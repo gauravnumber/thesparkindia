@@ -6,11 +6,12 @@ const Categories = () => {
       <Grid>
         <Grid.Row columns={2}>
           <Grid.Column width={3}>
-            <div className="ui vertical menu">
+            {/* <div className="ui vertical menu">
               <h3 style={{ textAlign: "center" }}>Trending Heading</h3>
               <div className="item">Ready Materials</div>
               <div className="item">Smart Lights</div>
-            </div>
+            </div> */}
+
             {/* <Menu
               // size="large"
               vertical
