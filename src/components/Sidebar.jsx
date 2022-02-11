@@ -118,11 +118,15 @@ export default function MiniDrawer() {
             <MenuIcon />
           </IconButton>
           <Typography variant="h6" noWrap component="div">
-            Mini variant drawer
-            {/* <PersonIcon /> */}
-            <PersonOutlineOutlinedIcon />
-            <ShoppingCartOutlinedIcon />
+            SPARK INDIA
           </Typography>
+          <Box sx={{ flexGrow: 1 }} />
+          <IconButton color="inherit" size="large">
+            <PersonOutlineOutlinedIcon />
+          </IconButton>
+          <IconButton color="inherit" size="large">
+            <ShoppingCartOutlinedIcon />
+          </IconButton>
         </Toolbar>
       </AppBar>
       <Drawer variant="permanent" open={open}>
