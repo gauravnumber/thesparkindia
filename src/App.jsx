@@ -1,6 +1,6 @@
 // import { useState } from "react";
 // import { Icon, Menu, Container } from "semantic-ui-react";
-import { CssBaseline, Container } from "@mui/material";
+import { CssBaseline, Container, Box } from "@mui/material";
 import { Routes, Route } from "react-router-dom";
 
 import Home from "./pages/Home";
@@ -17,6 +17,7 @@ function App() {
     <Container>
       <CssBaseline />
       <Header />
+      <Box mt={10} />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/categories" element={<Categories />} />
