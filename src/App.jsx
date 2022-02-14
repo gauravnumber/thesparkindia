@@ -1,5 +1,6 @@
 import { useState } from "react";
-import { Icon, Menu, Container } from "semantic-ui-react";
+// import { Icon, Menu, Container } from "semantic-ui-react";
+import { CssBaseline, Container } from "@mui/material";
 import { Routes, Route } from "react-router-dom";
 
 import Home from "./pages/Home";
@@ -7,11 +8,15 @@ import Categories from "./pages/Categories";
 import Shop from "./pages/Shop";
 import Feed from "./pages/Feed";
 import User from "./pages/User";
+
 import LowBar from "./components/LowBar";
+import Header from "./components/Header";
 
 function App() {
   return (
-    <Container fluid>
+    <Container>
+      <CssBaseline />
+      <Header />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/categories" element={<Categories />} />
