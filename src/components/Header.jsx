@@ -1,7 +1,7 @@
 import MuiAppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
 
-import MenuIcon from "@mui/icons-material/Menu";
+// import MenuIcon from "@mui/icons-material/Menu";
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import PersonOutlineOutlinedIcon from "@mui/icons-material/PersonOutlineOutlined";
 
@@ -20,6 +20,7 @@ const Header = () => {
         easing: theme.transitions.easing.sharp,
         duration: theme.transitions.duration.leavingScreen,
       }),
+      // marginBottom: 50,
       // ...(open && {
       //   // marginLeft: drawerWidth,
       //   // width: `calc(100% - ${drawerWidth}px)`,
@@ -38,18 +39,18 @@ const Header = () => {
         //  open={open}
       >
         <Toolbar>
-          <IconButton
+          {/* <IconButton
             color="inherit"
             aria-label="open drawer"
             // onClick={handleDrawerOpen}
             edge="start"
-            sx={{
-              marginRight: "36px",
-              ...(open && { display: "none" }),
-            }}
+            // sx={{
+            //   marginRight: "36px",
+            //   ...(open && { display: "none" }),
+            // }}
           >
             <MenuIcon />
-          </IconButton>
+          </IconButton> */}
           <Typography variant="h6" noWrap component="div">
             SPARK INDIA
           </Typography>

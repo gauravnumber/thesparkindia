@@ -1,10 +1,12 @@
-import { Grid, Menu, Icon, Input, Header } from "semantic-ui-react";
-import Sidebar from "../components/Sidebar";
+// import { Grid, Menu, Icon, Input, Header } from "semantic-ui-react";
+// import Sidebar from "../components/Sidebar";
+import { Box } from "@mui/material";
 
 const Home = () => {
   return (
-    <div>
-      <Sidebar />
+    <Box mt={10}>
+      Empty Home
+      {/* <Sidebar /> */}
       {/* <Menu borderless>
         <Menu.Item>
           <Icon name="bars" />
@@ -14,7 +16,7 @@ const Home = () => {
         </Menu.Item>
       </Menu>
       <Input icon="search" placeholder="Search for products" fluid /> */}
-    </div>
+    </Box>
   );
 };
 
