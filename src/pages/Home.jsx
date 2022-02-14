@@ -4,7 +4,7 @@ import { Box } from "@mui/material";
 
 const Home = () => {
   return (
-    <Box mt={10}>
+    <Box>
       Empty Home
       {/* <Sidebar /> */}
       {/* <Menu borderless>
