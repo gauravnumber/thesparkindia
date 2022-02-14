@@ -1,5 +1,5 @@
-import { Link, NavLink } from "react-router-dom";
-import { Icon, Menu } from "semantic-ui-react";
+// import { Link, NavLink } from "react-router-dom";
+// import { Icon, Menu } from "semantic-ui-react";
 import { useState } from "react";
 
 // import * as React from 'react';
@@ -10,6 +10,10 @@ import BottomNavigationAction from "@mui/material/BottomNavigationAction";
 import Paper from "@mui/material/Paper";
 import HomeIcon from "@mui/icons-material/Home";
 import CategoryIcon from "@mui/icons-material/Category";
+import AccountCircleOutlinedIcon from "@mui/icons-material/AccountCircleOutlined";
+import MessageOutlinedIcon from "@mui/icons-material/MessageOutlined";
+import HomeOutlinedIcon from "@mui/icons-material/HomeOutlined";
+import FeedOutlinedIcon from "@mui/icons-material/FeedOutlined";
 
 const LowBar = () => {
   const [value, setValue] = useState(0);
@@ -26,9 +30,17 @@ const LowBar = () => {
           setValue(newValue);
         }}
       >
-        <BottomNavigationAction label="Home" icon={<HomeIcon />} />
+        <BottomNavigationAction label="Home" icon={<HomeOutlinedIcon />} />
         <BottomNavigationAction label="Categories" icon={<CategoryIcon />} />
-        {/* <BottomNavigationAction label="Shop" /> */}
+        <BottomNavigationAction label="Feed" icon={<FeedOutlinedIcon />} />
+        <BottomNavigationAction
+          label="Message"
+          icon={<MessageOutlinedIcon />}
+        />
+        <BottomNavigationAction
+          label="Me"
+          icon={<AccountCircleOutlinedIcon />}
+        />
         {/* <BottomNavigationAction label="Archive" icon={<ArchiveIcon />} /> */}
       </BottomNavigation>
     </Paper>
