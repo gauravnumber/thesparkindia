@@ -6,6 +6,7 @@ import LibraryAddCheckOutlinedIcon from "@mui/icons-material/LibraryAddCheckOutl
 import AccessTimeOutlinedIcon from "@mui/icons-material/AccessTimeOutlined";
 import LocalOfferOutlinedIcon from "@mui/icons-material/LocalOfferOutlined";
 import FavoriteBorderOutlinedIcon from "@mui/icons-material/FavoriteBorderOutlined";
+import ArrowForwardIosOutlinedIcon from "@mui/icons-material/ArrowForwardIosOutlined";
 
 import {
   ListItemText,
@@ -57,11 +58,69 @@ const User = () => {
       <Divider />
 
       <Grid item>
-        <ListItemButton component="a" href="#simple-list">
+        <ListItemButton component="a">
           <ListItemIcon>
             <LibraryAddCheckOutlinedIcon />
           </ListItemIcon>
-          <ListItemText primary="Order" />
+          <ListItemText
+            primary="Sellers"
+            primaryTypographyProps={{ fontWeight: "bold" }}
+          />
+          <ListItemIcon>
+            <ArrowForwardIosOutlinedIcon />
+          </ListItemIcon>
+        </ListItemButton>
+
+        <ListItemButton component="a">
+          <ListItemIcon>
+            <LibraryAddCheckOutlinedIcon />
+          </ListItemIcon>
+          <ListItemText
+            primary="How to sell"
+            primaryTypographyProps={{ fontWeight: "bold" }}
+          />
+          <ListItemIcon>
+            <ArrowForwardIosOutlinedIcon />
+          </ListItemIcon>
+        </ListItemButton>
+
+        <ListItemButton component="a">
+          <ListItemIcon>
+            <LibraryAddCheckOutlinedIcon />
+          </ListItemIcon>
+          <ListItemText
+            primary="Language"
+            primaryTypographyProps={{ fontWeight: "bold" }}
+          />
+          <ListItemIcon>
+            <ArrowForwardIosOutlinedIcon />
+          </ListItemIcon>
+        </ListItemButton>
+
+        <ListItemButton component="a">
+          <ListItemIcon>
+            <LibraryAddCheckOutlinedIcon />
+          </ListItemIcon>
+          <ListItemText
+            primary="Help Center"
+            primaryTypographyProps={{ fontWeight: "bold" }}
+          />
+          <ListItemIcon>
+            <ArrowForwardIosOutlinedIcon />
+          </ListItemIcon>
+        </ListItemButton>
+
+        <ListItemButton component="a">
+          <ListItemIcon>
+            <LibraryAddCheckOutlinedIcon />
+          </ListItemIcon>
+          <ListItemText
+            primary="About Spark India"
+            primaryTypographyProps={{ fontWeight: "bold" }}
+          />
+          <ListItemIcon>
+            <ArrowForwardIosOutlinedIcon />
+          </ListItemIcon>
         </ListItemButton>
       </Grid>
     </Grid>
