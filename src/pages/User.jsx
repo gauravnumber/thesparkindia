@@ -9,6 +9,7 @@ import FavoriteBorderOutlinedIcon from "@mui/icons-material/FavoriteBorderOutlin
 import ArrowForwardIosOutlinedIcon from "@mui/icons-material/ArrowForwardIosOutlined";
 
 import {
+  Paper,
   ListItemText,
   ListItemButton,
   ListItemIcon,
@@ -33,7 +34,7 @@ const User = () => {
         followers layout
       </Grid>
       <Divider />
-      <Grid item>
+      <Grid item my={3}>
         <BottomNavigation
           showLabels
           // value={value}
@@ -43,7 +44,12 @@ const User = () => {
         >
           <BottomNavigationAction
             label="My Orders"
-            icon={<LibraryAddCheckOutlinedIcon />}
+            // sx={{ width: 0 }}
+            icon={
+              <Paper elevation={5} sx={{ p: 2, borderRadius: "50%" }}>
+                <LibraryAddCheckOutlinedIcon />
+              </Paper>
+            }
           />
           <BottomNavigationAction
             label="Recently Viewed"
