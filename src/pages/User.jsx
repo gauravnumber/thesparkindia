@@ -6,8 +6,10 @@ import LibraryAddCheckOutlinedIcon from "@mui/icons-material/LibraryAddCheckOutl
 import AccessTimeOutlinedIcon from "@mui/icons-material/AccessTimeOutlined";
 import LocalOfferOutlinedIcon from "@mui/icons-material/LocalOfferOutlined";
 import FavoriteBorderOutlinedIcon from "@mui/icons-material/FavoriteBorderOutlined";
+import ArrowForwardIosOutlinedIcon from "@mui/icons-material/ArrowForwardIosOutlined";
 
 import {
+  Paper,
   ListItemText,
   ListItemButton,
   ListItemIcon,
@@ -18,7 +20,30 @@ import {
   IconButton,
 } from "@mui/material";
 
+import { useState } from "react";
+
 const User = () => {
+  // const [value, setValue] = useState();
+
+  const menu = [
+    {
+      name: "My Orders",
+      icon: <LibraryAddCheckOutlinedIcon />,
+    },
+    {
+      name: "Recently Viewed",
+      icon: <AccessTimeOutlinedIcon />,
+    },
+    {
+      name: "Favourites",
+      icon: <FavoriteBorderOutlinedIcon />,
+    },
+    {
+      name: "My Coupon",
+      icon: <LocalOfferOutlinedIcon />,
+    },
+  ];
+
   return (
     <Grid container direction="column">
       <Grid item>
@@ -28,7 +53,7 @@ const User = () => {
         followers layout
       </Grid>
       <Divider />
-      <Grid item>
+      <Grid item my={3}>
         <BottomNavigation
           showLabels
           // value={value}
@@ -36,32 +61,86 @@ const User = () => {
           //   setValue(newValue);
           // }}
         >
-          <BottomNavigationAction
-            label="My Orders"
-            icon={<LibraryAddCheckOutlinedIcon />}
-          />
-          <BottomNavigationAction
-            label="Recently Viewed"
-            icon={<AccessTimeOutlinedIcon />}
-          />
-          <BottomNavigationAction
-            label="Favourites"
-            icon={<FavoriteBorderOutlinedIcon />}
-          />
-          <BottomNavigationAction
-            label="My Coupon"
-            icon={<LocalOfferOutlinedIcon />}
-          />
+          {menu.map((item, key) => (
+            <BottomNavigationAction
+              key={key + item.name}
+              label={item.name}
+              // sx={{ width: 0 }}
+              icon={
+                <Paper elevation={5} sx={{ p: 2, borderRadius: "50%" }}>
+                  {item.icon}
+                </Paper>
+              }
+            />
+          ))}
         </BottomNavigation>
       </Grid>
       <Divider />
 
       <Grid item>
-        <ListItemButton component="a" href="#simple-list">
+        <ListItemButton component="a">
           <ListItemIcon>
             <LibraryAddCheckOutlinedIcon />
           </ListItemIcon>
-          <ListItemText primary="Order" />
+          <ListItemText
+            primary="Sellers"
+            primaryTypographyProps={{ fontWeight: "bold" }}
+          />
+          <ListItemIcon>
+            <ArrowForwardIosOutlinedIcon />
+          </ListItemIcon>
+        </ListItemButton>
+
+        <ListItemButton component="a">
+          <ListItemIcon>
+            <LibraryAddCheckOutlinedIcon />
+          </ListItemIcon>
+          <ListItemText
+            primary="How to sell"
+            primaryTypographyProps={{ fontWeight: "bold" }}
+          />
+          <ListItemIcon>
+            <ArrowForwardIosOutlinedIcon />
+          </ListItemIcon>
+        </ListItemButton>
+
+        <ListItemButton component="a">
+          <ListItemIcon>
+            <LibraryAddCheckOutlinedIcon />
+          </ListItemIcon>
+          <ListItemText
+            primary="Language"
+            primaryTypographyProps={{ fontWeight: "bold" }}
+          />
+          <ListItemIcon>
+            <ArrowForwardIosOutlinedIcon />
+          </ListItemIcon>
+        </ListItemButton>
+
+        <ListItemButton component="a">
+          <ListItemIcon>
+            <LibraryAddCheckOutlinedIcon />
+          </ListItemIcon>
+          <ListItemText
+            primary="Help Center"
+            primaryTypographyProps={{ fontWeight: "bold" }}
+          />
+          <ListItemIcon>
+            <ArrowForwardIosOutlinedIcon />
+          </ListItemIcon>
+        </ListItemButton>
+
+        <ListItemButton component="a">
+          <ListItemIcon>
+            <LibraryAddCheckOutlinedIcon />
+          </ListItemIcon>
+          <ListItemText
+            primary="About Spark India"
+            primaryTypographyProps={{ fontWeight: "bold" }}
+          />
+          <ListItemIcon>
+            <ArrowForwardIosOutlinedIcon />
+          </ListItemIcon>
         </ListItemButton>
       </Grid>
     </Grid>
