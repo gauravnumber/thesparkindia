@@ -1,4 +1,4 @@
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useLocation } from "react-router-dom";
 // import { Icon, Menu } from "semantic-ui-react";
 import { useState, useEffect } from "react";
 
@@ -16,11 +16,12 @@ import HomeOutlinedIcon from "@mui/icons-material/HomeOutlined";
 import FeedOutlinedIcon from "@mui/icons-material/FeedOutlined";
 
 const LowBar = () => {
-  // const [currentPath, setCurrentPath] = useState(window.location.pathname);
+  // const [currentPath, setCurrentPath] = useState(location.pathname);
   const [value, setValue] = useState(0);
+  const location = useLocation();
 
   useEffect(() => {
-    switch (window.location.pathname) {
+    switch (location.pathname) {
       case "/":
         // console.log("0");
         setValue(0);
@@ -35,8 +36,8 @@ const LowBar = () => {
     }
 
     // console.log(`window.location.path`, window.location.path);
-    // setCurrentPath(window.location.pathname);
-  }, [window.location.pathname]);
+    // setCurrentPath(location.pathname);
+  }, [location.pathname]);
 
   return (
     <Paper
