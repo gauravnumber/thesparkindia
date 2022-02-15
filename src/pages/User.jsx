@@ -25,6 +25,25 @@ import { useState } from "react";
 const User = () => {
   // const [value, setValue] = useState();
 
+  const menu = [
+    {
+      name: "My Orders",
+      icon: <LibraryAddCheckOutlinedIcon />,
+    },
+    {
+      name: "Recently Viewed",
+      icon: <AccessTimeOutlinedIcon />,
+    },
+    {
+      name: "Favourites",
+      icon: <FavoriteBorderOutlinedIcon />,
+    },
+    {
+      name: "My Coupon",
+      icon: <LocalOfferOutlinedIcon />,
+    },
+  ];
+
   return (
     <Grid container direction="column">
       <Grid item>
@@ -42,27 +61,18 @@ const User = () => {
           //   setValue(newValue);
           // }}
         >
-          <BottomNavigationAction
-            label="My Orders"
-            // sx={{ width: 0 }}
-            icon={
-              <Paper elevation={5} sx={{ p: 2, borderRadius: "50%" }}>
-                <LibraryAddCheckOutlinedIcon />
-              </Paper>
-            }
-          />
-          <BottomNavigationAction
-            label="Recently Viewed"
-            icon={<AccessTimeOutlinedIcon />}
-          />
-          <BottomNavigationAction
-            label="Favourites"
-            icon={<FavoriteBorderOutlinedIcon />}
-          />
-          <BottomNavigationAction
-            label="My Coupon"
-            icon={<LocalOfferOutlinedIcon />}
-          />
+          {menu.map((item, key) => (
+            <BottomNavigationAction
+              key={key + item.name}
+              label={item.name}
+              // sx={{ width: 0 }}
+              icon={
+                <Paper elevation={5} sx={{ p: 2, borderRadius: "50%" }}>
+                  {item.icon}
+                </Paper>
+              }
+            />
+          ))}
         </BottomNavigation>
       </Grid>
       <Divider />
