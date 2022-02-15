@@ -5,7 +5,7 @@ import { Box } from "@mui/material";
 const Home = () => {
   return (
     <Box>
-      Empty Home
+      Click "Me" Tab
       {/* <Sidebar /> */}
       {/* <Menu borderless>
         <Menu.Item>

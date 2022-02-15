@@ -1,6 +1,6 @@
-// import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 // import { Icon, Menu } from "semantic-ui-react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 // import * as React from 'react';
 // import Box from '@mui/material/Box';
@@ -16,7 +16,27 @@ import HomeOutlinedIcon from "@mui/icons-material/HomeOutlined";
 import FeedOutlinedIcon from "@mui/icons-material/FeedOutlined";
 
 const LowBar = () => {
+  // const [currentPath, setCurrentPath] = useState(window.location.pathname);
   const [value, setValue] = useState(0);
+
+  useEffect(() => {
+    switch (window.location.pathname) {
+      case "/":
+        // console.log("0");
+        setValue(0);
+        break;
+      case "/user":
+        setValue(4);
+        // console.log("4");
+        break;
+      default:
+        setValue(0);
+      // console.log("none");
+    }
+
+    // console.log(`window.location.path`, window.location.path);
+    // setCurrentPath(window.location.pathname);
+  }, [window.location.pathname]);
 
   return (
     <Paper
@@ -25,12 +45,18 @@ const LowBar = () => {
     >
       <BottomNavigation
         showLabels
+        // value={4}
         value={value}
         onChange={(event, newValue) => {
           setValue(newValue);
         }}
       >
-        <BottomNavigationAction label="Home" icon={<HomeOutlinedIcon />} />
+        <BottomNavigationAction
+          label="Home"
+          icon={<HomeOutlinedIcon />}
+          component={Link}
+          to="/"
+        />
         <BottomNavigationAction label="Categories" icon={<CategoryIcon />} />
         <BottomNavigationAction label="Feed" icon={<FeedOutlinedIcon />} />
         <BottomNavigationAction
@@ -38,6 +64,8 @@ const LowBar = () => {
           icon={<MessageOutlinedIcon />}
         />
         <BottomNavigationAction
+          component={Link}
+          to="/user"
           label="Me"
           icon={<AccountCircleOutlinedIcon />}
         />
