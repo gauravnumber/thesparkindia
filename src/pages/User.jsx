@@ -55,11 +55,13 @@ const User = () => {
 
   return (
     <Grid container direction="column">
-      <Grid item>
-        <Grid item container>
-          <IconButton size="large">
-            <AccountCircleOutlinedIcon />
-          </IconButton>
+      <Grid item container direction="column" spacing={5} mb={2}>
+        <Grid item container xs>
+          <Grid item>
+            <IconButton size="large">
+              <AccountCircleOutlinedIcon />
+            </IconButton>
+          </Grid>
 
           <Grid item container direction="row" spacing={3} wrap="nowrap">
             <Grid
@@ -90,9 +92,17 @@ const User = () => {
           </Grid>
         </Grid>
 
-        <Grid item container spacing={3}>
-          <Button variant="contained">Sign up</Button>
-          <Button variant="outlined">Sign up</Button>
+        <Grid item container spacing={3} xs justifyContent="flex-end">
+          <Grid item>
+            <Button variant="contained" sx={{ borderRadius: "15px" }}>
+              Sign up
+            </Button>
+          </Grid>
+          <Grid item>
+            <Button variant="outlined" sx={{ borderRadius: "15px" }}>
+              Sign up
+            </Button>
+          </Grid>
         </Grid>
       </Grid>
       <Divider />
