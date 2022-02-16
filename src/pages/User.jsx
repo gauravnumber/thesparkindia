@@ -7,6 +7,7 @@ import AccessTimeOutlinedIcon from "@mui/icons-material/AccessTimeOutlined";
 import LocalOfferOutlinedIcon from "@mui/icons-material/LocalOfferOutlined";
 import FavoriteBorderOutlinedIcon from "@mui/icons-material/FavoriteBorderOutlined";
 import ArrowForwardIosOutlinedIcon from "@mui/icons-material/ArrowForwardIosOutlined";
+import AccountCircleOutlinedIcon from "@mui/icons-material/AccountCircleOutlined";
 
 import {
   Paper,
@@ -18,6 +19,10 @@ import {
   Divider,
   Grid,
   IconButton,
+  Button,
+  Box,
+  Typography,
+  styled,
 } from "@mui/material";
 
 import { useState } from "react";
@@ -44,13 +49,51 @@ const User = () => {
     },
   ];
 
+  const FollowNumbers = styled(Box)(({ theme }) => ({
+    color: theme.palette.primary.main,
+  }));
+
   return (
     <Grid container direction="column">
       <Grid item>
-        {/* <IconButton size="large">
-          <HomeIcon />
-        </IconButton> */}
-        followers layout
+        <Grid item container>
+          <IconButton size="large">
+            <AccountCircleOutlinedIcon />
+          </IconButton>
+
+          <Grid item container direction="row" spacing={3} wrap="nowrap">
+            <Grid
+              item
+              container
+              direction="column"
+              justifyContent="center"
+              alignItems="center"
+            >
+              <Grid item>
+                <Typography variant="h4">00</Typography>
+              </Grid>
+              <Grid item>Followers</Grid>
+            </Grid>
+            <Divider orientation="vertical" flexItem />
+            <Grid
+              item
+              container
+              direction="column"
+              justifyContent="center"
+              alignItems="center"
+            >
+              <Grid item>
+                <Typography variant="h4">00</Typography>
+              </Grid>{" "}
+              <Grid item>Following</Grid>
+            </Grid>
+          </Grid>
+        </Grid>
+
+        <Grid item container spacing={3}>
+          <Button variant="contained">Sign up</Button>
+          <Button variant="outlined">Sign up</Button>
+        </Grid>
       </Grid>
       <Divider />
       <Grid item my={3}>
