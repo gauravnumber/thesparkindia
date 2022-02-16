@@ -8,6 +8,7 @@ import Categories from "./pages/Categories";
 import Shop from "./pages/Shop";
 import Feed from "./pages/Feed";
 import User from "./pages/User";
+import Favourites from "./pages/Favourites";
 
 import LowBar from "./components/LowBar";
 import Header from "./components/Header";
@@ -24,6 +25,7 @@ function App() {
         <Route path="/shop" element={<Shop />} />
         <Route path="/feed" element={<Feed />} />
         <Route path="/user" element={<User />} />
+        <Route path="/favourites" element={<Favourites />} />
         <Route path="*" element={<h1>404: File Not Found</h1>} />
       </Routes>
       <LowBar />
