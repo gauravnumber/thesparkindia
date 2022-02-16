@@ -1,33 +1,27 @@
-import FavoriteIcon from "@mui/icons-material/Favorite";
-import HomeIcon from "@mui/icons-material/Home";
-import LocationOnIcon from "@mui/icons-material/LocationOn";
-import RestoreIcon from "@mui/icons-material/Restore";
-import LibraryAddCheckOutlinedIcon from "@mui/icons-material/LibraryAddCheckOutlined";
-import AccessTimeOutlinedIcon from "@mui/icons-material/AccessTimeOutlined";
-import LocalOfferOutlinedIcon from "@mui/icons-material/LocalOfferOutlined";
-import FavoriteBorderOutlinedIcon from "@mui/icons-material/FavoriteBorderOutlined";
-import ArrowForwardIosOutlinedIcon from "@mui/icons-material/ArrowForwardIosOutlined";
-import AccountCircleOutlinedIcon from "@mui/icons-material/AccountCircleOutlined";
+import { Link } from "react-router-dom";
 
+import AccessTimeOutlinedIcon from "@mui/icons-material/AccessTimeOutlined";
+import ArrowForwardIosOutlinedIcon from "@mui/icons-material/ArrowForwardIosOutlined";
+import FavoriteBorderOutlinedIcon from "@mui/icons-material/FavoriteBorderOutlined";
+import LibraryAddCheckOutlinedIcon from "@mui/icons-material/LibraryAddCheckOutlined";
+import LocalOfferOutlinedIcon from "@mui/icons-material/LocalOfferOutlined";
 import {
-  Stack,
   Avatar,
-  Paper,
-  ListItemText,
-  ListItemButton,
-  ListItemIcon,
   BottomNavigation,
   BottomNavigationAction,
+  Box,
+  Button,
   Divider,
   Grid,
   IconButton,
-  Button,
-  Box,
-  Typography,
+  ListItemButton,
+  ListItemIcon,
+  ListItemText,
+  Paper,
+  Stack,
   styled,
+  Typography,
 } from "@mui/material";
-
-import { useState } from "react";
 
 const User = () => {
   // const [value, setValue] = useState();
@@ -44,6 +38,7 @@ const User = () => {
     {
       name: "Favourites",
       icon: <FavoriteBorderOutlinedIcon />,
+      path: "/favourites",
     },
     {
       name: "My Coupon",
@@ -72,43 +67,13 @@ const User = () => {
               spacing={2}
             >
               <Typography variant="h4" textAlign="center">
-                <Box>00</Box>{" "}
-                <Typography variant="subtitle1">Followers</Typography>
+                <Box>00</Box> <Typography variant="body1">Followers</Typography>
               </Typography>
               <Typography variant="h4" textAlign="center">
-                <Box>00</Box>{" "}
-                <Typography variant="subtitle1">Following</Typography>
+                <Box>00</Box> <Typography variant="body1">Following</Typography>
               </Typography>
             </Stack>
           </Grid>
-
-          {/* <Grid item xs container direction="row" spacing={3} wrap="nowrap">
-            <Grid
-              item
-              container
-              direction="column"
-              justifyContent="center"
-              alignItems="center"
-            >
-              <Grid item>
-                <Typography variant="h4">00</Typography>
-              </Grid>
-              <Grid item>Followers</Grid>
-            </Grid>
-            <Divider orientation="vertical" flexItem />
-            <Grid
-              item
-              container
-              direction="column"
-              justifyContent="center"
-              alignItems="center"
-            >
-              <Grid item>
-                <Typography variant="h4">00</Typography>
-              </Grid>{" "}
-              <Grid item>Following</Grid>
-            </Grid>
-          </Grid> */}
         </Grid>
 
         <Grid item container spacing={3} xs justifyContent="flex-end">
@@ -137,7 +102,8 @@ const User = () => {
             <BottomNavigationAction
               key={key + item.name}
               label={item.name}
-              // sx={{ width: 0 }}
+              component={Link}
+              to={item.path ? item.path : "/"}
               icon={
                 <Paper elevation={5} sx={{ p: 2, borderRadius: "50%" }}>
                   {item.icon}
