@@ -7,8 +7,11 @@ import AccessTimeOutlinedIcon from "@mui/icons-material/AccessTimeOutlined";
 import LocalOfferOutlinedIcon from "@mui/icons-material/LocalOfferOutlined";
 import FavoriteBorderOutlinedIcon from "@mui/icons-material/FavoriteBorderOutlined";
 import ArrowForwardIosOutlinedIcon from "@mui/icons-material/ArrowForwardIosOutlined";
+import AccountCircleOutlinedIcon from "@mui/icons-material/AccountCircleOutlined";
 
 import {
+  Stack,
+  Avatar,
   Paper,
   ListItemText,
   ListItemButton,
@@ -18,6 +21,10 @@ import {
   Divider,
   Grid,
   IconButton,
+  Button,
+  Box,
+  Typography,
+  styled,
 } from "@mui/material";
 
 import { useState } from "react";
@@ -44,13 +51,78 @@ const User = () => {
     },
   ];
 
+  const FollowNumbers = styled(Box)(({ theme }) => ({
+    color: theme.palette.primary.main,
+  }));
+
   return (
     <Grid container direction="column">
-      <Grid item>
-        {/* <IconButton size="large">
-          <HomeIcon />
-        </IconButton> */}
-        followers layout
+      <Grid item container direction="column" spacing={5} mb={2}>
+        <Grid item container xs justifyContent="center" alignItems="center">
+          <Grid item xs>
+            <IconButton size="large">
+              <Avatar src="/broken-image.jpg" sx={{ width: 90, height: 90 }} />
+            </IconButton>
+          </Grid>
+
+          <Grid item xs>
+            <Stack
+              direction="row"
+              divider={<Divider orientation="vertical" flexItem />}
+              spacing={2}
+            >
+              <Typography variant="h4" textAlign="center">
+                <Box>00</Box>{" "}
+                <Typography variant="subtitle1">Followers</Typography>
+              </Typography>
+              <Typography variant="h4" textAlign="center">
+                <Box>00</Box>{" "}
+                <Typography variant="subtitle1">Following</Typography>
+              </Typography>
+            </Stack>
+          </Grid>
+
+          {/* <Grid item xs container direction="row" spacing={3} wrap="nowrap">
+            <Grid
+              item
+              container
+              direction="column"
+              justifyContent="center"
+              alignItems="center"
+            >
+              <Grid item>
+                <Typography variant="h4">00</Typography>
+              </Grid>
+              <Grid item>Followers</Grid>
+            </Grid>
+            <Divider orientation="vertical" flexItem />
+            <Grid
+              item
+              container
+              direction="column"
+              justifyContent="center"
+              alignItems="center"
+            >
+              <Grid item>
+                <Typography variant="h4">00</Typography>
+              </Grid>{" "}
+              <Grid item>Following</Grid>
+            </Grid>
+          </Grid> */}
+        </Grid>
+
+        <Grid item container spacing={3} xs justifyContent="flex-end">
+          <Grid item>
+            <Button variant="contained" sx={{ borderRadius: "15px" }}>
+              Sign up
+            </Button>
+          </Grid>
+          <Grid item>
+            <Button variant="outlined" sx={{ borderRadius: "15px" }}>
+              Sign up
+            </Button>
+          </Grid>
+        </Grid>
       </Grid>
       <Divider />
       <Grid item my={3}>
