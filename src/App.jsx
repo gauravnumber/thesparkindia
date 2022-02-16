@@ -28,6 +28,7 @@ function App() {
         <Route path="/favourites" element={<Favourites />} />
         <Route path="*" element={<h1>404: File Not Found</h1>} />
       </Routes>
+      <Box mt={10} />
       <LowBar />
     </Container>
   );
