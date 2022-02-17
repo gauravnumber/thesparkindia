@@ -7,7 +7,7 @@ import ListSubheader from "@mui/material/ListSubheader";
 import Switch from "@mui/material/Switch";
 import WifiIcon from "@mui/icons-material/Wifi";
 import BluetoothIcon from "@mui/icons-material/Bluetooth";
-import { alpha, Box, Divider, Typography, Stack } from "@mui/material";
+import { alpha, Box, Divider, Typography, Stack, Grid } from "@mui/material";
 
 const Notification = () => {
   const [checked, setChecked] = React.useState([
@@ -95,20 +95,28 @@ const Notification = () => {
         }}
       >
         <ListItem>
-          <Stack
-            sx={{ maxWidth: "100%", flexGrow: 1 }}
-            direction="row"
-            divider={<Divider orientation="vertical" flexItem />}
+          <Grid
+            container
+            // justifyContent="center"
+            // alignItems="center"
+            // sx={{ maxWidth: "100%", flexGrow: 1 }}
+            // direction="row"
+            // divider={<Divider orientation="vertical" flexItem />}
             spacing={5}
           >
-            <Box
-              sx={{
-                display: "flex",
+            <Grid
+              item
+              container
+              xs
+              justifyContent="space-around"
+              alignItems="center"
+              // sx={{
+              //   display: "flex",
 
-                justifyContent: "space-between",
-                alignItems: "center",
-                // width: 150,
-              }}
+              //   justifyContent: "space-between",
+              //   alignItems: "center",
+              //   // width: 150,
+              // }}
             >
               <Typography>Mobile</Typography>
               <Switch
@@ -116,16 +124,23 @@ const Notification = () => {
                 onChange={handleToggle("mobile")}
                 checked={checked.indexOf("mobile") !== -1}
               />
-            </Box>
-            <Box sx={{ display: "flex", alignItems: "center" }}>
+            </Grid>
+            <Grid
+              item
+              container
+              justifyContent="space-around"
+              alignItems="center"
+              xs
+              // sx={{ display: "flex", alignItems: "center" }}
+            >
               <Typography>Email</Typography>
               <Switch
                 edge="end"
                 onChange={handleToggle("email")}
                 checked={checked.indexOf("email") !== -1}
               />
-            </Box>
-          </Stack>
+            </Grid>
+          </Grid>
           {/* <Box
             sx={{
               mx: 3,
