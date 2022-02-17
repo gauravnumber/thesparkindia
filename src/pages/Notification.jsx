@@ -7,13 +7,14 @@ import ListSubheader from "@mui/material/ListSubheader";
 import Switch from "@mui/material/Switch";
 import WifiIcon from "@mui/icons-material/Wifi";
 import BluetoothIcon from "@mui/icons-material/Bluetooth";
-import { Box } from "@mui/material";
+import { alpha, Box, Divider, Typography, Stack } from "@mui/material";
 
 const Notification = () => {
   const [checked, setChecked] = React.useState([
     "notifications",
     "orderUpdates",
     "latestUpdates",
+    "email",
   ]);
 
   const handleToggle = (value) => () => {
@@ -67,7 +68,9 @@ const Notification = () => {
       <List
         sx={{
           borderRadius: "12px",
-          backgroundColor: "green",
+          // backgroundColor: "green",
+          // backgroundColor: "text.secondary",
+          backgroundColor: (theme) => alpha(theme.palette.primary.main, 0.1),
           mb: 3,
         }}
       >
@@ -83,16 +86,77 @@ const Notification = () => {
       <List
         sx={{
           borderRadius: "12px",
-          backgroundColor: "red",
+          backgroundColor: (theme) => alpha(theme.palette.primary.main, 0.1),
+          // backgroundColor: "text.secondary",
+          // backgroundColor: "red",
           // width: "100%",
           // maxWidth: 360,
           // bgcolor: "background.paper",
         }}
       >
+        <ListItem>
+          <Stack
+            sx={{ maxWidth: "100%", flexGrow: 1 }}
+            direction="row"
+            divider={<Divider orientation="vertical" flexItem />}
+            spacing={5}
+          >
+            <Box
+              sx={{
+                display: "flex",
+
+                justifyContent: "space-between",
+                alignItems: "center",
+                // width: 150,
+              }}
+            >
+              <Typography>Mobile</Typography>
+              <Switch
+                edge="end"
+                onChange={handleToggle("mobile")}
+                checked={checked.indexOf("mobile") !== -1}
+              />
+            </Box>
+            <Box sx={{ display: "flex", alignItems: "center" }}>
+              <Typography>Email</Typography>
+              <Switch
+                edge="end"
+                onChange={handleToggle("email")}
+                checked={checked.indexOf("email") !== -1}
+              />
+            </Box>
+          </Stack>
+          {/* <Box
+            sx={{
+              mx: 3,
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              maxWidth: "100%",
+            }}
+          >
+            <Typography variant="subtitle1">Mobile</Typography>
+            <Switch
+              edge="end"
+              onChange={handleToggle("mobile")}
+              checked={checked.indexOf("mobile") !== -1}
+            />
+
+            <Divider orientation="vertical" flexItem />
+            <Typography variant="subtitle1">Email</Typography>
+            <Switch
+              edge="end"
+              onChange={handleToggle("email")}
+              checked={checked.indexOf("email") !== -1}
+            />
+          </Box> */}
+        </ListItem>
+        {/* <ListItem>
+        </ListItem> */}
         {notifications.map((notification) => (
           <ListItem key={notification.id}>
             <ListItemText
-              id="switch-list-label-notifications"
+              // id="switch-list-label-notifications"
               primary={notification.name}
             />
             <Switch
