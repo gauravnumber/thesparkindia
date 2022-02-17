@@ -34,6 +34,7 @@ const User = () => {
     {
       name: "Recently Viewed",
       icon: <AccessTimeOutlinedIcon />,
+      path: "/recentlyViewed",
     },
     {
       name: "Favourites",
