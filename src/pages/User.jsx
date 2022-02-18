@@ -30,6 +30,7 @@ const User = () => {
     {
       name: "My Orders",
       icon: <LibraryAddCheckOutlinedIcon />,
+      path: "/myOrders",
     },
     {
       name: "Recently Viewed",

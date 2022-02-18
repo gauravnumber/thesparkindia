@@ -1,6 +1,10 @@
 import { useState } from "react";
 
 import {
+  Tab,
+  Tabs,
+  Box,
+  Divider,
   Typography,
   FormControl,
   InputLabel,
@@ -21,64 +25,66 @@ import {
 } from "@mui/icons-material";
 // import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined';
 
+function TabPanel(props) {
+  const { children, value, index, ...other } = props;
+
+  return (
+    <div
+      role="tabpanel"
+      hidden={value !== index}
+      id={`simple-tabpanel-${index}`}
+      aria-labelledby={`simple-tab-${index}`}
+      {...other}
+    >
+      {value === index && (
+        <Box
+        //  sx={{ p: 3 }}
+        >
+          <Typography>{children}</Typography>
+        </Box>
+      )}
+    </div>
+  );
+}
+
 const MyOrders = () => {
-  const [values, setValues] = useState({
-    amount: "",
-    password: "",
-    weight: "",
-    weightRange: "",
-    showPassword: false,
-  });
+  const [value, setValue] = useState(0);
 
-  const handleChange = (prop) => (event) => {
-    setValues({ ...values, [prop]: event.target.value });
-  };
-
-  const handleClickShowPassword = () => {
-    setValues({
-      ...values,
-      showPassword: !values.showPassword,
-    });
-  };
-
-  const handleMouseDownPassword = (event) => {
-    event.preventDefault();
+  const handleChange = (event, newValue) => {
+    setValue(newValue);
   };
 
   return (
     <>
-      <Grid container spacing={2} direction="column">
+      <Grid
+        container
+        spacing={2}
+        direction="column"
+        // marginX={0}
+      >
         <Grid
           item
+          container
+          alignItems="center"
           xs
           // bgcolor="secondary.main"
         >
-          <FormControl
-            sx={{ m: 1, width: "25ch" }}
-            variant="outlined"
-            fullWidth
-          >
-            <OutlinedInput
-              fullWidth
-              id="outlined-adornment-weight"
-              value={values.weight}
-              onChange={handleChange("weight")}
-              startAdornment={
+          <TextField
+            size="small"
+            sx={{
+              width: "25ch",
+            }}
+            InputProps={{
+              startAdornment: (
                 <InputAdornment position="start">
-                  <IconButton>
+                  <IconButton edge="start">
                     <SearchOutlined />
                   </IconButton>
                 </InputAdornment>
-              }
-              aria-describedby="outlined-weight-helper-text"
-              inputProps={{
-                "aria-label": "weight",
-              }}
-            />
-            {/* <FormHelperText id="outlined-weight-helper-text">
-              Weight
-            </FormHelperText> */}
-          </FormControl>
+              ),
+            }}
+            // fullWidth
+          />
 
           <IconButton
             size="large"
@@ -86,11 +92,35 @@ const MyOrders = () => {
           >
             <FilterListOutlined />
           </IconButton>
-          <Typography component="span">Filters</Typography>
+          <Typography component="span" variant="body2">
+            Filters
+          </Typography>
         </Grid>
 
+        <Grid item>
+          <Divider mb={9} />
+        </Grid>
         <Grid item xs>
-          input
+          <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
+            <Tabs value={value} onChange={handleChange} aria-label="basic tabs">
+              <Tab label="On the way" />
+              <Tab label="Delivered" />
+              <Tab label="Cancelled" />
+              <Tab label="Returned" />
+            </Tabs>
+          </Box>
+          <TabPanel value={value} index={0}>
+            Item One
+          </TabPanel>
+          <TabPanel value={value} index={1}>
+            Item Two
+          </TabPanel>
+          <TabPanel value={value} index={2}>
+            Item Three
+          </TabPanel>
+          <TabPanel value={value} index={3}>
+            Item Four
+          </TabPanel>
         </Grid>
         <Grid item xs>
           input
