@@ -15,7 +15,7 @@ const RecentlyViewed = () => {
   return (
     <Grid container spacing={3}>
       {Array.from(Array(12)).map((value, index) => (
-        <Grid item xs key={index}>
+        <Grid item xs={6} sm key={index}>
           <Card sx={{ maxWidth: 345 }}>
             <CardMedia
               component="img"
@@ -28,17 +28,31 @@ const RecentlyViewed = () => {
                 Product Details
               </Typography>
             </CardContent>
-            <CardActions>
+            <CardActions
+              sx={{
+                p: 0,
+                // "&.MuiCardActions-root": {
+                //   padding: 0,
+                // },
+              }}
+              // disableSpacing
+            >
               <Stack
                 direction="row"
-                justifyContent="flex-end"
+                justifyContent="space-between"
                 alignItems="center"
-                spacing={2}
+                spacing={0.1}
               >
-                <IconButton>
+                <IconButton size="small" edge="start">
                   <FavoriteIcon />
                 </IconButton>
-                <Typography variant="subtitle1" color="text.secondary">
+                <Typography
+                  // variant="subtitle1"
+                  variant="subtitle2"
+                  color="text.secondary"
+                  fontSize={10}
+                  noWrap
+                >
                   50 sold
                 </Typography>
                 <Rating
@@ -46,6 +60,7 @@ const RecentlyViewed = () => {
                   defaultValue={3.5}
                   precision={0.5}
                   readOnly
+                  size="small"
                 />
               </Stack>
             </CardActions>
