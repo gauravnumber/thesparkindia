@@ -1,4 +1,5 @@
 import { useState } from "react";
+import TabPanel from "../components/TabPanel";
 
 import {
   Tab,
@@ -13,39 +14,21 @@ import {
   IconButton,
   Grid,
   Menu,
+  Stack,
   Card,
+  CardMedia,
+  CardContent,
+  CardActions,
   TextField,
+  Rating,
+  styled,
 } from "@mui/material";
 
 import {
-  Visibility,
-  VisibilityOff,
   SearchOutlined,
   FilterListOutlined,
+  FavoriteBorderOutlined as FavoriteIcon,
 } from "@mui/icons-material";
-// import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined';
-
-function TabPanel(props) {
-  const { children, value, index, ...other } = props;
-
-  return (
-    <div
-      role="tabpanel"
-      hidden={value !== index}
-      id={`simple-tabpanel-${index}`}
-      aria-labelledby={`simple-tab-${index}`}
-      {...other}
-    >
-      {value === index && (
-        <Box
-        //  sx={{ p: 3 }}
-        >
-          <Typography>{children}</Typography>
-        </Box>
-      )}
-    </div>
-  );
-}
 
 const MyOrders = () => {
   const [value, setValue] = useState(0);
@@ -53,6 +36,11 @@ const MyOrders = () => {
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
+
+  const OrderTab = styled((props) => <Tab {...props} />)(({ theme }) => ({
+    textTransform: "none",
+    padding: 0,
+  }));
 
   return (
     <>
@@ -97,22 +85,66 @@ const MyOrders = () => {
           </Typography>
         </Grid>
 
-        <Grid item>
+        {/* <Grid item>
           <Divider mb={9} />
-        </Grid>
+        </Grid> */}
         <Grid item xs>
           <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
-            <Tabs value={value} onChange={handleChange} aria-label="basic tabs">
-              <Tab label="On the way" />
-              <Tab label="Delivered" />
-              <Tab label="Cancelled" />
-              <Tab label="Returned" />
+            <Tabs
+              value={value}
+              onChange={handleChange}
+              aria-label="basic tabs"
+              // sx={{ marginBottom: 1 }}
+            >
+              <OrderTab label="On the way" />
+              <OrderTab label="Delivered" />
+              <OrderTab label="Cancelled" />
+              <OrderTab label="Returned" />
             </Tabs>
           </Box>
           <TabPanel value={value} index={0}>
-            Item One
+            <Grid
+              container
+              item
+              spacing={1}
+              //  direction="row" columns={2}
+            >
+              <Grid item xs={4}>
+                <img
+                  // style={{ maxWidth: "100%" }}
+
+                  src="https://placeimg.com/80/80/any"
+                  alt="Random pic"
+                />
+              </Grid>
+              <Grid
+                item
+                xs={8}
+                //  container
+                // direction="column"
+              >
+                <Typography
+                  // sx={{ display: "inline" }}
+
+                  // variant="h6"
+                  fontWeight="bold"
+                  fontSize={17}
+                  // fontWeight={900}
+                  gutterBottom
+                >
+                  Premium Red LED 5V
+                </Typography>
+                <Typography
+                  fontSize={15}
+                  // variant="caption"
+                >
+                  Expected Delivery on Thu 5-Jan-2022
+                </Typography>
+              </Grid>
+            </Grid>
+            {/* <Grid item>two</Grid> */}
           </TabPanel>
-          <TabPanel value={value} index={1}>
+          {/* <TabPanel value={value} index={1}>
             Item Two
           </TabPanel>
           <TabPanel value={value} index={2}>
@@ -120,11 +152,11 @@ const MyOrders = () => {
           </TabPanel>
           <TabPanel value={value} index={3}>
             Item Four
-          </TabPanel>
+          </TabPanel> */}
         </Grid>
-        <Grid item xs>
+        {/* <Grid item xs>
           input
-        </Grid>
+        </Grid> */}
       </Grid>
     </>
   );
