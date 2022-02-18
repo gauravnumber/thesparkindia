@@ -30,15 +30,16 @@ const RecentlyViewed = () => {
             </CardContent>
             <CardActions
               sx={{
-                "& .MuiCardActions": {
-                  p: 0,
-                },
+                p: 0,
+                // "&.MuiCardActions-root": {
+                //   padding: 0,
+                // },
               }}
-              disableSpacing
+              // disableSpacing
             >
               <Stack
                 direction="row"
-                justifyContent="space-around"
+                justifyContent="space-between"
                 alignItems="center"
                 spacing={0.1}
               >
