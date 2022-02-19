@@ -1,4 +1,11 @@
-import { Stack, Paper, Grid, Typography, IconButton } from "@mui/material";
+import {
+  Avatar,
+  Stack,
+  Paper,
+  Grid,
+  Typography,
+  IconButton,
+} from "@mui/material";
 import HomeOutlinedIcon from "@mui/icons-material/HomeOutlined";
 import PlusOneOutlinedIcon from "@mui/icons-material/PlusOneOutlined";
 
@@ -8,13 +15,13 @@ const MyAddress = () => {
       <Grid item>
         <Paper sx={{ padding: 2 }} elevation={3}>
           <Grid item container>
-            <Grid item xs={10}>
-              <Typography variant="h5" component="div" gutterBottom>
+            <Grid item xs={9}>
+              <Typography variant="body1" component="div" gutterBottom>
                 Ravi Shankar
                 <Typography
                   ml={2}
                   component="span"
-                  variant="h6"
+                  variant="body2"
                   color="warning.main"
                 >
                   [Home]
@@ -22,7 +29,7 @@ const MyAddress = () => {
               </Typography>
               <Typography
                 component="div"
-                variant="subtitle1"
+                variant="subtitle2"
                 color="text.secondary"
                 sx={{ lineHeight: 1.2 }}
               >
@@ -33,28 +40,41 @@ const MyAddress = () => {
             </Grid>
             <Grid
               item
-              xs={2}
+              xs={3}
               container
               // backgroundColor="success.dark"
             >
-              <IconButton size="large">
+              <Avatar
+                sx={{
+                  width: 80,
+                  height: 80,
+
+                  // backgroundColor: "blue"
+                }}
+              >
+                <HomeOutlinedIcon sx={{ fontSize: 60 }} />
+              </Avatar>
+              {/* <IconButton size="large">
                 <HomeOutlinedIcon />
-              </IconButton>
+              </IconButton> */}
             </Grid>
           </Grid>
         </Paper>
       </Grid>
       <Grid item>
-        <Paper elevation={3} sx={{ p: 2 }}>
+        <Paper elevation={3} sx={{ p: 2, maxWidth: 250 }}>
           <Stack
             direction="row"
             alignItems="center"
             justifyContent="space-between"
           >
-            <Typography>Add a new address </Typography>
-            <IconButton>
+            <Typography color="text.secondary">Add a new address </Typography>
+            <Typography color="text.secondary" fontSize={25} fontWeight="700">
+              +
+            </Typography>
+            {/* <IconButton>
               <PlusOneOutlinedIcon />
-            </IconButton>
+            </IconButton> */}
           </Stack>
         </Paper>
       </Grid>
