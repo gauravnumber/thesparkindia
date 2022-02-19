@@ -12,6 +12,7 @@ import Favourites from "./pages/Favourites";
 import Notification from "./pages/Notification";
 import RecentlyViewed from "./pages/RecentlyViewed";
 import MyOrders from "./pages/MyOrders";
+import MyAddress from "./pages/MyAddress";
 
 import LowBar from "./components/LowBar";
 import Header from "./components/Header";
@@ -35,6 +36,7 @@ function App() {
         <Route path="/notification" element={<Notification />} />
         <Route path="/recentlyViewed" element={<RecentlyViewed />} />
         <Route path="/myOrders" element={<MyOrders />} />
+        <Route path="/myAddress" element={<MyAddress />} />
         <Route path="*" element={<h1>404: File Not Found</h1>} />
       </Routes>
       <Box mt={10} />
