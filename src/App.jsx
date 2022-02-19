@@ -19,7 +19,8 @@ import Header from "./components/Header";
 function App() {
   return (
     <Container
-    // sx={{ backgroundColor: "red" }}
+      // px={34}
+      sx={{ paddingX: 1 }}
     >
       <CssBaseline />
       <Header />

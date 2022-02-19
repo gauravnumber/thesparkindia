@@ -40,6 +40,9 @@ const MyOrders = () => {
   const OrderTab = styled((props) => <Tab {...props} />)(({ theme }) => ({
     textTransform: "none",
     padding: 0,
+    minWidth: `${theme.typography.pxToRem(88)}`,
+    // minWidth: "88px",
+    // margin: 0,
   }));
 
   return (
@@ -103,7 +106,52 @@ const MyOrders = () => {
             </Tabs>
           </Box>
           <TabPanel value={value} index={0}>
-            <Grid
+            {Array.from(Array(5)).map((_, index) => (
+              <Grid
+                container
+                item
+                // spacing={1}
+                key={index}
+                alignItems="center"
+                sx={{ borderBottom: 1, borderColor: "divider" }}
+                //  direction="row" columns={2}
+              >
+                <Grid item xs={4}>
+                  <img
+                    // style={{ maxWidth: "100%" }}
+
+                    src="https://source.unsplash.com/80x80"
+                    // src="https://placeimg.com/80/80/any"
+                    alt="Random pic"
+                  />
+                </Grid>
+                <Grid
+                  item
+                  xs={8}
+                  //  container
+                  // direction="column"
+                >
+                  <Typography
+                    // sx={{ display: "inline" }}
+
+                    // variant="h6"
+                    fontWeight="bold"
+                    fontSize={17}
+                    // fontWeight={900}
+                    gutterBottom
+                  >
+                    Premium Red LED 5V
+                  </Typography>
+                  <Typography
+                    fontSize={15}
+                    // variant="caption"
+                  >
+                    Expected Delivery on Thu 5-Jan-2022
+                  </Typography>
+                </Grid>
+              </Grid>
+            ))}
+            {/* <Grid
               container
               item
               spacing={1}
@@ -141,7 +189,7 @@ const MyOrders = () => {
                   Expected Delivery on Thu 5-Jan-2022
                 </Typography>
               </Grid>
-            </Grid>
+            </Grid> */}
             {/* <Grid item>two</Grid> */}
           </TabPanel>
           {/* <TabPanel value={value} index={1}>

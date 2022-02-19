@@ -16,7 +16,7 @@ function TabPanel(props) {
     >
       {value === index && (
         <Box>
-          <Grid container direction="column" spacing={3} mt={0.1}>
+          <Grid container direction="column" spacing={1} mt={0.1}>
             {children}
           </Grid>
           {/* <Typography>{children}</Typography> */}
