@@ -3,6 +3,9 @@
 import { CssBaseline, Container, Box } from "@mui/material";
 import { Routes, Route } from "react-router-dom";
 
+import LowBar from "./components/LowBar";
+import Header from "./components/Header";
+
 import Home from "./pages/Home";
 import Categories from "./pages/Categories";
 import Shop from "./pages/Shop";
@@ -14,9 +17,6 @@ import RecentlyViewed from "./pages/RecentlyViewed";
 import MyOrders from "./pages/MyOrders";
 import MyAddress from "./pages/MyAddress";
 import PaymentMethod from "./pages/PaymentMethod";
-
-import LowBar from "./components/LowBar";
-import Header from "./components/Header";
 
 function App() {
   return (
