@@ -47,7 +47,7 @@ const PaymentMethod = () => {
               alignItems="center"
               spacing={3}
             >
-              <Img src="https://source.unsplash.com/100x100" />
+              <Img src="https://source.unsplash.com/100x100" alt="Random" />
               <Typography
                 color={red[400]}
                 // color="red"
