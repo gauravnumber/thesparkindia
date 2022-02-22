@@ -3,6 +3,9 @@
 import { CssBaseline, Container, Box } from "@mui/material";
 import { Routes, Route } from "react-router-dom";
 
+import LowBar from "./components/LowBar";
+import Header from "./components/Header";
+
 import Home from "./pages/Home";
 import Categories from "./pages/Categories";
 import Shop from "./pages/Shop";
@@ -14,15 +17,17 @@ import RecentlyViewed from "./pages/RecentlyViewed";
 import MyOrders from "./pages/MyOrders";
 import MyAddress from "./pages/MyAddress";
 import PaymentMethod from "./pages/PaymentMethod";
-
-import LowBar from "./components/LowBar";
-import Header from "./components/Header";
+import EditProfile from "./pages/EditProfile";
 
 function App() {
   return (
     <Container
       // px={34}
-      sx={{ paddingX: 1 }}
+      sx={{
+        paddingX: 0,
+        // paddingX: 1,
+        // margin: 0,
+      }}
     >
       <CssBaseline />
       <Header />
@@ -39,6 +44,7 @@ function App() {
         <Route path="/myOrders" element={<MyOrders />} />
         <Route path="/myAddress" element={<MyAddress />} />
         <Route path="/paymentMethod" element={<PaymentMethod />} />
+        <Route path="/editProfile" element={<EditProfile />} />
         <Route path="*" element={<h1>404: File Not Found</h1>} />
       </Routes>
       <Box mt={10} />

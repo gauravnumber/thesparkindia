@@ -21,7 +21,8 @@ const RecentlyViewed = () => {
               component="img"
               alt="Random"
               height="140"
-              image="https://placeimg.com/200/140/any"
+              image="https://source.unsplash.com/200x140"
+              // image="https://placeimg.com/200/140/any"
             />
             <CardContent>
               <Typography gutterBottom variant="h5" component="div">

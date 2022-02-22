@@ -58,7 +58,10 @@ const User = () => {
         <Grid item container xs justifyContent="center" alignItems="center">
           <Grid item xs>
             <IconButton size="large">
-              <Avatar src="/broken-image.jpg" sx={{ width: 90, height: 90 }} />
+              <Avatar
+                //  src="/broken-image.jpg"
+                sx={{ width: 90, height: 90 }}
+              />
             </IconButton>
           </Grid>
 
