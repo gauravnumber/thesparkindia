@@ -27,6 +27,7 @@ function App() {
         paddingX: 0,
         // paddingX: 1,
         // margin: 0,
+        // backgroundColor: "red",
       }}
     >
       <CssBaseline />
