@@ -1,24 +1,44 @@
-import { Link, NavLink, useLocation } from "react-router-dom";
-// import { Icon, Menu } from "semantic-ui-react";
-import { useState, useEffect } from "react";
-
+import AccountCircleOutlinedIcon from "@mui/icons-material/AccountCircleOutlined";
+import CategoryIcon from "@mui/icons-material/Category";
+import FeedOutlinedIcon from "@mui/icons-material/FeedOutlined";
+import HomeOutlinedIcon from "@mui/icons-material/HomeOutlined";
+import MessageOutlinedIcon from "@mui/icons-material/MessageOutlined";
 // import * as React from 'react';
 // import Box from '@mui/material/Box';
 // import CssBaseline from '@mui/material/CssBaseline';
 import BottomNavigation from "@mui/material/BottomNavigation";
 import BottomNavigationAction from "@mui/material/BottomNavigationAction";
 import Paper from "@mui/material/Paper";
-import HomeIcon from "@mui/icons-material/Home";
-import CategoryIcon from "@mui/icons-material/Category";
-import AccountCircleOutlinedIcon from "@mui/icons-material/AccountCircleOutlined";
-import MessageOutlinedIcon from "@mui/icons-material/MessageOutlined";
-import HomeOutlinedIcon from "@mui/icons-material/HomeOutlined";
-import FeedOutlinedIcon from "@mui/icons-material/FeedOutlined";
+// import { Icon, Menu } from "semantic-ui-react";
+import { useEffect, useState } from "react";
+import { Link, useLocation } from "react-router-dom";
 
 const LowBar = () => {
   // const [currentPath, setCurrentPath] = useState(location.pathname);
   const [value, setValue] = useState(0);
   const location = useLocation();
+
+  const lowBarInfo = [
+    {
+      name: "Home",
+      icon: <HomeOutlinedIcon />,
+      path: "/",
+    },
+    {
+      name: "Categories",
+      icon: <CategoryIcon />,
+    },
+    { name: "Feed", icon: <FeedOutlinedIcon /> },
+    {
+      name: "Message",
+      icon: <MessageOutlinedIcon />,
+    },
+    {
+      name: "Me",
+      icon: <AccountCircleOutlinedIcon />,
+      path: "/user",
+    },
+  ];
 
   useEffect(() => {
     switch (location.pathname) {
@@ -51,25 +71,47 @@ const LowBar = () => {
         onChange={(event, newValue) => {
           setValue(newValue);
         }}
+        // sx={{ px: 0 }}
       >
-        <BottomNavigationAction
+        {lowBarInfo.map((menu, index) => (
+          <BottomNavigationAction
+            key={index + menu.name}
+            label={menu.name}
+            icon={menu.icon}
+            component={Link}
+            to={menu.path ? menu.path : "/"}
+            sx={{ px: 0, minWidth: 2 }}
+          />
+        ))}
+        {/* <BottomNavigationAction
           label="Home"
           icon={<HomeOutlinedIcon />}
           component={Link}
           to="/"
+          sx={{ px: 0, minWidth: 2 }}
         />
-        <BottomNavigationAction label="Categories" icon={<CategoryIcon />} />
-        <BottomNavigationAction label="Feed" icon={<FeedOutlinedIcon />} />
+        <BottomNavigationAction
+          label="Categories"
+          icon={<CategoryIcon />}
+          sx={{ px: 0, minWidth: 2 }}
+        />
+        <BottomNavigationAction
+          label="Feed"
+          icon={<FeedOutlinedIcon />}
+          sx={{ px: 0 }}
+        />
         <BottomNavigationAction
           label="Message"
           icon={<MessageOutlinedIcon />}
+          sx={{ px: 0 }}
         />
         <BottomNavigationAction
           component={Link}
           to="/user"
           label="Me"
           icon={<AccountCircleOutlinedIcon />}
-        />
+          sx={{ px: 0 }}
+        /> */}
         {/* <BottomNavigationAction label="Archive" icon={<ArchiveIcon />} /> */}
       </BottomNavigation>
     </Paper>

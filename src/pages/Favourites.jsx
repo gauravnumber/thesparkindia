@@ -14,7 +14,9 @@ import {
 
 const Favourites = () => {
   return (
-    <Box m={1}>
+    <Box
+    // m={1}
+    >
       <Grid container spacing={2}>
         {Array.from(Array(12)).map((value, index) => (
           <Grid item xs={6} sm key={index}>

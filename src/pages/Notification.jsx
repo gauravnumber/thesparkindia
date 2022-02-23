@@ -57,7 +57,7 @@ const Notification = () => {
   return (
     <Box
       sx={{
-        p: 2,
+        p: 1,
         // display: "flex",
         // justifyContent: "center",
         // borderRadius: "12px",
