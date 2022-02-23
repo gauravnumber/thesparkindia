@@ -24,8 +24,8 @@ function App() {
     <Container
       // px={34}
       sx={{
-        paddingX: 0,
-        // paddingX: 1,
+        // paddingX: 0,
+        paddingX: 1,
         // margin: 0,
         // backgroundColor: "red",
       }}

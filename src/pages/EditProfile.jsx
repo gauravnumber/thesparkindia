@@ -47,7 +47,7 @@ const EditProfile = () => {
           <AccountCircleOutlinedIcon fontSize="10px" />
         </IconButton>
       </Box> */}
-      <Stack direction="column" spacing={3} mt={-5}>
+      <Stack direction="column" spacing={3} mt={-5} mx={-1}>
         <Stack
           justifyContent="center"
           alignItems="center"
