@@ -61,7 +61,7 @@ const Notification = () => {
         // display: "flex",
         // justifyContent: "center",
         // borderRadius: "12px",
-        // backgroundColor: "red",
+        // backgroundColor: "blue",
       }}
     >
       <List

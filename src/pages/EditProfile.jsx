@@ -211,7 +211,8 @@ const EditProfile = () => {
           <Button
             sx={{
               textTransform: "none",
-              color: "black",
+              color: (theme) => theme.palette.text.primary,
+              // color: "black",
               border: "1px solid grey",
               // borderColor: "grey[500]",
               width: "15rem",
