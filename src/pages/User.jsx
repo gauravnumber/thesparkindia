@@ -48,9 +48,9 @@ const User = () => {
     },
   ];
 
-  const FollowNumbers = styled(Box)(({ theme }) => ({
-    color: theme.palette.primary.main,
-  }));
+  // const FollowNumbers = styled(Box)(({ theme }) => ({
+  //   color: theme.palette.primary.main,
+  // }));
 
   return (
     <Grid container direction="column">

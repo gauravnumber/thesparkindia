@@ -15,6 +15,9 @@ const theme = createTheme({
       // default: red[500]
     }
   },
+  // typography: {
+  //   htmlFontSize: 20
+  // }
 });
 
 export default theme

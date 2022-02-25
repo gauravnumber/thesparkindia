@@ -40,9 +40,7 @@ const MyOrders = () => {
   const OrderTab = styled((props) => <Tab {...props} />)(({ theme }) => ({
     textTransform: "none",
     padding: 0,
-    minWidth: `${theme.typography.pxToRem(88)}`,
-    // minWidth: "88px",
-    // margin: 0,
+    minWidth: `${theme.typography.pxToRem(80)}`,
   }));
 
   return (
@@ -63,7 +61,7 @@ const MyOrders = () => {
           <TextField
             size="small"
             sx={{
-              width: "25ch",
+              width: "20ch",
             }}
             InputProps={{
               startAdornment: (
