@@ -3,18 +3,13 @@ import CategoryIcon from "@mui/icons-material/Category";
 import FeedOutlinedIcon from "@mui/icons-material/FeedOutlined";
 import HomeOutlinedIcon from "@mui/icons-material/HomeOutlined";
 import MessageOutlinedIcon from "@mui/icons-material/MessageOutlined";
-// import * as React from 'react';
-// import Box from '@mui/material/Box';
-// import CssBaseline from '@mui/material/CssBaseline';
 import BottomNavigation from "@mui/material/BottomNavigation";
 import BottomNavigationAction from "@mui/material/BottomNavigationAction";
 import Paper from "@mui/material/Paper";
-// import { Icon, Menu } from "semantic-ui-react";
 import { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 
 const LowBar = () => {
-  // const [currentPath, setCurrentPath] = useState(location.pathname);
   const [value, setValue] = useState(0);
   const location = useLocation();
 
@@ -54,9 +49,6 @@ const LowBar = () => {
         setValue(0);
       // console.log("none");
     }
-
-    // console.log(`window.location.path`, window.location.path);
-    // setCurrentPath(location.pathname);
   }, [location.pathname]);
 
   return (
@@ -66,7 +58,6 @@ const LowBar = () => {
     >
       <BottomNavigation
         showLabels
-        // value={4}
         value={value}
         onChange={(event, newValue) => {
           setValue(newValue);
@@ -83,82 +74,8 @@ const LowBar = () => {
             sx={{ px: 0, minWidth: 2 }}
           />
         ))}
-        {/* <BottomNavigationAction
-          label="Home"
-          icon={<HomeOutlinedIcon />}
-          component={Link}
-          to="/"
-          sx={{ px: 0, minWidth: 2 }}
-        />
-        <BottomNavigationAction
-          label="Categories"
-          icon={<CategoryIcon />}
-          sx={{ px: 0, minWidth: 2 }}
-        />
-        <BottomNavigationAction
-          label="Feed"
-          icon={<FeedOutlinedIcon />}
-          sx={{ px: 0 }}
-        />
-        <BottomNavigationAction
-          label="Message"
-          icon={<MessageOutlinedIcon />}
-          sx={{ px: 0 }}
-        />
-        <BottomNavigationAction
-          component={Link}
-          to="/user"
-          label="Me"
-          icon={<AccountCircleOutlinedIcon />}
-          sx={{ px: 0 }}
-        /> */}
-        {/* <BottomNavigationAction label="Archive" icon={<ArchiveIcon />} /> */}
       </BottomNavigation>
     </Paper>
-    // <div>
-    //   <Menu size="large" borderless fixed="bottom" fluid>
-    //     <Menu.Item as={Link} to="/" name="home" active={true}>
-    //       <div className="center">
-    //         <div>
-    //           <Icon name="home" />
-    //         </div>
-    //         <div>Home</div>
-    //       </div>
-    //     </Menu.Item>
-    //     <Menu.Item as={Link} to="/categories">
-    //       <div className="center">
-    //         <div>
-    //           <Icon name="grid layout" />
-    //         </div>
-    //         <div>Categories</div>
-    //       </div>
-    //     </Menu.Item>
-    //     <Menu.Item as={Link} to="/shop">
-    //       <div className="center">
-    //         <div>
-    //           <Icon name="shop" />
-    //         </div>
-    //         <div>Shop</div>
-    //       </div>
-    //     </Menu.Item>
-    //     <Menu.Item as={Link} to="/feed">
-    //       <div className="center">
-    //         <div>
-    //           <Icon name="feed" />
-    //         </div>
-    //         <div>Feed</div>
-    //       </div>
-    //     </Menu.Item>
-    //     <Menu.Item as={Link} to="/user">
-    //       <div className="center">
-    //         <div>
-    //           <Icon name="user" />
-    //         </div>
-    //         <div>Account</div>
-    //       </div>
-    //     </Menu.Item>
-    //   </Menu>
-    // </div>
   );
 };
 
