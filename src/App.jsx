@@ -26,7 +26,7 @@ function App() {
       // px={34}
       sx={{
         // paddingX: 0,
-        paddingX: 1,
+        paddingX: 0.5,
         // margin: 0,
         // backgroundColor: "red",
       }}

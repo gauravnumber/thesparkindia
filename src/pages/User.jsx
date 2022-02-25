@@ -98,6 +98,11 @@ const User = () => {
       <Grid item my={3}>
         <BottomNavigation
           showLabels
+          // sx={{
+          //   "&.MuiBottomNavigationAction-label": {
+          //     fontSize: "11px",
+          //   },
+          // }}
           // value={value}
           // onChange={(event, newValue) => {
           //   setValue(newValue);
@@ -106,13 +111,25 @@ const User = () => {
           {menu.map((item, key) => (
             <BottomNavigationAction
               key={key + item.name}
+              // sx={{
+              //   padding: 0,
+              //   // fontSize: "11px",
+              // }}
+              sx={{
+                padding: 0,
+
+                "&.MuiButtonBase-root .MuiBottomNavigationAction-label": {
+                  fontSize: (theme) => theme.typography.pxToRem(11),
+                },
+              }}
               label={item.name}
               component={Link}
               to={item.path ? item.path : "/"}
               icon={
-                <Paper elevation={5} sx={{ p: 2, borderRadius: "50%" }}>
-                  {item.icon}
-                </Paper>
+                item.icon
+                // <Paper elevation={5} sx={{ p: 2, borderRadius: "50%" }}>
+                // {item.icon}
+                // </Paper>
               }
             />
           ))}
