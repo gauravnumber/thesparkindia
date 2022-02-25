@@ -56,13 +56,15 @@ const Notification = () => {
 
   return (
     <Box
-      sx={{
-        p: 1,
-        // display: "flex",
-        // justifyContent: "center",
-        // borderRadius: "12px",
-        // backgroundColor: "blue",
-      }}
+      sx={
+        {
+          // p: 1,
+          // display: "flex",
+          // justifyContent: "center",
+          // borderRadius: "12px",
+          // backgroundColor: "blue",
+        }
+      }
     >
       <List
         sx={{

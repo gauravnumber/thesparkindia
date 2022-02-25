@@ -17,7 +17,7 @@ const RecentlyViewed = () => {
     <Box
     //  m={1}
     >
-      <Grid container spacing={2}>
+      <Grid container spacing={1.5}>
         {Array.from(Array(12)).map((value, index) => (
           <Grid item xs={6} sm key={index}>
             <Card sx={{ maxWidth: 345 }}>
