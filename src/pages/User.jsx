@@ -1,5 +1,3 @@
-import { Link } from "react-router-dom";
-
 import AccessTimeOutlinedIcon from "@mui/icons-material/AccessTimeOutlined";
 import ArrowForwardIosOutlinedIcon from "@mui/icons-material/ArrowForwardIosOutlined";
 import FavoriteBorderOutlinedIcon from "@mui/icons-material/FavoriteBorderOutlined";
@@ -19,9 +17,9 @@ import {
   ListItemText,
   Paper,
   Stack,
-  styled,
   Typography,
 } from "@mui/material";
+import { Link } from "react-router-dom";
 
 const User = () => {
   // const [value, setValue] = useState();
@@ -98,6 +96,7 @@ const User = () => {
       <Grid item my={3}>
         <BottomNavigation
           showLabels
+          sx={{ lineHeight: 1 }}
           // sx={{
           //   "&.MuiBottomNavigationAction-label": {
           //     fontSize: "11px",
@@ -120,16 +119,28 @@ const User = () => {
 
                 "&.MuiButtonBase-root .MuiBottomNavigationAction-label": {
                   fontSize: (theme) => theme.typography.pxToRem(11),
+                  marginTop: 1,
+                  // lineHeight: 1,
                 },
+
+                // "&.MuiButtonBase-root .MuiBottomNavigationAction-label": {
+                //   lineHeight: 1,
+                // },
               }}
               label={item.name}
               component={Link}
               to={item.path ? item.path : "/"}
               icon={
-                item.icon
-                // <Paper elevation={5} sx={{ p: 2, borderRadius: "50%" }}>
-                // {item.icon}
-                // </Paper>
+                // item.icon
+                <Paper
+                  elevation={5}
+                  sx={{
+                    p: 2,
+                    borderRadius: "50%",
+                  }}
+                >
+                  {item.icon}
+                </Paper>
               }
             />
           ))}
