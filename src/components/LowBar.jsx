@@ -22,6 +22,7 @@ const LowBar = () => {
     {
       name: "Categories",
       icon: <CategoryIcon />,
+      path: "/categories",
     },
     { name: "Feed", icon: <FeedOutlinedIcon /> },
     {
@@ -38,16 +39,16 @@ const LowBar = () => {
   useEffect(() => {
     switch (location.pathname) {
       case "/":
-        // console.log("0");
         setValue(0);
+        break;
+      case "/categories":
+        setValue(1);
         break;
       case "/user":
         setValue(4);
-        // console.log("4");
         break;
       default:
         setValue(0);
-      // console.log("none");
     }
   }, [location.pathname]);
 

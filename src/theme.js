@@ -15,6 +15,13 @@ const theme = createTheme({
       // default: red[500]
     }
   },
+  overrides: {
+    // MuiButtonBase: {
+    //   root: {
+    //   textTransform: 'none'
+    //   }
+    // }
+  }
   // typography: {
   //   htmlFontSize: 20
   // }
