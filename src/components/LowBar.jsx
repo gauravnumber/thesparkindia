@@ -26,8 +26,9 @@ const LowBar = () => {
     },
     { name: "Feed", icon: <FeedOutlinedIcon /> },
     {
-      name: "Message",
+      name: "Enquiry",
       icon: <MessageOutlinedIcon />,
+      path: "/enquiry",
     },
     {
       name: "Me",
@@ -43,6 +44,9 @@ const LowBar = () => {
         break;
       case "/categories":
         setValue(1);
+        break;
+      case "/enquiry":
+        setValue(3);
         break;
       case "/user":
         setValue(4);
