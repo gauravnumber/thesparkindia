@@ -15,7 +15,8 @@ import {
 import InfoIcon from "@mui/icons-material/Info";
 import EmojiEventsOutlinedIcon from "@mui/icons-material/EmojiEventsOutlined";
 
-import CategoriePanel from "../components/CategoriePanel";
+import CategoriePanel from "@/components/CategoriePanel";
+// import CategoriePanel from "../components/CategoriePanel";
 
 const Categories = () => {
   const [value, setValue] = useState(0);
