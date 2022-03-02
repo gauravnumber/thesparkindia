@@ -151,7 +151,19 @@ const Categories = () => {
         //   },
         // }}
         >
-          <ImageListItem key="subheader" cols={3}>
+          <ImageListItem
+            key="subheader"
+            cols={3}
+            sx={
+              {
+                // my: -6,
+                // "& .MuiImageList-root": {
+                //   mt: 0,
+                //   color: "red",
+                // },
+              }
+            }
+          >
             <ListSubheader
               component="div"
               // color={(theme) => theme.palette.primary.main}
