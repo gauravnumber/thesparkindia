@@ -13,7 +13,8 @@ export default function CategoriePanel(props) {
     >
       {value === index && (
         <Box sx={{ px: 1 }}>
-          <Typography>{children}</Typography>
+          {children}
+          {/* <Typography>{children}</Typography> */}
         </Box>
       )}
     </div>

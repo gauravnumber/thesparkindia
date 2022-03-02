@@ -1,6 +1,7 @@
 import { useState } from "react";
 import {
   styled,
+  // ListSubheader,
   Box,
   Tab,
   Tabs,
@@ -12,6 +13,7 @@ import {
   ListSubheader,
 } from "@mui/material";
 import InfoIcon from "@mui/icons-material/Info";
+import EmojiEventsOutlinedIcon from "@mui/icons-material/EmojiEventsOutlined";
 
 import CategoriePanel from "../components/CategoriePanel";
 
@@ -125,7 +127,11 @@ const Categories = () => {
           },
         }}
       >
-        <CategorieTab label="Popular" sx={{ minWidth: "unset" }} />
+        <CategorieTab
+          label="Popular"
+          icon={<EmojiEventsOutlinedIcon />}
+          sx={{ minWidth: "unset" }}
+        />
         <CategorieTab label="Item Two" />
         <CategorieTab label="Item Three" />
         <CategorieTab label="Item Four" />
@@ -135,15 +141,30 @@ const Categories = () => {
       </Tabs>
       <CategoriePanel value={value} index={0}>
         <ImageList
-          cols={3}
-          // gap={10}
-          // sx={{ width: 500, height: 450 }}
-          // sx={{
-          //   "&.MuiImageListItemBar-title": {
-          //     whiteSpace: "wrap",
-          //   },
-          // }}
+        // cols={3}
+        // gap={10}
+        // sx={{ width: 500, height: 450 }}
+        // sx={{
+        //   "&.MuiImageListItemBar-title": {
+        //     whiteSpace: "wrap",
+        //   },
+        // }}
         >
+          <ImageListItem key="subheader" cols={3}>
+            <ListSubheader
+              component="div"
+              // color={(theme) => theme.palette.primary.main}
+
+              sx={{
+                color: (theme) => theme.palette.text.primary,
+                p: 0,
+                lineHeight: (theme) => theme.typography.pxToRem(24),
+              }}
+            >
+              All Popular
+            </ListSubheader>
+            {/* <b>heading</b> */}
+          </ImageListItem>
           {Array.from(Array(10)).map((_, index) => (
             <ImageListItem
               key={index}
@@ -156,7 +177,7 @@ const Categories = () => {
               }}
             >
               <img
-                src="https://source.unsplash.com/10x10"
+                src="https://source.unsplash.com/100x100"
                 // width="10"
                 // src={`${item.img}?w=248&fit=crop&auto=format`}
                 // srcSet={`${item.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
@@ -175,6 +196,10 @@ const Categories = () => {
                 sx={{
                   textAlign: "center",
                   color: "text.secondary",
+                  ".MuiImageListItemBar-title": {
+                    whiteSpace: "unset",
+                    lineHeight: (theme) => theme.spacing(2),
+                  },
                   // ".MuiImageListItemBar-titleWrap &.MuiImageListItemBar-title":
                   //   {
                   //     whiteSpace: "wrap",
