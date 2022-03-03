@@ -15,7 +15,8 @@ import {
 import InfoIcon from "@mui/icons-material/Info";
 import EmojiEventsOutlinedIcon from "@mui/icons-material/EmojiEventsOutlined";
 
-import CategoriePanel from "../components/CategoriePanel";
+import CategoriePanel from "@/components/CategoriePanel";
+// import CategoriePanel from "../components/CategoriePanel";
 
 const Categories = () => {
   const [value, setValue] = useState(0);
@@ -150,7 +151,19 @@ const Categories = () => {
         //   },
         // }}
         >
-          <ImageListItem key="subheader" cols={3}>
+          <ImageListItem
+            key="subheader"
+            cols={3}
+            sx={
+              {
+                // my: -6,
+                // "& .MuiImageList-root": {
+                //   mt: 0,
+                //   color: "red",
+                // },
+              }
+            }
+          >
             <ListSubheader
               component="div"
               // color={(theme) => theme.palette.primary.main}
