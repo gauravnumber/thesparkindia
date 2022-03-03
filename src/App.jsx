@@ -9,6 +9,7 @@ import Header from "./components/Header";
 import Home from "./pages/Home";
 import Categories from "./pages/Categories";
 import Shop from "./pages/Shop";
+import Enquiry from "./pages/Enquiry";
 import Feed from "./pages/Feed";
 import User from "./pages/User";
 import Favourites from "./pages/Favourites";
@@ -38,7 +39,8 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/categories" element={<Categories />} />
         <Route path="/shop" element={<Shop />} />
-        <Route path="/feed" element={<Feed />} />
+        <Route path="/enquiry" element={<Enquiry />} />
+        {/* <Route path="/feed" element={<Feed />} /> */}
         <Route path="/user" element={<User />} />
         <Route path="/favourites" element={<Favourites />} />
         <Route path="/notification" element={<Notification />} />
