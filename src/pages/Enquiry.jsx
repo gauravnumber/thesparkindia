@@ -30,13 +30,20 @@ const Enquiry = () => {
   ];
 
   return (
-    <>
-      {" "}
+    <Box
+      sx={
+        {
+          // bgcolor: "background.paper",
+        }
+      }
+    >
       <TextField
         size="small"
         sx={{
           // width: "20ch",
-          borderRadius: "12px",
+          // borderRadius: "50%",
+          borderRadius: "15px",
+          bgcolor: "background.paper",
         }}
         InputProps={{
           // borderRadius: "12px",
@@ -53,18 +60,27 @@ const Enquiry = () => {
       />
       <List
         sx={{
-          width: "100%",
+          // width: "100%",
+          mt: 2,
+          mx: -1,
+          // px: -1,
+          py: 0,
           //  maxWidth: 360,
           bgcolor: "background.paper",
         }}
       >
         {enquiries.map((enquiry, index) => (
-          <>
+          <Box key={index}>
             <ListItem
-              key={index}
+              // key={index}
               // alignItems="flex-start"
               secondaryAction={
-                <Badge badgeContent={enquiry.unReadMessage} color="primary" />
+                <Badge
+                  badgeContent={enquiry.unReadMessage}
+                  // mr={2}
+                  sx={{ mr: 2 }}
+                  color="primary"
+                />
               }
             >
               <ListItemAvatar>
@@ -83,7 +99,7 @@ const Enquiry = () => {
               //  variant="inset"
               component="li"
             />
-          </>
+          </Box>
         ))}
         {/* <ListItem
           key="first"
@@ -164,7 +180,7 @@ const Enquiry = () => {
           />
         </ListItem> */}
       </List>
-    </>
+    </Box>
   );
 };
 
