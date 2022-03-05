@@ -5,10 +5,11 @@ const theme = createTheme({
   palette: {
     // mode: "dark",
     primary: {
-      main: blue.A200
+      main: blue.A200,
+
       // main: blue[400]
       // main: green["A700"],
-      // // main: red[500],
+      // main: red[500],
     },
     background: {
       // paper: red[500],
@@ -20,6 +21,13 @@ const theme = createTheme({
     MuiTypography: {
       defaultProps: {
         component: "div"
+      }
+    },
+    MuiButton: {
+      styleOverrides: {
+        root: {
+          textTransform: "none"
+        }
       }
     }
   },

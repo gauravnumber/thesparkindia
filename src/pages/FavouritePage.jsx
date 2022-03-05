@@ -1,4 +1,7 @@
 import {
+  Button,
+  Box,
+  Stack,
   Typography,
   Avatar,
   List,
@@ -31,7 +34,12 @@ const FavouritePage = () => {
         disablePadding
       >
         <ListItem
-          sx={{ my: 0, borderBottom: 1, borderColor: "divider" }}
+          sx={{
+            my: 0,
+            borderBottom: 1,
+            borderColor: "divider",
+            // alignItems:"flex-start"
+          }}
           secondaryAction="icon"
           // secondaryPosition="top"
           disablePadding
@@ -45,6 +53,7 @@ const FavouritePage = () => {
             <span>some</span>
           </ListItemAvatar>
           <ListItemText
+            sx={{ mt: "-4px" }}
             primary={
               <Typography
                 fontWeight={(theme) => theme.typography.fontWeightMedium}
@@ -63,7 +72,7 @@ const FavouritePage = () => {
                 </Typography>
                 <Typography
                   variant="caption"
-                  fontSize={(theme) => theme.typography.pxToRem(10)}
+                  fontSize={(theme) => theme.typography.pxToRem(9)}
                 >
                   3.5 / 5
                 </Typography>
@@ -89,13 +98,49 @@ const FavouritePage = () => {
                     Rs 680 per pc
                   </Typography>
                 </Typography>
-                <Typography
-                  variant="caption"
-                  color="text.secondary"
-                  fontSize={(theme) => theme.typography.pxToRem(11)}
+                <Stack
+                  direction="row"
+                  alignItems="center"
+                  justifyContent="space-between"
+                  // sx={{ display: "flex" }}
+                  // variant="caption"
+                  // color="text.secondary"
+                  // fontSize={(theme) => theme.typography.pxToRem(10)}
                 >
-                  Min Qty. 10 (negotiable)
-                </Typography>
+                  <Typography
+                    variant="caption"
+                    color="text.secondary"
+                    fontSize={(theme) => theme.typography.pxToRem(10)}
+                  >
+                    Min Qty. 10 (negotiable)
+                  </Typography>
+                  <Stack
+                    direction="row"
+                    spacing={1}
+                    //  ml={5}
+                  >
+                    <Button
+                      color="error"
+                      sx={{ bgcolor: "background.default", p: 0.2 }}
+                    >
+                      Add to Cart
+                    </Button>
+                    <Button
+                      sx={{
+                        p: 0.2,
+                        bgcolor: "error.main",
+                        color: "error.contrastText",
+                        //! hover not color red
+                        ".MuiButtonBase-root &:hover": {
+                          // bgcolor: "error",
+                          color: "error",
+                        },
+                      }}
+                    >
+                      Buy Now
+                    </Button>
+                  </Stack>
+                </Stack>
               </Typography>
             }
           />
