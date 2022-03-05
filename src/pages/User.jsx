@@ -89,9 +89,9 @@ const User = () => {
     >
       {/*! GlobalStyles not working*/}
       <GlobalStyles
-        style={{
+        styles={{
           body: {
-            color: "pink",
+            // color: "pink",
             backgroundColor: "#fff",
           },
         }}

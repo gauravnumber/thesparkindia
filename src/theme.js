@@ -16,13 +16,13 @@ const theme = createTheme({
       default: grey[100]
     }
   },
-  overrides: {
-    // MuiButtonBase: {
-    //   root: {
-    //   textTransform: 'none'
-    //   }
-    // }
-  }
+  components: {
+    MuiTypography: {
+      defaultProps: {
+        component: "div"
+      }
+    }
+  },
   // typography: {
   //   htmlFontSize: 20
   // }
