@@ -1,4 +1,7 @@
+import FavoriteBorderOutlinedIcon from "@mui/icons-material/FavoriteBorderOutlined";
+
 import {
+  IconButton,
   Button,
   Box,
   Stack,
@@ -35,25 +38,79 @@ const FavouritePage = () => {
       >
         <ListItem
           sx={{
+            display: "flex",
+            alignItems: "flex-start",
             my: 0,
             borderBottom: 1,
             borderColor: "divider",
             // alignItems:"flex-start"
           }}
-          secondaryAction="icon"
+          secondaryAction={
+            <IconButton size="small">
+              <FavoriteBorderOutlinedIcon />
+            </IconButton>
+          }
           // secondaryPosition="top"
           disablePadding
         >
-          <ListItemAvatar>
+          <ListItemAvatar
+            sx={{
+              display: "flex",
+              justifyContent: "space-between",
+              flexDirection: "column",
+              alignItems: "center",
+              // height: 100,
+              height: (theme) => theme.typography.pxToRem(121),
+            }}
+          >
+            {/* <Box
+              sx={{
+                display: "flex",
+                justifyContent: "space-between",
+                flexDirection: "column",
+                alignItems: "center",
+                height: "100%",
+              }}
+            > */}
             <Avatar
               alt="Remy Sharp"
               src="https://source.unsplash.com/100x100"
               sx={{ borderRadius: 3 }}
             />
-            <span>some</span>
+            <Typography
+              p={0.5}
+              fontSize={(theme) => theme.typography.pxToRem(11)}
+              sx={{
+                borderRadius: 2,
+                bgcolor: "red",
+                color: "text.primary",
+              }}
+            >
+              15% off
+            </Typography>
+            {/* </Box> */}
+            {/* <Box
+              sx={{
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                mt: 2,
+                borderRadius: 2,
+                bgcolor: "red",
+                color: "text.primary",
+                // color: (theme) => theme.palette.primary.contrastText,
+              }}
+            >
+              <Typography
+                p={0.5}
+                fontSize={(theme) => theme.typography.pxToRem(11)}
+              >
+                15% off
+              </Typography>
+            </Box> */}
           </ListItemAvatar>
           <ListItemText
-            sx={{ mt: "-4px" }}
+            sx={{ mt: "-4px", ml: 1 }}
             primary={
               <Typography
                 fontWeight={(theme) => theme.typography.fontWeightMedium}
