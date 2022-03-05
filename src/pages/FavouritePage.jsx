@@ -13,18 +13,25 @@ const FavouritePage = () => {
 
   return (
     <>
-      <GlobalStyles
+      {/* <GlobalStyles
         styles={{
           body: {
             backgroundColor: "white",
           },
         }}
-      />
+      /> */}
       <List
-      //  disablePadding
+        sx={{
+          bgcolor: (theme) => theme.palette.background.paper,
+          px: 2,
+          mx: -2,
+          pt: 10,
+          mt: -10,
+        }}
+        disablePadding
       >
         <ListItem
-          sx={{ my: 0 }}
+          sx={{ my: 0, borderBottom: 1, borderColor: "divider" }}
           secondaryAction="icon"
           // secondaryPosition="top"
           disablePadding
