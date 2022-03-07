@@ -74,8 +74,14 @@ const FavouritePage = () => {
             > */}
             <Avatar
               alt="Remy Sharp"
-              src="https://source.unsplash.com/100x100"
-              sx={{ borderRadius: 3 }}
+              src="https://source.unsplash.com/75x75"
+              // size={75}
+              sx={{
+                borderRadius: "5px",
+
+                width: (theme) => theme.typography.pxToRem(75),
+                height: (theme) => theme.typography.pxToRem(75),
+              }}
             />
             <Typography
               p={0.5}
@@ -89,7 +95,9 @@ const FavouritePage = () => {
                 color: "text.primary",
                 bgcolor: "red",
                 borderRadius: "5px",
-                mt: 2,
+                mt: 1,
+                background:
+                  "linear-gradient(90deg, #FF2608 0%, rgba(255, 100, 58, 0.87) 100%)",
                 // background: linearGradient(
                 //   "90deg",
                 //   "#FF2608",
@@ -164,6 +172,7 @@ const FavouritePage = () => {
                   // fontSize={(theme) => theme.typography.pxToRem(10)}
                   sx={{
                     display: "flex",
+                    mt: 2,
 
                     // fontSize: (theme) => theme.typography.pxToRem(12),
                     // justifyContent: "space-around"
