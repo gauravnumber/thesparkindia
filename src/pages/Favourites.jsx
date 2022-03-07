@@ -1,3 +1,4 @@
+import { Link, Outlet } from "react-router-dom";
 import { FavoriteBorderOutlined as FavoriteIcon } from "@mui/icons-material";
 import MoreVertIcon from "@mui/icons-material/MoreVert";
 import {
@@ -23,6 +24,7 @@ const Favourites = () => {
       spacing={2}
       // m={1}
     >
+      {/* <Outlet /> */}
       {Array.from(Array(4)).map((_, index) => (
         <Paper key={index} elevation={3}>
           <Grid container direction="column">
@@ -37,7 +39,9 @@ const Favourites = () => {
               <Grid item xs>
                 <Typography
                   variant="h6"
-                  component="div"
+                  component={Link}
+                  to="led"
+                  // component="div"
                   // color="blue"
                   // color="text.primary"
                   // color="text.secondary"
