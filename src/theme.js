@@ -5,10 +5,11 @@ const theme = createTheme({
   palette: {
     // mode: "dark",
     primary: {
-      main: blue.A200
+      main: blue.A200,
+
       // main: blue[400]
       // main: green["A700"],
-      // // main: red[500],
+      // main: red[500],
     },
     background: {
       // paper: red[500],
@@ -16,13 +17,20 @@ const theme = createTheme({
       default: grey[100]
     }
   },
-  overrides: {
-    // MuiButtonBase: {
-    //   root: {
-    //   textTransform: 'none'
-    //   }
-    // }
-  }
+  components: {
+    MuiTypography: {
+      defaultProps: {
+        component: "div"
+      }
+    },
+    MuiButton: {
+      styleOverrides: {
+        root: {
+          textTransform: "none"
+        }
+      }
+    }
+  },
   // typography: {
   //   htmlFontSize: 20
   // }
