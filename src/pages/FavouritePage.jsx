@@ -60,7 +60,7 @@ const FavouritePage = () => {
               flexDirection: "column",
               alignItems: "center",
               // height: 100,
-              height: (theme) => theme.typography.pxToRem(121),
+              // height: (theme) => theme.typography.pxToRem(121),
             }}
           >
             {/* <Box
@@ -81,9 +81,22 @@ const FavouritePage = () => {
               p={0.5}
               fontSize={(theme) => theme.typography.pxToRem(11)}
               sx={{
-                borderRadius: 2,
-                bgcolor: "red",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                width: (theme) => theme.typography.pxToRem(61),
+                height: (theme) => theme.typography.pxToRem(20),
                 color: "text.primary",
+                bgcolor: "red",
+                borderRadius: "5px",
+                mt: 2,
+                // background: linearGradient(
+                //   "90deg",
+                //   "#FF2608",
+                //   "0%",
+                //   rgba(255, 100, 58, 0.87),
+                //   "100%"
+                // ),
               }}
             >
               15% off
@@ -113,7 +126,17 @@ const FavouritePage = () => {
             sx={{ mt: "-4px", ml: 1 }}
             primary={
               <Typography
-                fontWeight={(theme) => theme.typography.fontWeightMedium}
+                display="flex"
+                alignItems="center"
+                width={(theme) => theme.typography.pxToRem(179)}
+                height={(theme) => theme.typography.pxToRem(32)}
+                fontWeight={500}
+                fontStyle="normal"
+                fontSize={(theme) => theme.typography.pxToRem(14)}
+                lineHeight={(theme) => theme.typography.pxToRem(16)}
+                letterSpacing="0.02em"
+
+                // fontWeight={(theme) => theme.typography.fontWeightMedium}
               >
                 Super cool 3 mode LED 3v special graded
               </Typography>
@@ -123,34 +146,39 @@ const FavouritePage = () => {
                 <Typography
                   variant="subtitle2"
                   fontWeight={400}
+                  fontSize={(theme) => theme.typography.pxToRem(10)}
                   // fontWeight={(theme) => theme.typography.fontWeightNormal}
                 >
                   Umar Retail marketing
                 </Typography>
                 <Typography
                   variant="caption"
-                  fontSize={(theme) => theme.typography.pxToRem(9)}
+                  fontSize={(theme) => theme.typography.pxToRem(6.8)}
                 >
                   3.5 / 5
                 </Typography>
                 <Typography
-                  variant="caption"
+                  // variant="caption"
+                  // fontWeight={(theme) => theme.typography.fontWeightMedium}
+                  fontWeight={400}
+                  // fontSize={(theme) => theme.typography.pxToRem(10)}
                   sx={{
                     display: "flex",
+
                     // fontSize: (theme) => theme.typography.pxToRem(12),
                     // justifyContent: "space-around"
                   }}
                 >
                   <Typography
                     color="text.secondary"
-                    fontSize={(theme) => theme.typography.pxToRem(12)}
+                    fontSize={(theme) => theme.typography.pxToRem(10)}
                   >
                     Rs <del>799</del>
                   </Typography>
                   <Typography
                     ml={2}
-                    fontWeight={(theme) => theme.typography.fontWeightMedium}
-                    fontSize={(theme) => theme.typography.pxToRem(12)}
+                    // fontWeight={(theme) => theme.typography.fontWeightMedium}
+                    fontSize={(theme) => theme.typography.pxToRem(10)}
                   >
                     Rs 680 per pc
                   </Typography>
@@ -167,7 +195,7 @@ const FavouritePage = () => {
                   <Typography
                     variant="caption"
                     color="text.secondary"
-                    fontSize={(theme) => theme.typography.pxToRem(10)}
+                    fontSize={(theme) => theme.typography.pxToRem(8)}
                   >
                     Min Qty. 10 (negotiable)
                   </Typography>
@@ -177,22 +205,48 @@ const FavouritePage = () => {
                     //  ml={5}
                   >
                     <Button
-                      color="error"
-                      sx={{ bgcolor: "background.default", p: 0.2 }}
+                      // color="error"
+                      sx={{
+                        color: "#C33838",
+                        bgcolor: "#ECECEC",
+                        fontSize: "10px",
+                        fontWeight: 400,
+                        p: 0.2,
+                        borderRadius: "5px",
+                        width: "69px",
+                        height: "20px",
+                      }}
+                      // sx={{ bgcolor: "background.default", p: 0.2 }}
                     >
                       Add to Cart
                     </Button>
                     <Button
                       sx={{
+                        color: "white",
+                        bgcolor: "#C43838",
+                        // bgcolor: "#ECECEC",
+                        fontSize: "10px",
+                        fontWeight: 400,
                         p: 0.2,
-                        bgcolor: "error.main",
-                        color: "error.contrastText",
-                        //! hover not color red
-                        ".MuiButtonBase-root &:hover": {
-                          // bgcolor: "error",
-                          color: "error",
+                        borderRadius: "5px",
+                        width: "69px",
+                        height: "20px",
+                        "&:hover": {
+                          color: "#C43838",
+                          border: 0,
                         },
                       }}
+
+                      // sx={{
+                      //   p: 0.2,
+                      //   bgcolor: "error.main",
+                      //   color: "error.contrastText",
+                      //   //! hover not color red
+                      //   ".MuiButtonBase-root &:hover": {
+                      //     // bgcolor: "error",
+                      //     color: "error",
+                      //   },
+                      // }}
                     >
                       Buy Now
                     </Button>
