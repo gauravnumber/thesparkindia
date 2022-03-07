@@ -1,6 +1,7 @@
 import FavoriteBorderOutlinedIcon from "@mui/icons-material/FavoriteBorderOutlined";
 
 import {
+  Rating,
   IconButton,
   Button,
   Box,
@@ -160,10 +161,16 @@ const FavouritePage = () => {
                   Umar Retail marketing
                 </Typography>
                 <Typography
-                  variant="caption"
+                  // variant="caption"
                   fontSize={(theme) => theme.typography.pxToRem(6.8)}
                 >
-                  3.5 / 5
+                  3.5 / 5{" "}
+                  <Rating
+                    value={3.5}
+                    precision={0.5}
+                    sx={{ fontSize: "unset" }}
+                    readOnly
+                  />
                 </Typography>
                 <Typography
                   // variant="caption"
