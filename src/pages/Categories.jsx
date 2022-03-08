@@ -18,6 +18,7 @@ import {
 } from "@mui/material";
 import InfoIcon from "@mui/icons-material/Info";
 import EmojiEventsOutlinedIcon from "@mui/icons-material/EmojiEventsOutlined";
+import FilterAltOutlinedIcon from "@mui/icons-material/FilterAltOutlined";
 
 import CategoriePanel from "@/components/CategoriePanel";
 import CategoryTab from "@/components/CategoryTab";
@@ -38,7 +39,8 @@ const Categories = () => {
         // flexDirection: "column",
         bgcolor: "background.paper",
         // p: 2,
-        m: -1,
+        mx: -1,
+        my: -3,
 
         // height: 224,
       }}
@@ -94,28 +96,67 @@ const Categories = () => {
         // }}
         >
           {/* <Divider /> */}
-          <Divider
-            textAlign="left"
-            sx={{
-              width: "214px",
-            }}
-            // flexItem
+          {/* <ImageListItem
+            key="divider"
+            //  cols={1}
           >
-            Popular
-          </Divider>
+            <Divider /> */}
+          {/* <Divider
+              // textAlign="left"
+              sx={{
+                width: "100%",
+                // width: "114px",
+                // width: "214px",
+              }}
+              // flexItem
+            >
+              Popular
+            </Divider> */}
+          {/* </ImageListItem> */}
+          {/* <Divider
+            // component={ImageListItem}
+            textAlign="left"
+          /> */}
+
+          <ImageListItem
+            key="popular"
+            cols={3}
+            sx={{
+              my: 2,
+              "& .MuiDivider-root": {
+                // color: "#e4e4e4",
+                fontSize: (theme) => theme.typography.pxToRem(13),
+                // lineHeight: (theme) => theme.typography.pxToRem(15),
+              },
+              "& .MuiDivider-root::before": {
+                width: 0,
+              },
+            }}
+          >
+            <Divider
+              textAlign="left"
+              sx={{
+                color: "#8e8e8e",
+              }}
+            >
+              Popular
+            </Divider>
+          </ImageListItem>
 
           <ImageListItem
             key="subheader"
             cols={3}
-            sx={
-              {
-                // my: -6,
-                // "& .MuiImageList-root": {
-                //   mt: 0,
-                //   color: "red",
-                // },
-              }
-            }
+            sx={{
+              display: "flex",
+              flexDirection: "row",
+              alignItems: "center",
+              justifyContent: "space-between",
+              // my: -6,
+              // "& .MuiImageList-root": {
+              //   mt: 0,
+              //   color: "red",
+              // },
+            }}
           >
             <ListSubheader
               component="div"
@@ -128,8 +169,12 @@ const Categories = () => {
             >
               All Popular
             </ListSubheader>
+            <IconButton size="small" sx={{ mr: 0.5 }}>
+              <FilterAltOutlinedIcon />
+            </IconButton>
             {/* <b>heading</b> */}
           </ImageListItem>
+
           {Array.from(Array(10)).map((_, index) => (
             <ImageListItem
               key={index}
@@ -143,7 +188,7 @@ const Categories = () => {
               }}
             >
               <img
-                src="https://source.unsplash.com/80x83"
+                src="https://source.unsplash.com/80x83?shoes"
                 // width="10"
                 // src={`${item.img}?w=248&fit=crop&auto=format`}
                 // srcSet={`${item.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
