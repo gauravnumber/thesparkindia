@@ -1,6 +1,8 @@
 import { useState } from "react";
 import {
+  Stack,
   GlobalStyles,
+  Divider,
   Avatar,
   styled,
   // ListSubheader,
@@ -18,7 +20,7 @@ import InfoIcon from "@mui/icons-material/Info";
 import EmojiEventsOutlinedIcon from "@mui/icons-material/EmojiEventsOutlined";
 
 import CategoriePanel from "@/components/CategoriePanel";
-import CategorieTab from "@/components/CategorieTab";
+import CategoryTab from "@/components/CategoryTab";
 // import CategoriePanel from "../components/CategoriePanel";
 
 const Categories = () => {
@@ -33,6 +35,7 @@ const Categories = () => {
       sx={{
         // flexGrow: 1,
         display: "flex",
+        // flexDirection: "column",
         bgcolor: "background.paper",
         // p: 2,
         m: -1,
@@ -45,6 +48,14 @@ const Categories = () => {
           body: { backgroundColor: "#fff" },
         }}
       />
+      {/* <Stack direction="column"> */}
+      {/* <Divider
+          textAlign="left"
+          //  flexItem
+        >
+          Popular
+        </Divider> */}
+      {/* <Stack direction="row"> */}
       <Tabs
         orientation="vertical"
         variant="scrollable"
@@ -59,17 +70,17 @@ const Categories = () => {
           },
         }}
       >
-        <CategorieTab
+        <CategoryTab
           label="Popular"
           icon={<EmojiEventsOutlinedIcon />}
           sx={{ minWidth: "unset" }}
         />
-        <CategorieTab label="Item Two" />
-        <CategorieTab label="Item Three" />
-        <CategorieTab label="Item Four" />
-        <CategorieTab label="Item Five" />
-        <CategorieTab label="Item Six" />
-        <CategorieTab label="Item Seven" />
+        <CategoryTab label="Item Two" />
+        <CategoryTab label="Item Three" />
+        <CategoryTab label="Item Four" />
+        <CategoryTab label="Item Five" />
+        <CategoryTab label="Item Six" />
+        <CategoryTab label="Item Seven" />
       </Tabs>
       <CategoriePanel value={value} index={0}>
         <ImageList
@@ -82,6 +93,17 @@ const Categories = () => {
         //   },
         // }}
         >
+          {/* <Divider /> */}
+          <Divider
+            textAlign="left"
+            sx={{
+              width: "214px",
+            }}
+            // flexItem
+          >
+            Popular
+          </Divider>
+
           <ImageListItem
             key="subheader"
             cols={3}
@@ -98,7 +120,6 @@ const Categories = () => {
             <ListSubheader
               component="div"
               // color={(theme) => theme.palette.primary.main}
-
               sx={{
                 color: (theme) => theme.palette.text.primary,
                 p: 0,
@@ -113,7 +134,8 @@ const Categories = () => {
             <ImageListItem
               key={index}
               sx={{
-                width: 83,
+                width: 80,
+                height: 114,
                 // borderRadius: 12,
                 // "&.MuiImageListItemBar-title": {
                 //   whiteSpace: "wrap",
@@ -121,7 +143,7 @@ const Categories = () => {
               }}
             >
               <img
-                src="https://source.unsplash.com/83x80"
+                src="https://source.unsplash.com/80x83"
                 // width="10"
                 // src={`${item.img}?w=248&fit=crop&auto=format`}
                 // srcSet={`${item.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
@@ -134,7 +156,7 @@ const Categories = () => {
                 }}
               />
               <ImageListItemBar
-                title="Random text"
+                title="Popular shoes for women"
                 // title={item.title}
                 // subtitle={item.author}
                 position="below"
@@ -144,26 +166,11 @@ const Categories = () => {
                   ".MuiImageListItemBar-title": {
                     fontWeight: "fontWeightRegular",
                     whiteSpace: "unset",
+                    height: (theme) => theme.typography.pxToRem(26),
                     fontSize: (theme) => theme.typography.pxToRem(11),
                     lineHeight: (theme) => theme.typography.pxToRem(12.89),
                   },
-                  // ".MuiImageListItemBar-titleWrap &.MuiImageListItemBar-title":
-                  //   {
-                  //     whiteSpace: "wrap",
-                  //   },
-                  // whiteSpace: "break-spaces",
-                  // wordWrap: "nowrap",
-                  // borderRadius: (theme) => theme.shape.borderRadius,
                 }}
-                // actionPosition="right"
-                // actionIcon={
-                //   <IconButton
-                //     sx={{ color: "rgba(255, 255, 255, 0.54)" }}
-                //     aria-label={`info about ${item.title}`}
-                //   >
-                //     <InfoIcon />
-                //   </IconButton>
-                // }
               />
             </ImageListItem>
           ))}
@@ -187,6 +194,8 @@ const Categories = () => {
       <CategoriePanel value={value} index={6}>
         Item Seven
       </CategoriePanel>
+      {/* </Stack>
+      </Stack> */}
     </Box>
   );
 };
