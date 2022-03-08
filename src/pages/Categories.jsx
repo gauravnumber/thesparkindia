@@ -1,5 +1,9 @@
 import { useState } from "react";
 import {
+  Stack,
+  GlobalStyles,
+  Divider,
+  Avatar,
   styled,
   // ListSubheader,
   Box,
@@ -14,8 +18,10 @@ import {
 } from "@mui/material";
 import InfoIcon from "@mui/icons-material/Info";
 import EmojiEventsOutlinedIcon from "@mui/icons-material/EmojiEventsOutlined";
+import FilterAltOutlinedIcon from "@mui/icons-material/FilterAltOutlined";
 
 import CategoriePanel from "@/components/CategoriePanel";
+import CategoryTab from "@/components/CategoryTab";
 // import CategoriePanel from "../components/CategoriePanel";
 
 const Categories = () => {
@@ -25,95 +31,33 @@ const Categories = () => {
     setValue(newValue);
   };
 
-  const CategorieTab = styled((props) => <Tab {...props} />)(({ theme }) => ({
-    textTransform: "none",
-    padding: 0,
-    // minWidth: `${theme.typography.pxToRem(80)}`,
-  }));
-
-  // const itemData = [
-  //   {
-  //     img: "https://images.unsplash.com/photo-1551963831-b3b1ca40c98e",
-  //     title: "Breakfast",
-  //     author: "@bkristastucchio",
-  //     rows: 2,
-  //     cols: 2,
-  //     featured: true,
-  //   },
-  //   {
-  //     img: "https://images.unsplash.com/photo-1551782450-a2132b4ba21d",
-  //     title: "Burger",
-  //     author: "@rollelflex_graphy726",
-  //   },
-  //   {
-  //     img: "https://images.unsplash.com/photo-1522770179533-24471fcdba45",
-  //     title: "Camera",
-  //     author: "@helloimnik",
-  //   },
-  //   {
-  //     img: "https://images.unsplash.com/photo-1444418776041-9c7e33cc5a9c",
-  //     title: "Coffee",
-  //     author: "@nolanissac",
-  //     cols: 2,
-  //   },
-  //   {
-  //     img: "https://images.unsplash.com/photo-1533827432537-70133748f5c8",
-  //     title: "Hats",
-  //     author: "@hjrc33",
-  //     cols: 2,
-  //   },
-  //   {
-  //     img: "https://images.unsplash.com/photo-1558642452-9d2a7deb7f62",
-  //     title: "Honey",
-  //     author: "@arwinneil",
-  //     rows: 2,
-  //     cols: 2,
-  //     featured: true,
-  //   },
-  //   {
-  //     img: "https://images.unsplash.com/photo-1516802273409-68526ee1bdd6",
-  //     title: "Basketball",
-  //     author: "@tjdragotta",
-  //   },
-  //   {
-  //     img: "https://images.unsplash.com/photo-1518756131217-31eb79b20e8f",
-  //     title: "Fern",
-  //     author: "@katie_wasserman",
-  //   },
-  //   {
-  //     img: "https://images.unsplash.com/photo-1597645587822-e99fa5d45d25",
-  //     title: "Mushrooms",
-  //     author: "@silverdalex",
-  //     rows: 2,
-  //     cols: 2,
-  //   },
-  //   {
-  //     img: "https://images.unsplash.com/photo-1567306301408-9b74779a11af",
-  //     title: "Tomato basil",
-  //     author: "@shelleypauls",
-  //   },
-  //   {
-  //     img: "https://images.unsplash.com/photo-1471357674240-e1a485acb3e1",
-  //     title: "Sea star",
-  //     author: "@peterlaster",
-  //   },
-  //   {
-  //     img: "https://images.unsplash.com/photo-1589118949245-7d38baf380d6",
-  //     title: "Bike",
-  //     author: "@southside_customs",
-  //     cols: 2,
-  //   },
-  // ];
-
   return (
     <Box
       sx={{
         // flexGrow: 1,
-        bgcolor: "background.paper",
         display: "flex",
+        // flexDirection: "column",
+        bgcolor: "background.paper",
+        // p: 2,
+        mx: -1,
+        my: -3,
+
         // height: 224,
       }}
     >
+      <GlobalStyles
+        styles={{
+          body: { backgroundColor: "#fff" },
+        }}
+      />
+      {/* <Stack direction="column"> */}
+      {/* <Divider
+          textAlign="left"
+          //  flexItem
+        >
+          Popular
+        </Divider> */}
+      {/* <Stack direction="row"> */}
       <Tabs
         orientation="vertical"
         variant="scrollable"
@@ -128,17 +72,17 @@ const Categories = () => {
           },
         }}
       >
-        <CategorieTab
+        <CategoryTab
           label="Popular"
           icon={<EmojiEventsOutlinedIcon />}
           sx={{ minWidth: "unset" }}
         />
-        <CategorieTab label="Item Two" />
-        <CategorieTab label="Item Three" />
-        <CategorieTab label="Item Four" />
-        <CategorieTab label="Item Five" />
-        <CategorieTab label="Item Six" />
-        <CategorieTab label="Item Seven" />
+        <CategoryTab label="Item Two" />
+        <CategoryTab label="Item Three" />
+        <CategoryTab label="Item Four" />
+        <CategoryTab label="Item Five" />
+        <CategoryTab label="Item Six" />
+        <CategoryTab label="Item Seven" />
       </Tabs>
       <CategoriePanel value={value} index={0}>
         <ImageList
@@ -151,23 +95,72 @@ const Categories = () => {
         //   },
         // }}
         >
+          {/* <Divider /> */}
+          {/* <ImageListItem
+            key="divider"
+            //  cols={1}
+          >
+            <Divider /> */}
+          {/* <Divider
+              // textAlign="left"
+              sx={{
+                width: "100%",
+                // width: "114px",
+                // width: "214px",
+              }}
+              // flexItem
+            >
+              Popular
+            </Divider> */}
+          {/* </ImageListItem> */}
+          {/* <Divider
+            // component={ImageListItem}
+            textAlign="left"
+          /> */}
+
+          <ImageListItem
+            key="popular"
+            cols={3}
+            sx={{
+              my: 2,
+              "& .MuiDivider-root": {
+                // color: "#e4e4e4",
+                fontSize: (theme) => theme.typography.pxToRem(13),
+                // lineHeight: (theme) => theme.typography.pxToRem(15),
+              },
+              "& .MuiDivider-root::before": {
+                width: 0,
+              },
+            }}
+          >
+            <Divider
+              textAlign="left"
+              sx={{
+                color: "#8e8e8e",
+              }}
+            >
+              Popular
+            </Divider>
+          </ImageListItem>
+
           <ImageListItem
             key="subheader"
             cols={3}
-            sx={
-              {
-                // my: -6,
-                // "& .MuiImageList-root": {
-                //   mt: 0,
-                //   color: "red",
-                // },
-              }
-            }
+            sx={{
+              display: "flex",
+              flexDirection: "row",
+              alignItems: "center",
+              justifyContent: "space-between",
+              // my: -6,
+              // "& .MuiImageList-root": {
+              //   mt: 0,
+              //   color: "red",
+              // },
+            }}
           >
             <ListSubheader
               component="div"
               // color={(theme) => theme.palette.primary.main}
-
               sx={{
                 color: (theme) => theme.palette.text.primary,
                 p: 0,
@@ -176,13 +169,18 @@ const Categories = () => {
             >
               All Popular
             </ListSubheader>
+            <IconButton size="small" sx={{ mr: 0.5 }}>
+              <FilterAltOutlinedIcon />
+            </IconButton>
             {/* <b>heading</b> */}
           </ImageListItem>
+
           {Array.from(Array(10)).map((_, index) => (
             <ImageListItem
               key={index}
               sx={{
-                width: 70,
+                width: 80,
+                height: 114,
                 // borderRadius: 12,
                 // "&.MuiImageListItemBar-title": {
                 //   whiteSpace: "wrap",
@@ -190,19 +188,20 @@ const Categories = () => {
               }}
             >
               <img
-                src="https://source.unsplash.com/100x100"
+                src="https://source.unsplash.com/80x83?shoes"
                 // width="10"
                 // src={`${item.img}?w=248&fit=crop&auto=format`}
                 // srcSet={`${item.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
                 alt="Random alt"
-                loading="lazy"
+                // loading="lazy"
                 style={{
-                  borderRadius: 12,
+                  // borderRadius: "unset",
+                  borderRadius: 5,
                   // borderRadius: (theme) => theme.shape.borderRadius,
                 }}
               />
               <ImageListItemBar
-                title="Random text"
+                title="Popular shoes for women"
                 // title={item.title}
                 // subtitle={item.author}
                 position="below"
@@ -210,26 +209,13 @@ const Categories = () => {
                   textAlign: "center",
                   color: "text.secondary",
                   ".MuiImageListItemBar-title": {
+                    fontWeight: "fontWeightRegular",
                     whiteSpace: "unset",
-                    lineHeight: (theme) => theme.spacing(2),
+                    height: (theme) => theme.typography.pxToRem(26),
+                    fontSize: (theme) => theme.typography.pxToRem(11),
+                    lineHeight: (theme) => theme.typography.pxToRem(12.89),
                   },
-                  // ".MuiImageListItemBar-titleWrap &.MuiImageListItemBar-title":
-                  //   {
-                  //     whiteSpace: "wrap",
-                  //   },
-                  // whiteSpace: "break-spaces",
-                  // wordWrap: "nowrap",
-                  // borderRadius: (theme) => theme.shape.borderRadius,
                 }}
-                // actionPosition="right"
-                // actionIcon={
-                //   <IconButton
-                //     sx={{ color: "rgba(255, 255, 255, 0.54)" }}
-                //     aria-label={`info about ${item.title}`}
-                //   >
-                //     <InfoIcon />
-                //   </IconButton>
-                // }
               />
             </ImageListItem>
           ))}
@@ -253,6 +239,8 @@ const Categories = () => {
       <CategoriePanel value={value} index={6}>
         Item Seven
       </CategoriePanel>
+      {/* </Stack>
+      </Stack> */}
     </Box>
   );
 };
