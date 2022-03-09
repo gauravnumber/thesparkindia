@@ -67,9 +67,25 @@ const Categories = () => {
         // TabIndicatorProps={{ left: 0 }}
         // sx={{ borderLeft: 1, borderColor: "divider" }}
         sx={{
+          "& .MuiSvgIcon-root": {
+            width: 22,
+            height: 22,
+          },
           ".MuiTabs-indicator": {
             left: 0,
           },
+          "& .MuiTab-root": {
+            bgcolor: "#e1eeff",
+            mb: "1px",
+          },
+
+          "& .Mui-selected": {
+            color: "c04aad",
+            bgcolor: "white",
+            // mb: 4,
+          },
+
+          // bgcolor: "#e1eeff",
         }}
       >
         <CategoryTab
