@@ -9,10 +9,12 @@ const CategoryTab = styled((props) => <Tab {...props} />)(({ theme }) => {
     // width: 60,
     // height: 66,
 
-    // color: "#864aad",
+    color: "inherit",
     // backgroundCololr: "#red",
     // backgroundCololr: "#e1eeff",
     fontSize: (theme) => theme.typogrpahy.pxToRem(9),
+    // lineHeight: (theme) => theme.typogrpahy.pxToRem(11),
+    // opacity: 0.33,
     fontWeight: "400",
     textTransform: "none",
     padding: 0,
