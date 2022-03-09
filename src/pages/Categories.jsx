@@ -80,7 +80,8 @@ const Categories = () => {
           },
 
           "& .Mui-selected": {
-            color: "c04aad",
+            color: "#004aad",
+            // opacity: 0.33,
             bgcolor: "white",
             // mb: 4,
           },
