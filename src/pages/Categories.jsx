@@ -123,6 +123,9 @@ const Categories = () => {
             cols={3}
             sx={{
               my: 2,
+              "& .MuiDivider-wrapper": {
+                pl: 0,
+              },
               "& .MuiDivider-root": {
                 // color: "#e4e4e4",
                 fontSize: (theme) => theme.typography.pxToRem(13),
