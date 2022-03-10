@@ -193,8 +193,8 @@ const Categories = () => {
               <FilterAltOutlinedIcon
                 sx={{
                   // "& .MuiSvgIcon-root": {
-                  width: 22,
-                  height: 22,
+                  width: 19,
+                  height: 19,
                   // },
                 }}
               />
