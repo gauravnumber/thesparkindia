@@ -190,7 +190,14 @@ const Categories = () => {
               All Popular
             </ListSubheader>
             <IconButton size="small" sx={{ mr: 0.5 }}>
-              <FilterAltOutlinedIcon />
+              <FilterAltOutlinedIcon
+                sx={{
+                  // "& .MuiSvgIcon-root": {
+                  width: 19,
+                  height: 19,
+                  // },
+                }}
+              />
             </IconButton>
             {/* <b>heading</b> */}
           </ImageListItem>
