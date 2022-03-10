@@ -21,6 +21,8 @@ import MyAddress from "./pages/MyAddress";
 import PaymentMethod from "./pages/PaymentMethod";
 import EditProfile from "./pages/EditProfile";
 import MyCart from "./pages/MyCart";
+import HelpCenter from "./pages/HelpCenter";
+
 
 function App() {
   return (
@@ -57,6 +59,7 @@ function App() {
         <Route path="/paymentMethod" element={<PaymentMethod />} />
         <Route path="/editProfile" element={<EditProfile />} />
         <Route path="/myCart" element={<MyCart />} />
+        <Route path="/HelpCenter" element={<HelpCenter />} />
         <Route path="*" element={<h1>404: File Not Found</h1>} />
       </Routes>
       <Box mt={10} />
