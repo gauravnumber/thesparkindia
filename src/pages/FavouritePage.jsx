@@ -1,3 +1,4 @@
+import MoreVertOutlinedIcon from "@mui/icons-material/MoreVertOutlined";
 import FavoriteBorderOutlinedIcon from "@mui/icons-material/FavoriteBorderOutlined";
 
 import {
@@ -30,13 +31,56 @@ const FavouritePage = () => {
       <List
         sx={{
           bgcolor: (theme) => theme.palette.background.paper,
-          px: 2,
+          // px: 2,
           mx: -2,
           pt: 10,
-          mt: -10,
+          mt: -13,
         }}
-        disablePadding
+        // disablePadding
       >
+        <ListItem
+          key="heading"
+          sx={{
+            pl: 2,
+            borderBottom: 1,
+            borderColor: "divider",
+          }}
+          secondaryAction={
+            <IconButton size="small">
+              <MoreVertOutlinedIcon />
+            </IconButton>
+          }
+          // disablePadding
+        >
+          <ListItemText
+            sx={{
+              pl: 1,
+            }}
+            primary={
+              <Typography
+                sx={{
+                  fontWeight: (theme) => theme.typography.fontWeightMedium,
+                  fontSize: (theme) => theme.typography.pxToRem(18.59),
+                  letterSpacing: "0.02em",
+                }}
+              >
+                LED Wishlist
+              </Typography>
+            }
+            secondary={
+              <Typography
+                sx={{
+                  ml: 0.5,
+                  color: "#233263",
+                  fontSize: (theme) => theme.typography.pxToRem(10),
+                  letterSpacing: "0.02em",
+                }}
+              >
+                &#8231; 5 items
+              </Typography>
+            }
+          />
+        </ListItem>
         {Array.from(Array(10)).map((_, index) => (
           <ListItem
             key={index}
@@ -45,7 +89,7 @@ const FavouritePage = () => {
               alignItems: "flex-start",
               // my: 0,
               pt: 2,
-              // p
+              px: 2,
               borderBottom: 1,
               borderColor: "divider",
               // alignItems:"flex-start"
@@ -256,17 +300,6 @@ const FavouritePage = () => {
                             border: 0,
                           },
                         }}
-
-                        // sx={{
-                        //   p: 0.2,
-                        //   bgcolor: "error.main",
-                        //   color: "error.contrastText",
-                        //   //! hover not color red
-                        //   ".MuiButtonBase-root &:hover": {
-                        //     // bgcolor: "error",
-                        //     color: "error",
-                        //   },
-                        // }}
                       >
                         Buy Now
                       </Button>
