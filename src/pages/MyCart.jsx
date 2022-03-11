@@ -1,3 +1,4 @@
+import { RadioButtonUnchecked, CheckCircle } from "@mui/icons-material";
 import FavoriteBorderOutlinedIcon from "@mui/icons-material/FavoriteBorderOutlined";
 
 import {
@@ -34,7 +35,7 @@ const MyCart = () => {
           bgcolor: (theme) => theme.palette.background.paper,
           px: 0.5,
           // pl: 1,
-          mx: -2,
+          mx: -1,
           pt: 10,
           mt: -10,
         }}
@@ -47,6 +48,7 @@ const MyCart = () => {
               display: "flex",
               alignItems: "flex-start",
               pt: 2,
+              pr: 1,
               borderBottom: 1,
               borderColor: "divider",
             }}
@@ -68,6 +70,8 @@ const MyCart = () => {
               }}
               primary={
                 <Checkbox
+                  icon={<RadioButtonUnchecked />}
+                  checkedIcon={<CheckCircle />}
                   sx={{
                     color: "primary.red",
                     borderRadius: 5,
