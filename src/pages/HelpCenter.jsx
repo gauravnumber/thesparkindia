@@ -24,7 +24,7 @@ function HelpCenter() {
   };
   
   return (
-    <div className="App">
+    <div>
       <Box
        sx={{
         width: 360,
