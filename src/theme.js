@@ -6,11 +6,11 @@ const theme = createTheme({
     // mode: "dark",
     primary: {
       main: blue.A200,
-
-      // main: blue[400]
-      // main: green["A700"],
-      // main: red[500],
+      red: "#c43838"
     },
+    // redButton: {
+    //   main: "#c43838"
+    // },
     background: {
       // paper: red[500],
       // default: red[500]
