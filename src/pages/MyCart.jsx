@@ -231,6 +231,98 @@ const MyCart = () => {
           </ListItem>
         ))}
       </List>
+      <Grid
+        container
+        direction="row"
+        spacing={2}
+        // alignItems="center"
+        justifyContent="space-between"
+        py={2}
+        // mr={-20}
+        // px={1}
+        bgcolor={(theme) => theme.palette.background.paper}
+      >
+        <Grid
+          item
+          container
+          direction="row"
+          alignItems="center"
+          wrap="nowrap"
+          xs={3}
+        >
+          <Grid item>
+            <Checkbox
+              sx={{
+                color: "primary.red",
+                "&.Mui-checked": {
+                  color: "primary.red",
+                },
+              }}
+            />
+          </Grid>
+          <Grid item>
+            <Typography
+              sx={{
+                fontWeight: "fontWeightMedium",
+              }}
+            >
+              All(9)
+            </Typography>
+          </Grid>
+        </Grid>
+        <Grid
+          item
+          container
+          direction="row"
+          justifyContent="flex-end"
+          alignItems="center"
+          pr={1}
+          xs={9}
+          spacing={2}
+        >
+          <Grid
+            item
+            //  container alignItems="center"
+            textAlign="center"
+          >
+            <Typography
+              sx={{
+                fontWeight: "fontWeightMedium",
+                // fontSize: (theme) => theme.typography.pxToRem(20),
+              }}
+            >
+              Rs 8500
+            </Typography>
+            <Typography
+              sx={{
+                color: "#606060",
+                fontWeight: "fontWeightMedium",
+                fontSize: (theme) => theme.typography.pxToRem(11.04),
+              }}
+            >
+              Total Amount
+            </Typography>
+          </Grid>
+          <Grid item>
+            <Button
+              sx={{
+                p: 2,
+                width: 90,
+                height: 33,
+                bgcolor: "primary.red",
+                color: "primary.contrastText",
+                boxShadow: "0px 2px 10px rgba(0,0,0,0.25)",
+                "&:hover": {
+                  color: "primary.red",
+                  bgcolor: "primary.contrastText",
+                },
+              }}
+            >
+              Checkout(3)
+            </Button>
+          </Grid>
+        </Grid>
+      </Grid>
     </>
     // <Stack direction="column" spacing={2}>
     //   <Paper elevation={2} sx={{ p: 2 }}>
