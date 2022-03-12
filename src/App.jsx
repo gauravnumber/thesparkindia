@@ -13,8 +13,6 @@ import Enquiry from "./pages/Enquiry";
 // import Feed from "./pages/Feed";
 import User from "./pages/User";
 import Favourites from "./pages/Favourites";
-// eslint-disable-next-line import/extensions
-// eslint-disable-next-line import/no-unresolved
 import FavouritePage from "@/pages/FavouritePage";
 import Notification from "./pages/Notification";
 import RecentlyViewed from "./pages/RecentlyViewed";
