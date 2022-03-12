@@ -2,6 +2,7 @@ import { RadioButtonUnchecked, CheckCircle } from "@mui/icons-material";
 import FavoriteBorderOutlinedIcon from "@mui/icons-material/FavoriteBorderOutlined";
 
 import {
+  // ButtonGroup,
   Avatar,
   List,
   ListItem,
@@ -48,16 +49,70 @@ const MyCart = () => {
               display: "flex",
               alignItems: "flex-start",
               pt: 2,
-              pr: 1,
+              pl: 0,
+              // pr: 6,
               borderBottom: 1,
               borderColor: "divider",
+              "& .MuiListItemSecondaryAction-root": {
+                // top: 25,
+                right: 2,
+              },
             }}
             secondaryAction={
-              <IconButton size="small">
-                <FavoriteBorderOutlinedIcon />
-              </IconButton>
+              <Stack direction="column" spacing={2}>
+                <IconButton size="small">
+                  <FavoriteBorderOutlinedIcon />
+                </IconButton>
+                <ButtonGroup
+                  sx={{
+                    minWidth: 21,
+                    // width: 30,
+                    height: 21,
+                    // width: 57,
+                    // p: 0,
+                    // m: 0,
+
+                    bgcolor: "#f4f4f4",
+                    borderColor: "#d4d4d4",
+                    // color: "primary.red",
+
+                    "& .MuiButtonGroup-grouped": {
+                      minWidth: 21,
+                    },
+                    "&.MuiButton-root": {
+                      p: 0,
+                      m: 0,
+                      color: "primary.red",
+                    },
+                  }}
+                >
+                  <Button>+</Button>
+                  <Button>11</Button>
+                  <Button>-</Button>
+                </ButtonGroup>
+                <Button
+                  sx={{
+                    color: "white",
+                    bgcolor: "#C43838",
+                    // bgcolor: "#ECECEC",
+                    fontSize: "10px",
+                    fontWeight: 400,
+                    p: 0.2,
+                    borderRadius: "5px",
+                    width: "69px",
+                    height: "20px",
+                    "&:hover": {
+                      color: "#C43838",
+                      border: 0,
+                    },
+                  }}
+                >
+                  Buy Now
+                </Button>
+              </Stack>
             }
-            disablePadding
+
+            // disablePadding
           >
             <ListItemText
               sx={{
@@ -188,12 +243,12 @@ const MyCart = () => {
                     >
                       Min Qty. 10 (negotiable)
                     </Typography>
-                    <Stack
+                    {/* <Stack
                       direction="row"
                       spacing={1}
                       //  ml={5}
-                    >
-                      <Button
+                    > */}
+                    {/* <Button
                         // color="error"
                         sx={{
                           color: "#C33838",
@@ -207,8 +262,8 @@ const MyCart = () => {
                         }}
                       >
                         Add to Cart
-                      </Button>
-                      <Button
+                      </Button> */}
+                    {/* <Button
                         sx={{
                           color: "white",
                           bgcolor: "#C43838",
@@ -217,7 +272,7 @@ const MyCart = () => {
                           fontWeight: 400,
                           p: 0.2,
                           borderRadius: "5px",
-                          width: "69px",
+                          // width: "69px",
                           height: "20px",
                           "&:hover": {
                             color: "#C43838",
@@ -226,8 +281,8 @@ const MyCart = () => {
                         }}
                       >
                         Buy Now
-                      </Button>
-                    </Stack>
+                      </Button> */}
+                    {/* </Stack> */}
                   </Stack>
                 </Typography>
               }
@@ -256,8 +311,11 @@ const MyCart = () => {
         >
           <Grid item>
             <Checkbox
+              icon={<RadioButtonUnchecked />}
+              checkedIcon={<CheckCircle />}
               sx={{
                 color: "primary.red",
+                borderRadius: 5,
                 "&.Mui-checked": {
                   color: "primary.red",
                 },
