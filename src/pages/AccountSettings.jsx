@@ -42,7 +42,7 @@ function AccountSettings() {
               </Typography>
           </Box>
           
-          <List />
+          <AccountSettingsList />
 
           <Box>
             <Button variant="outlined"

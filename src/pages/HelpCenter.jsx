@@ -98,7 +98,7 @@ function HelpCenter() {
     </Paper>
        </Box>
  
-    <List input={inputText} 
+    <HelpCenterList input={inputText} 
       sx={{
         ml: 2
       }}
