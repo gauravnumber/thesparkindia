@@ -59,13 +59,13 @@ const MyCart = () => {
               },
             }}
             secondaryAction={
-              <Stack direction="column" spacing={2}>
+              <Stack direction="column" spacing={2} alignItems="flex-end">
                 <IconButton size="small">
                   <FavoriteBorderOutlinedIcon />
                 </IconButton>
                 <ButtonGroup
                   sx={{
-                    minWidth: 21,
+                    minWidth: 10,
                     // width: 30,
                     height: 21,
                     // width: 57,
@@ -73,21 +73,34 @@ const MyCart = () => {
                     // m: 0,
 
                     bgcolor: "#f4f4f4",
-                    borderColor: "#d4d4d4",
                     // color: "primary.red",
 
                     "& .MuiButtonGroup-grouped": {
-                      minWidth: 21,
-                    },
-                    "&.MuiButton-root": {
-                      p: 0,
-                      m: 0,
+                      minWidth: "unset",
+                      px: (theme) => theme.typography.pxToRem(6),
                       color: "primary.red",
+                      borderColor: "#d4d4d4",
+                      // minWidth: 21,
+                      // minWidth: 10,
                     },
+                    // "&.MuiButton-root": {
+                    //   minWidth: 1,
+                    //   p: 0,
+                    //   m: 0,
+                    //   // color: "primary.red",
+                    // },
                   }}
                 >
                   <Button>+</Button>
-                  <Button>11</Button>
+                  <Button
+                    sx={{
+                      "&.MuiButtonGroup-grouped": {
+                        color: "text.primary",
+                      },
+                    }}
+                  >
+                    11
+                  </Button>
                   <Button>-</Button>
                 </ButtonGroup>
                 <Button
