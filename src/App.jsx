@@ -10,7 +10,7 @@ import Home from "./pages/Home";
 import Categories from "./pages/Categories";
 import Shop from "./pages/Shop";
 import Enquiry from "./pages/Enquiry";
-import Feed from "./pages/Feed";
+// import Feed from "./pages/Feed";
 import User from "./pages/User";
 import Favourites from "./pages/Favourites";
 import FavouritePage from "@/pages/FavouritePage";
@@ -21,6 +21,8 @@ import MyAddress from "./pages/MyAddress";
 import PaymentMethod from "./pages/PaymentMethod";
 import EditProfile from "./pages/EditProfile";
 import MyCart from "./pages/MyCart";
+import HelpCenter from "./pages/HelpCenter";
+import AccountSettings from "./pages/AccountSettings";
 
 function App() {
   return (
@@ -57,6 +59,8 @@ function App() {
         <Route path="/paymentMethod" element={<PaymentMethod />} />
         <Route path="/editProfile" element={<EditProfile />} />
         <Route path="/myCart" element={<MyCart />} />
+        <Route path="/helpCenter" element={<HelpCenter />} />
+        <Route path="/accountSettings" element={<AccountSettings />} />
         <Route path="*" element={<h1>404: File Not Found</h1>} />
       </Routes>
       <Box mt={10} />

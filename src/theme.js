@@ -1,4 +1,7 @@
-import { red, green, blue, grey } from "@mui/material/colors";
+import {
+  // red, green,
+  blue, grey,
+} from "@mui/material/colors";
 import { createTheme } from "@mui/material/styles";
 
 const theme = createTheme({
@@ -17,29 +20,29 @@ const theme = createTheme({
     background: {
       // paper: red[500],
       // default: red[500]
-      default: grey[100]
-    }
+      default: grey[100],
+    },
   },
   shape: {
-    borderRadius: 5
+    borderRadius: 5,
   },
   components: {
     MuiTypography: {
       defaultProps: {
-        component: "div"
-      }
+        component: "div",
+      },
     },
     MuiButton: {
       styleOverrides: {
         root: {
-          textTransform: "none"
-        }
-      }
-    }
+          textTransform: "none",
+        },
+      },
+    },
   },
   // typography: {
   //   htmlFontSize: 20
   // }
 });
 
-export default theme
+export default theme;
