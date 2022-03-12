@@ -1,5 +1,5 @@
 import React from 'react'
-import data from "./mock/helpCenterMockData.json";
+import data from "../mock/helpCenterMockData.json";
 import { Box, Divider } from '@mui/material';
 import '@fontsource/roboto/400.css';
 
