@@ -6,16 +6,22 @@ const theme = createTheme({
     // mode: "dark",
     primary: {
       main: blue.A200,
+      red: "#c43838",
+      // bgRed: "#c43838",
+      // red: "#c33838"
 
-      // main: blue[400]
-      // main: green["A700"],
-      // main: red[500],
     },
+    // redButton: {
+    //   main: "#c43838"
+    // },
     background: {
       // paper: red[500],
       // default: red[500]
       default: grey[100]
     }
+  },
+  shape: {
+    borderRadius: 5
   },
   components: {
     MuiTypography: {
