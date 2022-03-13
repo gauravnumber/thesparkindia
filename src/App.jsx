@@ -23,6 +23,7 @@ import EditProfile from "./pages/EditProfile";
 import MyCart from "./pages/MyCart";
 import HelpCenter from "./pages/HelpCenter";
 import AccountSettings from "./pages/AccountSettings";
+import PrivasySettings from "./pages/PrivasySettings";
 
 
 function App() {
@@ -60,8 +61,9 @@ function App() {
         <Route path="/paymentMethod" element={<PaymentMethod />} />
         <Route path="/editProfile" element={<EditProfile />} />
         <Route path="/myCart" element={<MyCart />} />
-        <Route path="/HelpCenter" element={<HelpCenter />} />
-        <Route path="/AccountSettings" element={<AccountSettings />} />
+        <Route path="/helpCenter" element={<HelpCenter />} />
+        <Route path="/accountSettings" element={<AccountSettings />} />
+        <Route path="/privasySettings" element={<PrivasySettings />} />
         <Route path="*" element={<h1>404: File Not Found</h1>} />
       </Routes>
       <Box mt={10} />

@@ -1,6 +1,6 @@
 import {useState} from "react";
 
-import HelpCenterList from "./HelpCenterList";
+import HelpCenterList from "../mock/HelpCenterList";
 
 import Paper from '@mui/material/Paper';
 import TextField from '@mui/material/TextField';

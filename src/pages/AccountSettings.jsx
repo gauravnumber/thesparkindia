@@ -1,6 +1,6 @@
 import React from 'react';
 
-import AccountSettingsList from "./AccountSettingsList";
+import AccountSettingsList from "../mock/AccountSettingsList";
 
 import { Box, Button } from '@mui/material';
 import Typography from '@mui/material/Typography';
