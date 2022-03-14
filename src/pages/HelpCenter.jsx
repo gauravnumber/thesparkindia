@@ -10,7 +10,7 @@ import Typography from "@mui/material/Typography";
 import { SearchOutlined } from "@mui/icons-material";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 
-import HelpCenterList from "./HelpCenterList";
+import HelpCenterList from "../mock/HelpCenterList";
 
 function HelpCenter() {
   const [inputText, setInputText] = useState("");
