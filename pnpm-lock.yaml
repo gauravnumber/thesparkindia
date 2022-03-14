@@ -15,6 +15,7 @@ specifiers:
   eslint-plugin-prettier: ^4.0.0
   eslint-plugin-react: ^7.28.0
   eslint-plugin-react-hooks: ^4.3.0
+  husky: ^7.0.0
   prettier: ^2.5.1
   react: ^17.0.2
   react-dom: ^17.0.2
@@ -41,6 +42,7 @@ devDependencies:
   eslint-plugin-prettier: 4.0.0_cfc9253cc6cf8e63ed6f63a6b600e6b9
   eslint-plugin-react: 7.29.3_eslint@7.32.0
   eslint-plugin-react-hooks: 4.3.0_eslint@7.32.0
+  husky: 7.0.4
   prettier: 2.5.1
   vite: 2.7.13
 
@@ -1704,6 +1706,12 @@ packages:
     dependencies:
       react-is: 16.13.1
     dev: false
+
+  /husky/7.0.4:
+    resolution: {integrity: sha512-vbaCKN2QLtP/vD4yvs6iz6hBEo6wkSzs8HpRah1Z6aGmF2KW5PdYuAd7uX5a+OyBZHBhd+TFLqgjUgytQr4RvQ==}
+    engines: {node: '>=12'}
+    hasBin: true
+    dev: true
 
   /ignore/4.0.6:
     resolution: {integrity: sha512-cyFDKrqc/YdcWFniJhzI42+AzS+gNwmUzOSFcRCQYwySuBBBy/KjuxWLZ/FHEH6Moq1NizMOBWyTcv8O4OZIMg==}
