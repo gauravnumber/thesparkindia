@@ -14,7 +14,7 @@ function AccountSettings() {
         // pt: 1,
         // width: 360,
         // height: 907,
-        background: "#FFFFFF",
+        backgroundColor: (theme) => theme.palette.background.paper,
       }}
     >
       {/* <GlobalStyles styles={{ body: { backgroundColor: "red" } }} /> */}
