@@ -13,7 +13,7 @@ import Enquiry from "./pages/Enquiry";
 // import Feed from "./pages/Feed";
 import User from "./pages/User";
 import Favourites from "./pages/Favourites";
-import FavouritePage from "@/pages/FavouritePage";
+import FavouritePage from "./pages/FavouritePage";
 import Notification from "./pages/Notification";
 import RecentlyViewed from "./pages/RecentlyViewed";
 import MyOrders from "./pages/MyOrders";

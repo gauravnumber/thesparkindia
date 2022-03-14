@@ -5,9 +5,10 @@
   },
   "extends": [
     "plugin:react/recommended",
-    "airbnb"
-    // "prettier",
-    // "prettier/react"
+    "airbnb",
+    "prettier",
+    // "prettier/react",
+    "plugin:prettier/recommended"
   ],
   "parserOptions": {
     "ecmaFeatures": {
@@ -16,7 +17,7 @@
     "ecmaVersion": "latest",
     "sourceType": "module"
   },
-  "plugins": ["react", "import"],
+  "plugins": ["react", "import", "prettier"],
   "rules": {
     "react/react-in-jsx-scope": ["off"],
     "quotes": ["error", "double", { "avoidEscape": true }]
