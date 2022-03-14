@@ -10,7 +10,7 @@ import Home from "./pages/Home";
 import Categories from "./pages/Categories";
 import Shop from "./pages/Shop";
 import Enquiry from "./pages/Enquiry";
-import Feed from "./pages/Feed";
+// import Feed from "./pages/Feed";
 import User from "./pages/User";
 import Favourites from "./pages/Favourites";
 import FavouritePage from "@/pages/FavouritePage";
@@ -24,7 +24,6 @@ import MyCart from "./pages/MyCart";
 import HelpCenter from "./pages/HelpCenter";
 import AccountSettings from "./pages/AccountSettings";
 import PrivasySettings from "./pages/PrivasySettings";
-
 
 function App() {
   return (
