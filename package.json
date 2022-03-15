@@ -7,13 +7,13 @@
     "preview": "vite preview",
     "lint": "eslint .",
     "lint:fix": "eslint --fix",
-    "format": "prettier --write --ignore-unknown ./src/",
+    "format": "prettier --write --ignore-unknown",
     "prepare": "husky install",
     "pre-commit": "lint-staged"
   },
   "lint-staged": {
     "*.+(js|jsx)": [
-      "eslint"
+      "prettier --write --ignore-unknown"
     ]
   },
   "dependencies": {

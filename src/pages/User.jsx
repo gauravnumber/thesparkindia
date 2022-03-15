@@ -66,7 +66,6 @@ const User = () => {
   //       main: blue.A200,
   //     },
   //     background: {
-  //       default: "#fff",
   //       paper: "#fff",
   //     },
   //     // background: "white",
