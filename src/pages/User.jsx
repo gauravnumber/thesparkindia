@@ -62,7 +62,6 @@ const User = () => {
 
   // const theme = createTheme({
   //   palette: {
-  //     // mode: "dark",
   //     primary: {
   //       main: blue.A200,
   //     },
