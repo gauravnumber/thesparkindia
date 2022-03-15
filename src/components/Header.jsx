@@ -29,7 +29,7 @@ const Header = () => {
       //     duration: theme.transitions.duration.enteringScreen,
       //   }),
       // }),
-    })
+    }),
   );
 
   return (

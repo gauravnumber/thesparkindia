@@ -6,17 +6,12 @@
     "build": "vite build",
     "preview": "vite preview",
     "lint": "eslint .",
-    "lint:fix": "eslint --fix .",
+    "lint:fix": "eslint --fix ",
     "format": "prettier --write --ignore-unknown ./src/",
     "prepare": "husky install",
     "pre-commit": "lint-staged"
   },
-  "lint-staged": {
-    "*.+(js|jsx)": [
-      "eslint --fix",
-      "prettier --write --ignore-unknown"
-    ]
-  },
+  "lint-staged": {},
   "dependencies": {
     "@emotion/react": "^11.8.2",
     "@emotion/styled": "^11.8.1",
