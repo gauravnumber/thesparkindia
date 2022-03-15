@@ -8,8 +8,7 @@
     "lint": "eslint .",
     "lint:fix": "eslint --fix .",
     "prepare": "husky install",
-    "pre-commit": "lint-staged",
-    "postinstall": "husky install && npm install "
+    "pre-commit": "lint-staged"
   },
   "lint-staged": {
     "*.+(js|jsx)": [
