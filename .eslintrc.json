@@ -20,6 +20,14 @@
   "plugins": ["react", "import", "prettier"],
   "rules": {
     "react/react-in-jsx-scope": ["off"],
-    "quotes": ["error", "double", { "avoidEscape": true }]
+    "react/prop-types": 0,
+    "quotes": ["error", "double", { "avoidEscape": true }],
+    "no-console": "warn",
+    "import/first": "error",
+    "linebreak-style": ["error", "unix"],
+
+    "prettier/prettier": "error",
+    "arrow-body-style": "off",
+    "prefer-arrow-callback": "off"
   }
 }

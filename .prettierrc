@@ -4,5 +4,6 @@
   "trailingComa": "all",
   "semi": true,
   "singleQuote": false,
-  "printWidth": 80
+  "printWidth": 80,
+  "arrowParens": "always"
 }
