@@ -9,11 +9,12 @@
     "lint:fix": "eslint --fix .",
     "prepare": "husky install",
     "pre-commit": "lint-staged",
-    "postinstall": "husky install && npm install"
+    "postinstall": "husky install && npm install "
   },
   "lint-staged": {
     "*.+(js|jsx)": [
-      "eslint --fix"
+      "eslint --fix",
+      "prettier --write --ignore-unknown"
     ]
   },
   "dependencies": {
