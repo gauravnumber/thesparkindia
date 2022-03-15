@@ -11,7 +11,11 @@
     "prepare": "husky install",
     "pre-commit": "lint-staged"
   },
-  "lint-staged": {},
+  "lint-staged": {
+    "*.+(js|jsx)": [
+      "eslint --fix"
+    ]
+  },
   "dependencies": {
     "@emotion/react": "^11.8.2",
     "@emotion/styled": "^11.8.1",
