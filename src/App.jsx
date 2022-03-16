@@ -47,15 +47,15 @@ function App() {
           <Route path="led" element={<FavouritePage />} />
         </Route>
         <Route path="/notification" element={<Notification />} />
-        <Route path="/recentlyViewed" element={<RecentlyViewed />} />
-        <Route path="/myOrders" element={<MyOrders />} />
-        <Route path="/myAddress" element={<MyAddress />} />
-        <Route path="/paymentMethod" element={<PaymentMethod />} />
-        <Route path="/editProfile" element={<EditProfile />} />
-        <Route path="/myCart" element={<MyCart />} />
-        <Route path="/helpCenter" element={<HelpCenter />} />
-        <Route path="/accountSettings" element={<AccountSettings />} />
-        <Route path="/privasySettings" element={<PrivasySettings />} />
+        <Route path="/recently-viewed" element={<RecentlyViewed />} />
+        <Route path="/my-orders" element={<MyOrders />} />
+        <Route path="/my-address" element={<MyAddress />} />
+        <Route path="/payment-method" element={<PaymentMethod />} />
+        <Route path="/edit-profile" element={<EditProfile />} />
+        <Route path="/my-cart" element={<MyCart />} />
+        <Route path="/help-center" element={<HelpCenter />} />
+        <Route path="/account-settings" element={<AccountSettings />} />
+        <Route path="/privasy-settings" element={<PrivasySettings />} />
         <Route path="*" element={<h1>404: File Not Found</h1>} />
       </Routes>
       <Box mt={10} />

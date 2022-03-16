@@ -28,12 +28,12 @@ function User() {
     {
       name: "My Orders",
       icon: <LibraryAddCheckOutlinedIcon />,
-      path: "/myOrders",
+      path: "/my-orders",
     },
     {
       name: "Recently Viewed",
       icon: <AccessTimeOutlinedIcon />,
-      path: "/recentlyViewed",
+      path: "/recently-viewed",
     },
     {
       name: "Favourites",
