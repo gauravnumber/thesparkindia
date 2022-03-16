@@ -57,6 +57,7 @@ const Header = () => {
         color: "primary.blue",
         backgroundColor: (theme) => theme.palette.background.paper,
         height: 40,
+        boxShadow: (theme) => theme.shadows[1],
 
         "& .MuiToolbar-root": {
           minHeight: 40,
