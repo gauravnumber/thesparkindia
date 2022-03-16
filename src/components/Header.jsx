@@ -16,8 +16,6 @@ import {
 const Header = () => {
   // "npm run lint:fix",
 
-  // const AppBar = styled(MuiAppBar, {
-  //   // shouldForwardProp: (prop) => prop !== "open",
   // })(
   //   ({
   //     theme,
