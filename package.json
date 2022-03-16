@@ -12,7 +12,7 @@
     "pre-commit": "lint-staged"
   },
   "lint-staged": {
-    "*.js": [
+    "*.jsx": [
       "prettier --write --ignore-unknown"
     ]
   },
