@@ -1,4 +1,4 @@
-// import MuiAppBar from "@mui/material/AppBar";
+import { useNavigate, useLocation } from "react-router-dom";
 import Toolbar from "@mui/material/Toolbar";
 
 import MenuIcon from "@mui/icons-material/Menu";
@@ -14,34 +14,10 @@ import {
 } from "@mui/material";
 
 const Header = () => {
-  //   }) => ({
-  //     // "& .MuiAppBar-root": {
-  //     //   // color: "text.primary",
-  //     //   color: "red",
-  //     //   backgroundColor: (theme) => theme.palette.background.paper,
-  //     //   height: 40,
-  //     // },
+  const navigate = useNavigate();
+  const location = useLocation();
 
-  //     // "& .MuiToolbar-root": {
-  //     //   minHeight: 40,
-  //     // },
-
-  //     zIndex: theme.zIndex.drawer + 1,
-  //     transition: theme.transitions.create(["width", "margin"], {
-  //       easing: theme.transitions.easing.sharp,
-  //       duration: theme.transitions.duration.leavingScreen,
-  //     }),
-  //     // marginBottom: 50,
-  //     // ...(open && {
-  //     //   // marginLeft: drawerWidth,
-  //     //   // width: `calc(100% - ${drawerWidth}px)`,
-  //     //   transition: theme.transitions.create(["width", "margin"], {
-  //     //     easing: theme.transitions.easing.sharp,
-  //     //     duration: theme.transitions.duration.enteringScreen,
-  //     //   }),
-  //     // }),
-  //   }),
-  // );
+  console.log(location.pathname.slice(1));
 
   return (
     <AppBar
@@ -62,16 +38,7 @@ const Header = () => {
       <Toolbar
       // disableGutters
       >
-        <IconButton
-          color="inherit"
-          aria-label="open drawer"
-          // onClick={handleDrawerOpen}
-          edge="start"
-          // sx={{
-          //   marginRight: "36px",
-          //   ...(open && { display: "none" }),
-          // }}
-        >
+        <IconButton color="inherit" onClick={() => navigate(-1)} edge="start">
           <MenuIcon />
         </IconButton>
         <Typography variant="h6" noWrap component="div">
