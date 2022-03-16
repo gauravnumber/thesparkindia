@@ -14,9 +14,6 @@ import {
 } from "@mui/material";
 
 const Header = () => {
-  // "npm run lint:fix",
-
-  // })(
   //   ({
   //     theme,
   //     // , open
