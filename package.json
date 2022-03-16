@@ -12,9 +12,7 @@
     "pre-commit": "lint-staged"
   },
   "lint-staged": {
-    "*.jsx": [
-      "prettier --write --ignore-unknown"
-    ]
+    "*.jsx": "eslint"
   },
   "dependencies": {
     "@emotion/react": "^11.8.2",

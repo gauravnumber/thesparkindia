@@ -14,9 +14,6 @@ import {
 } from "@mui/material";
 
 const Header = () => {
-  //   ({
-  //     theme,
-  //     // , open
   //   }) => ({
   //     // "& .MuiAppBar-root": {
   //     //   // color: "text.primary",
