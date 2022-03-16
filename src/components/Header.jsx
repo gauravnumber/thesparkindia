@@ -1,4 +1,5 @@
-// import MuiAppBar from "@mui/material/AppBar";
+import { useState, useEffect } from "react";
+import { useNavigate, useLocation } from "react-router-dom";
 import Toolbar from "@mui/material/Toolbar";
 
 import MenuIcon from "@mui/icons-material/Menu";
@@ -14,40 +15,27 @@ import {
 } from "@mui/material";
 
 const Header = () => {
-  // const AppBar = styled(MuiAppBar, {
-  //   // shouldForwardProp: (prop) => prop !== "open",
-  // })(
-  //   ({
-  //     theme,
-  //     // , open
-  //   }) => ({
-  //     // "& .MuiAppBar-root": {
-  //     //   // color: "text.primary",
-  //     //   color: "red",
-  //     //   backgroundColor: (theme) => theme.palette.background.paper,
-  //     //   height: 40,
-  //     // },
+  const navigate = useNavigate();
+  const location = useLocation();
+  const [heading, setHeading] = useState();
 
-  //     // "& .MuiToolbar-root": {
-  //     //   minHeight: 40,
-  //     // },
+  useEffect(() => {
+    const path = location.pathname.slice(1);
+    let headingName = path.split("-");
+    headingName = headingName
+      .map((text) => text.charAt(0).toUpperCase() + text.slice(1))
+      .join(" ");
+    console.log(headingName);
 
-  //     zIndex: theme.zIndex.drawer + 1,
-  //     transition: theme.transitions.create(["width", "margin"], {
-  //       easing: theme.transitions.easing.sharp,
-  //       duration: theme.transitions.duration.leavingScreen,
-  //     }),
-  //     // marginBottom: 50,
-  //     // ...(open && {
-  //     //   // marginLeft: drawerWidth,
-  //     //   // width: `calc(100% - ${drawerWidth}px)`,
-  //     //   transition: theme.transitions.create(["width", "margin"], {
-  //     //     easing: theme.transitions.easing.sharp,
-  //     //     duration: theme.transitions.duration.enteringScreen,
-  //     //   }),
-  //     // }),
-  //   }),
-  // );
+    setHeading(headingName === "" ? "SPARK INDIA" : headingName);
+
+    // setHeading(
+    //   location.pathname.slice(1).charAt(0).toUpperCase() +
+    //     location.pathname.slice(2),
+    // );
+  }, [location.pathname]);
+  // console.log(`heading`, heading);
+  // console.log(location.pathname.slice(1));
 
   return (
     <AppBar
@@ -68,20 +56,13 @@ const Header = () => {
       <Toolbar
       // disableGutters
       >
-        <IconButton
-          color="inherit"
-          aria-label="open drawer"
-          // onClick={handleDrawerOpen}
-          edge="start"
-          // sx={{
-          //   marginRight: "36px",
-          //   ...(open && { display: "none" }),
-          // }}
-        >
+        <IconButton color="inherit" onClick={() => navigate(-1)} edge="start">
           <MenuIcon />
         </IconButton>
         <Typography variant="h6" noWrap component="div">
-          SPARK INDIA
+          {heading}
+          {/* {location.pathname.slice(1)} */}
+          {/* SPARK INDIA */}
         </Typography>
         <Box sx={{ flexGrow: 1 }} />
         <IconButton color="inherit" size="large">

@@ -35,15 +35,15 @@ const MyCart = () => {
           // pl: 1,
           mx: -1,
           // pt: 2,
-          mt: -6,
+          // mt: -6,
           // pt: 10,
           // mt: -10,
         }}
         // disablePadding
       >
-        {Array.from(Array(10)).map(() => (
+        {Array.from(Array(10)).map((_, index) => (
           <ListItem
-            key={Date.now}
+            key={index}
             sx={{
               display: "flex",
               alignItems: "flex-start",
