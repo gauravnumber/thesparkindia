@@ -26,9 +26,6 @@ import {
 } from "@mui/material";
 
 const MyCart = () => {
-  const Img = styled("img")`
-    width: 100%;
-  `;
   return (
     <>
       <List
@@ -37,14 +34,16 @@ const MyCart = () => {
           px: 0.5,
           // pl: 1,
           mx: -1,
-          pt: 10,
-          mt: -10,
+          // pt: 2,
+          mt: -6,
+          // pt: 10,
+          // mt: -10,
         }}
         // disablePadding
       >
-        {Array.from(Array(10)).map((_, index) => (
+        {Array.from(Array(10)).map(() => (
           <ListItem
-            key={index}
+            key={Date.now}
             sx={{
               display: "flex",
               alignItems: "flex-start",

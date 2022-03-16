@@ -21,8 +21,10 @@
   "rules": {
     "react/react-in-jsx-scope": ["off"],
     "react/prop-types": 0,
-    "quotes": ["error", "double", { "avoidEscape": true }],
+    "react/function-component-definition": ["off"],
     "no-console": "warn",
+    "no-shadow": ["off"],
+    "quotes": ["error", "double", { "avoidEscape": true }],
     "import/first": "error",
     "linebreak-style": ["error", "unix"],
 
