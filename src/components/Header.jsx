@@ -5,7 +5,13 @@ import MenuIcon from "@mui/icons-material/Menu";
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import PersonOutlineOutlinedIcon from "@mui/icons-material/PersonOutlineOutlined";
 
-import { Typography, IconButton, Box, AppBar, styled } from "@mui/material";
+import {
+  Typography,
+  IconButton,
+  Box,
+  AppBar,
+  //  styled
+} from "@mui/material";
 
 const Header = () => {
   // const AppBar = styled(MuiAppBar, {
