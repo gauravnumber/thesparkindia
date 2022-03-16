@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import Toolbar from "@mui/material/Toolbar";
 
@@ -16,8 +17,25 @@ import {
 const Header = () => {
   const navigate = useNavigate();
   const location = useLocation();
+  const [heading, setHeading] = useState();
 
-  console.log(location.pathname.slice(1));
+  useEffect(() => {
+    const path = location.pathname.slice(1);
+    let headingName = path.split("-");
+    headingName = headingName
+      .map((text) => text.charAt(0).toUpperCase() + text.slice(1))
+      .join(" ");
+    console.log(headingName);
+
+    setHeading(headingName === "" ? "SPARK INDIA" : headingName);
+
+    // setHeading(
+    //   location.pathname.slice(1).charAt(0).toUpperCase() +
+    //     location.pathname.slice(2),
+    // );
+  }, [location.pathname]);
+  // console.log(`heading`, heading);
+  // console.log(location.pathname.slice(1));
 
   return (
     <AppBar
@@ -42,7 +60,9 @@ const Header = () => {
           <MenuIcon />
         </IconButton>
         <Typography variant="h6" noWrap component="div">
-          SPARK INDIA
+          {heading}
+          {/* {location.pathname.slice(1)} */}
+          {/* SPARK INDIA */}
         </Typography>
         <Box sx={{ flexGrow: 1 }} />
         <IconButton color="inherit" size="large">
