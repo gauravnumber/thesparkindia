@@ -20,7 +20,7 @@ import {
 const Favourites = () => {
   return (
     <Stack
-      // pt={1}
+      pt={1}
       direction="column"
       spacing={2}
       // m={1}
