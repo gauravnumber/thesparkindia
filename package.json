@@ -12,9 +12,8 @@
     "pre-commit": "lint-staged"
   },
   "lint-staged": {
-    "*.js": [
-      "eslint --fix",
-      "prettier --write --ignore-unknown"
+    "*.jsx": [
+      "npm run format"
     ]
   },
   "dependencies": {
