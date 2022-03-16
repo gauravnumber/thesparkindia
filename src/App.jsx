@@ -34,7 +34,7 @@ function App() {
     >
       <CssBaseline />
       <Header />
-      <Box mt={5} />
+      <Box mt={6} />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/categories" element={<Categories />} />

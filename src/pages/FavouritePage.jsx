@@ -33,8 +33,9 @@ const FavouritePage = () => {
           bgcolor: (theme) => theme.palette.background.paper,
           // px: 2,
           mx: -2,
-          pt: 10,
-          mt: -13,
+          mt: -3,
+          // pt: 10,
+          // mt: -13,
         }}
         // disablePadding
       >
