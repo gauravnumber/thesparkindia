@@ -1,13 +1,10 @@
-import { red, green, blue, grey } from "@mui/material/colors";
-
 import AccessTimeOutlinedIcon from "@mui/icons-material/AccessTimeOutlined";
 import ArrowForwardIosOutlinedIcon from "@mui/icons-material/ArrowForwardIosOutlined";
 import FavoriteBorderOutlinedIcon from "@mui/icons-material/FavoriteBorderOutlined";
 import LibraryAddCheckOutlinedIcon from "@mui/icons-material/LibraryAddCheckOutlined";
 import LocalOfferOutlinedIcon from "@mui/icons-material/LocalOfferOutlined";
 import {
-  ThemeProvider,
-  createTheme,
+  // createTheme,
   GlobalStyles,
   Avatar,
   BottomNavigation,
@@ -26,17 +23,17 @@ import {
 } from "@mui/material";
 import { Link } from "react-router-dom";
 
-const User = () => {
+function User() {
   const menu = [
     {
       name: "My Orders",
       icon: <LibraryAddCheckOutlinedIcon />,
-      path: "/myOrders",
+      path: "/my-orders",
     },
     {
       name: "Recently Viewed",
       icon: <AccessTimeOutlinedIcon />,
-      path: "/recentlyViewed",
+      path: "/recently-viewed",
     },
     {
       name: "Favourites",
@@ -59,15 +56,6 @@ const User = () => {
   //     }}
   //   />
   // );
-
-  // const theme = createTheme({
-  //   palette: {
-  //     // mode: "dark",
-  //     primary: {
-  //       main: blue.A200,
-  //     },
-  //     background: {
-  //       default: "#fff",
   //       paper: "#fff",
   //     },
   //     // background: "white",
@@ -87,7 +75,7 @@ const User = () => {
     <
       // ThemeProvider theme={theme}
     >
-      {/*! GlobalStyles not working*/}
+      {/*! GlobalStyles not working */}
       <GlobalStyles
         styles={{
           body: {
@@ -183,9 +171,9 @@ const User = () => {
             //   setValue(newValue);
             // }}
           >
-            {menu.map((item, key) => (
+            {menu.map((item) => (
               <BottomNavigationAction
-                key={key + item.name}
+                key={item.name + item.path}
                 // sx={{
                 //   padding: 0,
                 //   // fontSize: "11px",
@@ -288,6 +276,6 @@ const User = () => {
       // ThemeProvider
     >
   );
-};
+}
 
 export default User;

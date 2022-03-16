@@ -1,16 +1,17 @@
-import { defineConfig } from 'vite'
+import { defineConfig } from "vite";
 // import tsconfigPaths from 'vite-tsconfig-paths'
-import { resolve } from "path"
+import { resolve } from "path";
 
-import react from '@vitejs/plugin-react'
+import react from "@vitejs/plugin-react";
 
 export default defineConfig({
-  plugins: [react(),
+  plugins: [
+    react(),
     // tsconfigPaths()
   ],
   resolve: {
     alias: {
-      "@": resolve(__dirname, "src")
-    }
-  }
-})
+      "@": resolve(__dirname, "src"),
+    },
+  },
+});

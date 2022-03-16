@@ -13,7 +13,7 @@ import Enquiry from "./pages/Enquiry";
 // import Feed from "./pages/Feed";
 import User from "./pages/User";
 import Favourites from "./pages/Favourites";
-import FavouritePage from "@/pages/FavouritePage";
+import FavouritePage from "./pages/FavouritePage";
 import Notification from "./pages/Notification";
 import RecentlyViewed from "./pages/RecentlyViewed";
 import MyOrders from "./pages/MyOrders";
@@ -28,17 +28,13 @@ import PrivasySettings from "./pages/PrivasySettings";
 function App() {
   return (
     <Container
-      // px={34}
       sx={{
-        // paddingX: 0,
         paddingX: 1,
-        // margin: 0,
-        // backgroundColor: "red",
       }}
     >
       <CssBaseline />
       <Header />
-      <Box mt={10} />
+      <Box mt={6} />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/categories" element={<Categories />} />
@@ -46,23 +42,20 @@ function App() {
         <Route path="/enquiry" element={<Enquiry />} />
         {/* <Route path="/feed" element={<Feed />} /> */}
         <Route path="/user" element={<User />} />
-        <Route
-          path="/favourites"
-          // element={<Favourites />}
-        >
+        <Route path="/favourites">
           <Route index element={<Favourites />} />
           <Route path="led" element={<FavouritePage />} />
         </Route>
         <Route path="/notification" element={<Notification />} />
-        <Route path="/recentlyViewed" element={<RecentlyViewed />} />
-        <Route path="/myOrders" element={<MyOrders />} />
-        <Route path="/myAddress" element={<MyAddress />} />
-        <Route path="/paymentMethod" element={<PaymentMethod />} />
-        <Route path="/editProfile" element={<EditProfile />} />
-        <Route path="/myCart" element={<MyCart />} />
-        <Route path="/helpCenter" element={<HelpCenter />} />
-        <Route path="/accountSettings" element={<AccountSettings />} />
-        <Route path="/privasySettings" element={<PrivasySettings />} />
+        <Route path="/recently-viewed" element={<RecentlyViewed />} />
+        <Route path="/my-orders" element={<MyOrders />} />
+        <Route path="/my-address" element={<MyAddress />} />
+        <Route path="/payment-method" element={<PaymentMethod />} />
+        <Route path="/edit-profile" element={<EditProfile />} />
+        <Route path="/my-cart" element={<MyCart />} />
+        <Route path="/help-center" element={<HelpCenter />} />
+        <Route path="/account-settings" element={<AccountSettings />} />
+        <Route path="/privasy-settings" element={<PrivasySettings />} />
         <Route path="*" element={<h1>404: File Not Found</h1>} />
       </Routes>
       <Box mt={10} />
