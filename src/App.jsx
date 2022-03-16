@@ -28,12 +28,8 @@ import PrivasySettings from "./pages/PrivasySettings";
 function App() {
   return (
     <Container
-      // px={34}
       sx={{
-        // paddingX: 0,
         paddingX: 1,
-        // margin: 0,
-        // backgroundColor: "red",
       }}
     >
       <CssBaseline />
@@ -46,10 +42,7 @@ function App() {
         <Route path="/enquiry" element={<Enquiry />} />
         {/* <Route path="/feed" element={<Feed />} /> */}
         <Route path="/user" element={<User />} />
-        <Route
-          path="/favourites"
-          // element={<Favourites />}
-        >
+        <Route path="/favourites">
           <Route index element={<Favourites />} />
           <Route path="led" element={<FavouritePage />} />
         </Route>

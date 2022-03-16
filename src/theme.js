@@ -11,6 +11,7 @@ const theme = createTheme({
     primary: {
       main: blue.A200,
       red: "#c43838",
+      blue: "#223263"
       // bgRed: "#c43838",
       // red: "#c33838"
     },
@@ -25,6 +26,13 @@ const theme = createTheme({
   },
   shape: {
     borderRadius: 5,
+  },
+  typography: {
+    h6: {
+      fontSize: theme => theme.typography.pxToRem(18.57),
+      fontWeight: 500,
+      letterSpacing: "0.02em"
+    }
   },
   components: {
     MuiTypography: {
