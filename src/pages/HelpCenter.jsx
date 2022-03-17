@@ -8,7 +8,7 @@ import IconButton from "@mui/material/IconButton";
 import Typography from "@mui/material/Typography";
 
 import { SearchOutlined } from "@mui/icons-material";
-import ArrowBackIcon from "@mui/icons-material/ArrowBack";
+// import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 
 import HelpCenterList from "../mock/HelpCenterList";
 
@@ -24,12 +24,14 @@ function HelpCenter() {
     <div>
       <Box
         sx={{
-          width: 360,
-          height: 907,
+          mx: -2,
+          pt: 1,
+          // width: 360,
+          // height: 907,
           background: "#FFFFFF",
         }}
       >
-        <Box
+        {/* <Box
           sx={{
             width: 1 / 2,
             fontFamily: "roboto",
@@ -50,7 +52,7 @@ function HelpCenter() {
             Help center
           </Typography>
         </Box>
-
+ */}
         <Box>
           <Paper
             elevation={4}
