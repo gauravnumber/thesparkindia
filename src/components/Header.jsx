@@ -10,23 +10,12 @@ import PersonOutlineOutlinedIcon from "@mui/icons-material/PersonOutlineOutlined
 import { Typography, IconButton, Box, AppBar } from "@mui/material";
 import { ArrowBack } from "@mui/icons-material";
 
+import useHeader from "@/hooks/useHeader";
+
 const Header = () => {
   const navigate = useNavigate();
   const location = useLocation();
-  const [heading, setHeading] = useState();
-
-  useEffect(() => {
-    const path = location.pathname.slice(1);
-    let headingName = path.split("-");
-    headingName = headingName
-      .map((text) => text.charAt(0).toUpperCase() + text.slice(1))
-      .join(" ");
-    console.log(headingName);
-
-    setHeading(headingName === "" ? "SPARK INDIA" : headingName);
-  }, [location.pathname]);
-
-  // console.log(`location.pathname`, location.pathname);
+  const { heading } = useHeader();
 
   return (
     <AppBar
@@ -52,8 +41,6 @@ const Header = () => {
         )}
         <Typography variant="h6" noWrap component="div">
           {heading}
-          {/* {location.pathname.slice(1)} */}
-          {/* SPARK INDIA */}
         </Typography>
         <Box sx={{ flexGrow: 1 }} />
         <IconButton color="inherit" size="large">
