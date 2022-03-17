@@ -12,7 +12,7 @@
     "pre-commit": "lint-staged"
   },
   "lint-staged": {
-    "*.jsx": "eslint"
+    "*.jsx": "echo 'test'"
   },
   "dependencies": {
     "@emotion/react": "^11.8.2",
@@ -26,7 +26,7 @@
   },
   "devDependencies": {
     "@vitejs/plugin-react": "^1.0.7",
-    "eslint": "^7.32.0",
+    "eslint": "^8.11.0",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-import": "^2.25.3",
@@ -37,6 +37,7 @@
     "husky": "^7.0.0",
     "lint-staged": "^12.3.5",
     "prettier": "^2.5.1",
+    "react@latest": "link:eslint-plugin-prettier/react@latest",
     "vite": "^2.7.2"
   }
 }
