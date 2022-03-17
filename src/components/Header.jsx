@@ -5,8 +5,10 @@ import Toolbar from "@mui/material/Toolbar";
 import MenuIcon from "@mui/icons-material/Menu";
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import PersonOutlineOutlinedIcon from "@mui/icons-material/PersonOutlineOutlined";
+// import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 
 import { Typography, IconButton, Box, AppBar } from "@mui/material";
+import { ArrowBack } from "@mui/icons-material";
 
 const Header = () => {
   const navigate = useNavigate();
@@ -24,6 +26,8 @@ const Header = () => {
     setHeading(headingName === "" ? "SPARK INDIA" : headingName);
   }, [location.pathname]);
 
+  // console.log(`location.pathname`, location.pathname);
+
   return (
     <AppBar
       position="fixed"
@@ -37,14 +41,15 @@ const Header = () => {
           minHeight: 40,
         },
       }}
-      //  open={open}
     >
       <Toolbar
       // disableGutters
       >
-        <IconButton color="inherit" onClick={() => navigate(-1)} edge="start">
-          <MenuIcon />
-        </IconButton>
+        {location.pathname !== "/" && (
+          <IconButton color="inherit" onClick={() => navigate(-1)} edge="start">
+            <ArrowBack />
+          </IconButton>
+        )}
         <Typography variant="h6" noWrap component="div">
           {heading}
           {/* {location.pathname.slice(1)} */}
