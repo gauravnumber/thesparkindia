@@ -41,8 +41,6 @@ const Categories = () => {
         // p: 2,
         mx: -1,
         // my: -3,
-
-        // height: 224,
       }}
     >
       <GlobalStyles
