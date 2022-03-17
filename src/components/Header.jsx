@@ -22,8 +22,6 @@ const Header = () => {
     console.log(headingName);
 
     setHeading(headingName === "" ? "SPARK INDIA" : headingName);
-
-    // );
   }, [location.pathname]);
   // console.log(location.pathname.slice(1));
 
