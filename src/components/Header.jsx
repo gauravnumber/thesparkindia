@@ -23,13 +23,11 @@ const Header = () => {
 
     setHeading(headingName === "" ? "SPARK INDIA" : headingName);
   }, [location.pathname]);
-  // console.log(location.pathname.slice(1));
 
   return (
     <AppBar
       position="fixed"
       sx={{
-        // color: "red",
         color: "primary.blue",
         backgroundColor: (theme) => theme.palette.background.paper,
         height: 40,
