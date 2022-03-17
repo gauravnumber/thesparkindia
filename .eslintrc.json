@@ -5,6 +5,8 @@
   },
   "extends": [
     "plugin:react/recommended",
+    "plugin:import/recommended",
+    // "airbnb-base",
     "airbnb",
     "prettier",
     // "prettier/react",
@@ -17,7 +19,9 @@
     "ecmaVersion": "latest",
     "sourceType": "module"
   },
-  "plugins": ["react", "import", "prettier"],
+  "plugins": ["react", "prettier"
+    // ,  "prettier/react"
+  ],
   "rules": {
     "react/react-in-jsx-scope": ["off"],
     "react/prop-types": 0,
@@ -31,5 +35,19 @@
     "prettier/prettier": "error",
     "arrow-body-style": "off",
     "prefer-arrow-callback": "off"
+  },
+  "settings": {
+    // "import/resolver": {
+    //   "@/*": "./src"
+    // }
+    // "import/resolver":  
+    // {
+    //   "alias": {
+    //     "map": [
+    //       "@/*", "./src/*"
+    //     ],
+    //     "extensions": ["jsx"]
+    //   }
+    // }
   }
 }
