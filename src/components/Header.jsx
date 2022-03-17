@@ -23,11 +23,8 @@ const Header = () => {
 
     setHeading(headingName === "" ? "SPARK INDIA" : headingName);
 
-    //   location.pathname.slice(1).charAt(0).toUpperCase() +
-    //     location.pathname.slice(2),
     // );
   }, [location.pathname]);
-  // console.log(`heading`, heading);
   // console.log(location.pathname.slice(1));
 
   return (

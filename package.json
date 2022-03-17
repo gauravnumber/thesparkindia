@@ -12,7 +12,7 @@
     "pre-commit": "lint-staged"
   },
   "lint-staged": {
-    "*.jsx": "eslint"
+    "*.jsx": "echo 'test'"
   },
   "dependencies": {
     "@emotion/react": "^11.8.2",
