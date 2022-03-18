@@ -37,7 +37,6 @@
     "husky": "^7.0.0",
     "lint-staged": "^12.3.5",
     "prettier": "^2.5.1",
-    "react@latest": "link:eslint-plugin-prettier/react@latest",
     "vite": "^2.7.2"
   }
 }
