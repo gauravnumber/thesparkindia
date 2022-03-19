@@ -31,11 +31,11 @@ const Enquiry = () => {
 
   return (
     <Box
-      sx={
-        {
-          // bgcolor: "background.paper",
-        }
-      }
+      sx={{
+        // mt: 7,
+        pt: 2,
+        // bgcolor: "background.paper",
+      }}
     >
       <TextField
         size="small"
