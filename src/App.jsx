@@ -24,11 +24,13 @@ import MyCart from "./pages/MyCart";
 import HelpCenter from "./pages/HelpCenter";
 import AccountSettings from "./pages/AccountSettings";
 import PrivasySettings from "./pages/PrivasySettings";
+import AccountInformation from "./pages/AccountInformation";
 
 function App() {
   return (
     <Container
       sx={{
+        // paddingX: 0,
         paddingX: 1,
       }}
     >
@@ -56,6 +58,7 @@ function App() {
         <Route path="/help-center" element={<HelpCenter />} />
         <Route path="/account-settings" element={<AccountSettings />} />
         <Route path="/privasy-settings" element={<PrivasySettings />} />
+        <Route path="/account-information" element={<AccountInformation />} />
         <Route path="*" element={<h1>404: File Not Found</h1>} />
       </Routes>
       <Box mt={10} />
