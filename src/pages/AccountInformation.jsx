@@ -6,138 +6,97 @@ import CreateIcon from "@mui/icons-material/Create";
 
 function AccountInformation() {
   return (
-    <div>
+    <Box
+      sx={{
+        background: "#FFFFFF",
+        mx: -1,
+      }}
+    >
       <Box
-        sx={{
-          // width: 360,
-          // height: 907,
-          background: "#FFFFFF",
-        }}
+      // mx={-2}
       >
-        {/* <Box>
-          <Typography
-            sx={{
-              color: "#223263",
-              fontFamily: "Roboto",
-              position: "relative",
-              fontSize: 22,
-              fontWeight: 500,
-              height: 22,
-              my: 3,
-            }}
-          >
-            <IconButton
-              edge="start"
-              sx={{
-                mx: 1,
-                color: "#223263",
-              }}
-            >
-              <ArrowBackIcon />
-            </IconButton>
-            Account information
-            <IconButton
-              edge="end"
-              sx={{
-                mx: 1,
-                color: "#223263",
-                position: "absolute",
-                right: 0,
-              }}
-            >
-              <CreateIcon color="action" />
-            </IconButton>
-          </Typography>
-        </Box>
-        <Divider
+        <Typography
           sx={{
-            height: 2,
+            color: "#000000",
+            fontFamily: "Roboto",
+            fontSize: 15,
+            mx: 2,
           }}
-        /> */}
-        <Box mx={-2}>
-          <Typography
-            sx={{
-              color: "#000000",
-              fontFamily: "Roboto",
-              fontSize: 15,
-              mx: 2,
-            }}
-          >
-            User name
-          </Typography>
-          <Typography
-            sx={{
-              fontFamily: "Roboto",
-              fontSize: 9,
-              m: 2,
-              color: "rgba(0, 0, 0, 0.7)",
-            }}
-          >
-            Sparkindia
-          </Typography>
-          <Typography
-            sx={{
-              color: "#000000",
-              fontFamily: "Roboto",
-              fontSize: 15,
-              m: 2,
-            }}
-          >
-            Phone
-          </Typography>
-          <Typography
-            sx={{
-              fontFamily: "Roboto",
-              fontSize: 9,
-              m: 2,
-              color: "rgba(0, 0, 0, 0.7)",
-            }}
-          >
-            9657869764761
-          </Typography>
-          <Typography
-            sx={{
-              color: "#000000",
-              fontFamily: "Roboto",
-              fontSize: 15,
-              m: 2,
-            }}
-          >
-            Email address
-          </Typography>
-          <Typography
-            sx={{
-              fontFamily: "Roboto",
-              fontSize: 9,
-              m: 2,
-              color: "rgba(0, 0, 0, 0.7)",
-            }}
-          >
-            asafgaf@gmail.com
-          </Typography>
-          <Typography
-            sx={{
-              color: "#000000",
-              fontFamily: "Roboto",
-              fontSize: 15,
-              m: 2,
-            }}
-          >
-            Country
-          </Typography>
-          <Typography
-            sx={{
-              fontFamily: "Roboto",
-              fontSize: 9,
-              m: 2,
-              color: "rgba(0, 0, 0, 0.7)",
-            }}
-          >
-            India
-          </Typography>
-        </Box>
+        >
+          User name
+        </Typography>
+        <Typography
+          sx={{
+            fontFamily: "Roboto",
+            fontSize: 9,
+            m: 2,
+            color: "rgba(0, 0, 0, 0.7)",
+          }}
+        >
+          Sparkindia
+        </Typography>
+        <Typography
+          sx={{
+            color: "#000000",
+            fontFamily: "Roboto",
+            fontSize: 15,
+            m: 2,
+          }}
+        >
+          Phone
+        </Typography>
+        <Typography
+          sx={{
+            fontFamily: "Roboto",
+            fontSize: 9,
+            m: 2,
+            color: "rgba(0, 0, 0, 0.7)",
+          }}
+        >
+          9657869764761
+        </Typography>
+        <Typography
+          sx={{
+            color: "#000000",
+            fontFamily: "Roboto",
+            fontSize: 15,
+            m: 2,
+          }}
+        >
+          Email address
+        </Typography>
+        <Typography
+          sx={{
+            fontFamily: "Roboto",
+            fontSize: 9,
+            m: 2,
+            color: "rgba(0, 0, 0, 0.7)",
+          }}
+        >
+          asafgaf@gmail.com
+        </Typography>
+        <Typography
+          sx={{
+            color: "#000000",
+            fontFamily: "Roboto",
+            fontSize: 15,
+            m: 2,
+          }}
+        >
+          Country
+        </Typography>
+        <Typography
+          sx={{
+            fontFamily: "Roboto",
+            fontSize: 9,
+            m: 2,
+            color: "rgba(0, 0, 0, 0.7)",
+          }}
+        >
+          India
+        </Typography>
       </Box>
-    </div>
+    </Box>
   );
 }
 

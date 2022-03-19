@@ -30,6 +30,7 @@ function App() {
   return (
     <Container
       sx={{
+        // paddingX: 0,
         paddingX: 1,
       }}
     >
