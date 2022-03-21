@@ -9,7 +9,8 @@ function Slide(props) {
         // display: "flex",
         // flexDirection: "column",
         // justifyContent: "space-between",
-        backgroundImage: "url('https://source.unsplash.com/393x169?black')",
+        backgroundImage:
+          "url('https://source.unsplash.com/393x169?black,light,bulb')",
         // bgcolor: "black",
         color: "#fff",
         borderRadius: 0,
