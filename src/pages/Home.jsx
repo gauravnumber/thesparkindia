@@ -4,6 +4,7 @@ import Img from "@/components/Img";
 import Slide from "@/components/Slide";
 import { SearchOutlined } from "@mui/icons-material";
 import {
+  GlobalStyles,
   Box,
   IconButton,
   InputAdornment,
@@ -49,7 +50,19 @@ const Home = () => {
   ];
 
   return (
-    <Box mt={-5} mx={-1}>
+    <Box
+      //  mt={-5}
+      mx={-1}
+    >
+      <GlobalStyles
+        styles={{
+          body: {
+            // backgroundColor: "#223263",
+            // backgroundColor: (theme) => theme.palette.primary.blue,
+            // backgroundColor: "primary.blue",
+          },
+        }}
+      />
       <TextField
         size="small"
         sx={{

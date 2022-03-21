@@ -1,5 +1,8 @@
 import { useState, useEffect } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
+
+import { QrCode } from "@mui/icons-material";
+
 import Toolbar from "@mui/material/Toolbar";
 
 import MenuIcon from "@mui/icons-material/Menu";
@@ -17,7 +20,7 @@ const Header = () => {
   const location = useLocation();
   const { heading } = useHeader();
 
-  if (location.pathname === "/") return null;
+  // if (location.pathname === "/") return null;
 
   return (
     <AppBar
@@ -31,12 +34,26 @@ const Header = () => {
         "& .MuiToolbar-root": {
           minHeight: 40,
         },
+
+        ...(location.pathname === "/" && {
+          boxShadow: "unset",
+          // backgroundColor: "primary.blue",
+          // color: "#fff",
+        }),
       }}
     >
       <Toolbar
       // disableGutters
       >
-        {location.pathname !== "/" && (
+        {location.pathname === "/" ? (
+          <IconButton
+            color="inherit"
+            //  onClick={() => navigate(-1)}
+            edge="start"
+          >
+            <MenuIcon />
+          </IconButton>
+        ) : (
           <IconButton color="inherit" onClick={() => navigate(-1)} edge="start">
             <ArrowBack />
           </IconButton>
@@ -45,6 +62,9 @@ const Header = () => {
           {heading}
         </Typography>
         <Box sx={{ flexGrow: 1 }} />
+        {/* <IconButton color="inherit" size="large">
+          <QrCode />
+        </IconButton> */}
         <IconButton color="inherit" size="large">
           <PersonOutlineOutlinedIcon />
         </IconButton>
