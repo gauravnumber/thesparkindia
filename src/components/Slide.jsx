@@ -14,7 +14,8 @@ function Slide(props) {
         color: "#fff",
         borderRadius: 0,
         height: 169,
-        p: 3,
+        px: 3,
+        py: 2,
       }}
     >
       <Typography
@@ -44,18 +45,25 @@ function Slide(props) {
           //  backgroundColor: (theme) => theme.palette.common.white
           color: (theme) => theme.palette.primary.main,
           backgroundColor: (theme) => theme.palette.background.paper,
-          fontWeight: 500,
-          fontSize: (theme) => theme.typography.pxToRem(11.59),
+          fontWeight: 600,
+          fontSize: 8.07,
+          // fontSize: (theme) => theme.typography.pxToRem(8.07),
           letterSpacing: "0.04em",
           mt: 1,
-          mb: 2,
+          mb: 5,
         }}
       >
         {props.item.buttonText}
       </Button>
       <br />
 
-      <Typography>
+      <Typography
+        display="flex"
+        flexDirection="row"
+        alignItems="center"
+        fontWeight={700}
+        fontSize={9.98}
+      >
         <IconButton color="inherit" sx={{ p: 0 }}>
           <HouseOutlined />
         </IconButton>{" "}
