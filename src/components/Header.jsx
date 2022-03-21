@@ -17,6 +17,8 @@ const Header = () => {
   const location = useLocation();
   const { heading } = useHeader();
 
+  if (location.pathname === "/") return null;
+
   return (
     <AppBar
       position="fixed"
