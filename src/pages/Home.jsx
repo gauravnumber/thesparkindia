@@ -118,8 +118,17 @@ const Home = () => {
         ))}
       </Carousel>
 
-      <Paper sx={{ mt: 1, mx: 1, p: 1 }}>
-        <Typography>SPARKS</Typography>
+      <Paper
+        sx={{
+          mt: 1,
+          mx: 1,
+          p: 1,
+          //  pb: 3
+        }}
+      >
+        <Typography variant="h6" color="primary.blue2">
+          SPARKS
+        </Typography>
         <Grid
           container
           // alignItems="center"
@@ -131,12 +140,31 @@ const Home = () => {
               alignItems="center"
               justifyContent="center"
               key={index}
+              // spacing={1}
+              // rowSpacing={2}
+              // columnSpacing={3}
               xs={3}
+              // component="button"
             >
-              <IconButton>
+              <IconButton
+                sx={{
+                  "& .MuiSvgIcon-root": {
+                    fontSize: 37.04,
+                  },
+                }}
+              >
                 <VoiceChat />
               </IconButton>
-              <Typography>Scan and Buy</Typography>
+              <Typography
+                sx={{
+                  // width: 57,
+                  // height: 26,
+                  fontSize: (theme) => theme.typography.pxToRem(12),
+                  textAlign: "center",
+                }}
+              >
+                Scan and Buy
+              </Typography>
             </Grid>
           ))}
         </Grid>
