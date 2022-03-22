@@ -156,7 +156,7 @@ const Home = () => {
               </IconButton>
               <Typography
                 sx={{
-                  // width: 57,
+                  width: 57,
                   // height: 26,
                   fontSize: (theme) => theme.typography.pxToRem(12),
                   textAlign: "center",
