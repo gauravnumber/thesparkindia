@@ -142,7 +142,6 @@ const Home = () => {
               key={index}
               // spacing={1}
               // rowSpacing={2}
-              // columnSpacing={3}
               xs={3}
               // component="button"
             >
