@@ -5,6 +5,7 @@ import Img from "@/components/Img";
 import Slide from "@/components/Slide";
 import { SearchOutlined } from "@mui/icons-material";
 import {
+  Badge,
   Grid,
   Stack,
   GlobalStyles,
@@ -17,6 +18,9 @@ import {
   useTheme,
 } from "@mui/material";
 import Carousel from "react-material-ui-carousel";
+
+import { Countdown, Dot } from "@/components/HotDeals";
+// import Countdown from "@/components/HotDeals/Countdown";
 
 const Home = () => {
   const theme = useTheme();
@@ -167,6 +171,27 @@ const Home = () => {
             </Grid>
           ))}
         </Grid>
+      </Paper>
+
+      <Paper sx={{ mx: 1, mt: 1, p: 1 }}>
+        <Typography
+          sx={{
+            display: "flex",
+            alignItems: "center",
+            // justifyContent: "space-between",
+          }}
+        >
+          <Typography variant="h6" color="primary.blue2">
+            HOT DEALS
+          </Typography>
+          <Typography sx={{ display: "flex", ml: 2 }}>
+            <Countdown>03</Countdown>
+            <Dot>:</Dot>
+            <Countdown>05</Countdown>
+            <Dot>:</Dot>
+            <Countdown>26</Countdown>
+          </Typography>
+        </Typography>
       </Paper>
     </Box>
   );
