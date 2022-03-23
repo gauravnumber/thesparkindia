@@ -298,7 +298,14 @@ const Home = () => {
             See All Deals &gt;
           </Typography>
         </Typography>
-        <Stack direction="row" spacing={1} sx={{ overflowX: "scroll", mt: 1 }}>
+        <Stack
+          direction="row"
+          spacing={1}
+          sx={{
+            overflowX: "scroll",
+            mt: 1,
+          }}
+        >
           {Array.from(Array(10)).map((_, index) => (
             <Box
               key={index}
@@ -311,13 +318,20 @@ const Home = () => {
                 // mt: 1,
               }}
             >
-              <Box
+              {/* <Box
                 sx={{
                   width: 141,
                   height: 109,
                   backgroundColor: "primary.blue2",
                 }}
+              /> */}
+              <img
+                src="https://source.unsplash.com/141x109?LCD,TV"
+                width="141"
+                height="109"
+                alt="LCD TV"
               />
+
               <Stack spacing="5px" sx={{ p: "6.67px" }}>
                 <Typography
                   variant="h6"
@@ -338,7 +352,7 @@ const Home = () => {
                   </Typography>
                   <Typography
                     color="primary.grey"
-                    fontSize="inherit"
+                    // fontSize="inherit"
                     fontSize={(theme) => theme.typography.pxToRem(6.87)}
                   >
                     Per item
