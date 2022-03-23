@@ -5,6 +5,7 @@ import Img from "@/components/Img";
 import Slide from "@/components/Slide";
 import { SearchOutlined } from "@mui/icons-material";
 import {
+  LinearProgress,
   Badge,
   Grid,
   Stack,
@@ -214,23 +215,20 @@ const Home = () => {
             mt: 1,
           }}
         >
-          <Img
+          {/* <Img
             src="https://source.unsplash.com/141x109?LCD,TV"
             width="141"
             height="109"
             alt="LCD TV"
-          />
-          {/* <Box
-            sx={{ width: 141, height: 109, backgroundColor: "primary.blue2" }}
           /> */}
-          <Stack
-            //  spacing={1}
-            sx={{ p: "6.67px", pt: 0 }}
-          >
+          <Box
+            sx={{ width: 141, height: 109, backgroundColor: "primary.blue2" }}
+          />
+          <Stack spacing="5px" sx={{ p: "6.67px" }}>
             <Typography
               variant="h6"
               fontSize={(theme) => theme.typography.pxToRem(12)}
-              // lineHeight={1}
+              lineHeight="13px"
             >
               16"inch LCD Dell Monitor with Cables
             </Typography>
@@ -240,16 +238,15 @@ const Home = () => {
               spacing="5px"
               fontSize={(theme) => theme.typography.pxToRem(10.05)}
             >
-              <Typography
-                variant="h6"
-                // fontSize={(theme) => theme.typography.pxToRem(10.05)}
-              >
-                &#8377;16,150
-              </Typography>
+              <Typography variant="h6">&#8377;16,150</Typography>
               <Typography color="primary.grey" fontSize="inherit">
                 <del>21,150</del>
               </Typography>
-              <Typography color="primary.grey" fontSize="inherit">
+              <Typography
+                color="primary.grey"
+                fontSize="inherit"
+                fontSize={(theme) => theme.typography.pxToRem(6.87)}
+              >
                 Per item
               </Typography>
             </Stack>
@@ -260,6 +257,7 @@ const Home = () => {
               For 50 units
             </Typography>
           </Stack>
+          <LinearProgress />
         </Box>
       </Paper>
     </Box>
