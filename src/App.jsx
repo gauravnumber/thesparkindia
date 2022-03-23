@@ -25,6 +25,7 @@ import HelpCenter from "./pages/HelpCenter";
 import AccountSettings from "./pages/AccountSettings";
 import PrivasySettings from "./pages/PrivasySettings";
 import AccountInformation from "./pages/AccountInformation";
+import Language from "./pages/Language";
 
 function App() {
   return (
@@ -65,6 +66,7 @@ function App() {
         <Route path="/accountSettings" element={<AccountSettings />} />
         <Route path="/privasySettings" element={<PrivasySettings />} />
         <Route path="/accountInformation" element={<AccountInformation />} />
+        <Route path="/language" element={<Language />} />
         <Route path="*" element={<h1>404: File Not Found</h1>} />
       </Routes>
       <Box mt={10} />
