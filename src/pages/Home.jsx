@@ -1,8 +1,6 @@
 // import { Grid, Menu, Icon, Input, Header } from "semantic-ui-react";
 // import Sidebar from "../components/Sidebar";
 import { VoiceChat } from "@mui/icons-material";
-import Img from "@/components/Img";
-import Slide from "@/components/Slide";
 import { SearchOutlined } from "@mui/icons-material";
 import {
   LinearProgress,
@@ -20,8 +18,11 @@ import {
 } from "@mui/material";
 import Carousel from "react-material-ui-carousel";
 
+import Img from "@/components/Img";
+import Slide from "@/components/Slide";
+import Progress from "@/components/Progress";
+
 import { Countdown, Dot } from "@/components/HotDeals";
-// import Countdown from "@/components/HotDeals/Countdown";
 
 const Home = () => {
   const theme = useTheme();
@@ -288,7 +289,7 @@ const Home = () => {
               // alignItems: "center",
               // justifyContent: "flex-end",
               // alignSelf: "flex-end",
-              justifySelf: "flex-end",
+              // justifySelf: "flex-end",
               ml: 6,
               fontSize: (theme) => theme.typography.pxToRem(13.88),
               color: "primary.grey",
@@ -303,7 +304,8 @@ const Home = () => {
               key={index}
               sx={{
                 width: 141,
-                height: 202,
+                height: 222,
+                // height: 202,
                 border: "1.25px solid #cce2ff",
                 borderRadius: "3.76px",
                 // mt: 1,
@@ -348,8 +350,8 @@ const Home = () => {
                 >
                   For 50 units
                 </Typography>
+                <Progress />
               </Stack>
-              <LinearProgress />
             </Box>
           ))}
         </Stack>
