@@ -191,7 +191,76 @@ const Home = () => {
             <Dot>:</Dot>
             <Countdown>26</Countdown>
           </Typography>
+          <Typography
+            sx={{
+              // display: "flex",
+              // alignItems: "center",
+              // justifyContent: "flex-end",
+              // alignSelf: "flex-end",
+              justifySelf: "flex-end",
+              ml: 6,
+              fontSize: (theme) => theme.typography.pxToRem(13.88),
+              color: "primary.grey",
+            }}
+          >
+            See All Deals &gt;
+          </Typography>
         </Typography>
+        <Box
+          sx={{
+            width: 141,
+            height: 202,
+            border: "1.25px solid #cce2ff",
+            mt: 1,
+          }}
+        >
+          <Img
+            src="https://source.unsplash.com/141x109?LCD,TV"
+            width="141"
+            height="109"
+            alt="LCD TV"
+          />
+          {/* <Box
+            sx={{ width: 141, height: 109, backgroundColor: "primary.blue2" }}
+          /> */}
+          <Stack
+            //  spacing={1}
+            sx={{ p: "6.67px", pt: 0 }}
+          >
+            <Typography
+              variant="h6"
+              fontSize={(theme) => theme.typography.pxToRem(12)}
+              // lineHeight={1}
+            >
+              16"inch LCD Dell Monitor with Cables
+            </Typography>
+            <Stack
+              direction="row"
+              alignItems="center"
+              spacing="5px"
+              fontSize={(theme) => theme.typography.pxToRem(10.05)}
+            >
+              <Typography
+                variant="h6"
+                // fontSize={(theme) => theme.typography.pxToRem(10.05)}
+              >
+                &#8377;16,150
+              </Typography>
+              <Typography color="primary.grey" fontSize="inherit">
+                <del>21,150</del>
+              </Typography>
+              <Typography color="primary.grey" fontSize="inherit">
+                Per item
+              </Typography>
+            </Stack>
+            <Typography
+              color="#828282"
+              fontSize={(theme) => theme.typography.pxToRem(10.05)}
+            >
+              For 50 units
+            </Typography>
+          </Stack>
+        </Box>
       </Paper>
     </Box>
   );
