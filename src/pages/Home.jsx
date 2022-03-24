@@ -1,4 +1,5 @@
 import HotDeals from "@/components/Home/HotDeals";
+import LiveStudio from "@/components/Home/LiveStudio";
 import Slide from "@/components/Home/Slide";
 import Spark from "@/components/Home/Spark";
 import Img from "@/components/Img";
@@ -38,6 +39,7 @@ const Home = () => {
       <Slide />
       <Spark />
       <HotDeals />
+      <LiveStudio />
     </Box>
   );
 };
