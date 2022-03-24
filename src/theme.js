@@ -11,9 +11,11 @@ const theme = createTheme({
     primary: {
       main: blue.A200,
       red: "#c43838",
+      darkRed: "#ff2608",
       blue: "#223263",
       blue2: "#004aad",
-      grey: "#747474"
+      sparkBlue: "#338aff",
+      grey: "#747474",
       // bgRed: "#c43838",
       // red: "#c33838"
     },
