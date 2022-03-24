@@ -1,69 +1,78 @@
-import MuiAppBar from "@mui/material/AppBar";
+import { useState, useEffect } from "react";
+import { useNavigate, useLocation } from "react-router-dom";
+
+import { QrCode } from "@mui/icons-material";
+
 import Toolbar from "@mui/material/Toolbar";
 
-// import MenuIcon from "@mui/icons-material/Menu";
+import MenuIcon from "@mui/icons-material/Menu";
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import PersonOutlineOutlinedIcon from "@mui/icons-material/PersonOutlineOutlined";
+// import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 
-import { Typography, IconButton, Box, styled } from "@mui/material";
+import { Typography, IconButton, Box, AppBar } from "@mui/material";
+import { ArrowBack } from "@mui/icons-material";
+
+import useHeader from "@/hooks/useHeader";
 
 const Header = () => {
-  const AppBar = styled(MuiAppBar, {
-    // shouldForwardProp: (prop) => prop !== "open",
-  })(
-    ({
-      theme,
-      // , open
-    }) => ({
-      zIndex: theme.zIndex.drawer + 1,
-      transition: theme.transitions.create(["width", "margin"], {
-        easing: theme.transitions.easing.sharp,
-        duration: theme.transitions.duration.leavingScreen,
-      }),
-      // marginBottom: 50,
-      // ...(open && {
-      //   // marginLeft: drawerWidth,
-      //   // width: `calc(100% - ${drawerWidth}px)`,
-      //   transition: theme.transitions.create(["width", "margin"], {
-      //     easing: theme.transitions.easing.sharp,
-      //     duration: theme.transitions.duration.enteringScreen,
-      //   }),
-      // }),
-    })
-  );
+  const navigate = useNavigate();
+  const location = useLocation();
+  const { heading } = useHeader();
+
+  // if (location.pathname === "/") return null;
 
   return (
-    <>
-      <AppBar
-        position="fixed"
-        //  open={open}
+    <AppBar
+      position="fixed"
+      sx={{
+        color: "primary.blue",
+        backgroundColor: (theme) => theme.palette.background.paper,
+        height: 40,
+        boxShadow: (theme) => theme.shadows[1],
+
+        "& .MuiToolbar-root": {
+          minHeight: 40,
+        },
+
+        ...(location.pathname === "/" && {
+          boxShadow: "unset",
+          // backgroundColor: "primary.blue",
+          // color: "#fff",
+        }),
+      }}
+    >
+      <Toolbar
+      // disableGutters
       >
-        <Toolbar>
-          {/* <IconButton
+        {location.pathname === "/" ? (
+          <IconButton
             color="inherit"
-            aria-label="open drawer"
-            // onClick={handleDrawerOpen}
+            //  onClick={() => navigate(-1)}
             edge="start"
-            // sx={{
-            //   marginRight: "36px",
-            //   ...(open && { display: "none" }),
-            // }}
           >
             <MenuIcon />
-          </IconButton> */}
-          <Typography variant="h6" noWrap component="div">
-            SPARK INDIA
-          </Typography>
-          <Box sx={{ flexGrow: 1 }} />
-          <IconButton color="inherit" size="large">
-            <PersonOutlineOutlinedIcon />
           </IconButton>
-          <IconButton color="inherit" size="large">
-            <ShoppingCartOutlinedIcon />
+        ) : (
+          <IconButton color="inherit" onClick={() => navigate(-1)} edge="start">
+            <ArrowBack />
           </IconButton>
-        </Toolbar>
-      </AppBar>
-    </>
+        )}
+        <Typography variant="h6" noWrap component="div">
+          {heading}
+        </Typography>
+        <Box sx={{ flexGrow: 1 }} />
+        {/* <IconButton color="inherit" size="large">
+          <QrCode />
+        </IconButton> */}
+        <IconButton color="inherit" size="large">
+          <PersonOutlineOutlinedIcon />
+        </IconButton>
+        <IconButton color="inherit" size="large">
+          <ShoppingCartOutlinedIcon />
+        </IconButton>
+      </Toolbar>
+    </AppBar>
   );
 };
 

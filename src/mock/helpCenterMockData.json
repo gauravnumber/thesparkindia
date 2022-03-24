@@ -1,31 +1,42 @@
-[{
+[
+  {
     "id": 1,
     "text": "pause my search?"
-  }, {
+  },
+  {
     "id": 2,
     "text": "Allow spark india to access your location"
-  }, {
+  },
+  {
     "id": 3,
     "text": "Allow spark india to access contact list"
-  }, {
+  },
+  {
     "id": 4,
     "text": "Allow spark india to access microphone"
-  }, {
+  },
+  {
     "id": 5,
     "text": "Allow spark india to access camera"
-  }, {
+  },
+  {
     "id": 6,
     "text": "pause my search"
-  }, {
+  },
+  {
     "id": 7,
     "text": "anything else"
-  }, {
+  },
+  {
     "id": 8,
     "text": "how much"
-  }, {
+  },
+  {
     "id": 9,
     "text": "how to"
-  }, {
+  },
+  {
     "id": 10,
     "text": "allow me"
-  }] 
+  }
+]

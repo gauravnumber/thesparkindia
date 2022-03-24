@@ -40,9 +40,7 @@ const Categories = () => {
         bgcolor: "background.paper",
         // p: 2,
         mx: -1,
-        my: -3,
-
-        // height: 224,
+        // my: -3,
       }}
     >
       <GlobalStyles
