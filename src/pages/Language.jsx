@@ -6,45 +6,15 @@ import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import RadioButtonCheckedIcon from "@mui/icons-material/RadioButtonChecked";
 import RadioButtonUncheckedIcon from "@mui/icons-material/RadioButtonUnchecked";
 
-import "@fontsource/roboto/500.css";
-
 function Language() {
   return (
     <div className="App">
       <Box
         sx={{
-          width: 360,
-          height: 907,
+          mx: -1,
           background: "#FFFFFF",
         }}
       >
-        <Box
-          sx={{
-            width: 1 / 2,
-            fontFamily: "roboto",
-            fontSize: 19,
-            color: "#223263",
-          }}
-        >
-          <Typography variant="h5" component="h1">
-            <IconButton
-              edge="start"
-              sx={{
-                mx: 1,
-                color: "#223263",
-              }}
-            >
-              <ArrowBackIcon />
-            </IconButton>
-            Language
-          </Typography>
-        </Box>
-        <Divider
-          sx={{
-            height: 10,
-            bgcolor: "#E5E5E5",
-          }}
-        />
         <Box
           sx={{
             position: "relative",
