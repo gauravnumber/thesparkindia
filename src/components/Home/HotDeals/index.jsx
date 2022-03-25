@@ -69,7 +69,7 @@ const HotDeals = () => {
             }}
           /> */}
             <img
-              src="https://source.unsplash.com/141x109?LCD,TV"
+              src={`https://source.unsplash.com/141x109?LCD,DELL,monitor&sig=${index}`}
               width="141"
               height="109"
               alt="LCD TV"
