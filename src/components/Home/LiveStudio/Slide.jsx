@@ -25,8 +25,7 @@ const Slide = () => {
             color: (theme) => theme.palette.primary.contrastText,
             backgroundColor: "black",
             borderRadius: "3px",
-            background:
-              "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 94.58%), url('https://source.unsplash.com/148x210')",
+            background: `linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 94.58%), url("https://source.unsplash.com/148x210?electric,trimmer&sig=${index}")`,
             // background: "url('https://source.unsplash.com/148x210')",
             // backgroundImage:
             //   "url('https://source.unsplash.com/148x210?black,background')",
@@ -54,6 +53,7 @@ const Slide = () => {
             sx={{
               fontWeight: 500,
               fontSize: (theme) => theme.typography.pxToRem(12),
+              lineHeight: "14px",
             }}
           >
             Best Electric trimmers in 2022 with 5 Modes
