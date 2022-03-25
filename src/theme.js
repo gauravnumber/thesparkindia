@@ -16,6 +16,7 @@ const theme = createTheme({
       blue2: "#004aad",
       sparkBlue: "#338aff",
       grey: "#747474",
+      grey2: "#d6d6d6"
       // bgRed: "#c43838",
       // red: "#c33838"
     },
