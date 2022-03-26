@@ -26,7 +26,7 @@ const ElectronicItems = () => {
             sx={{
               fontSize: (theme) => theme.typography.pxToRem(14),
               mt: 1,
-              lineHeight: (theme) => theme.typography.pxToRem(14),
+              lineHeight: (theme) => theme.typography.pxToRem(15.45),
               textAlign: "center",
             }}
           >
