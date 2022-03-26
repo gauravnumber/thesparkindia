@@ -35,31 +35,51 @@ const TrendingSearches = () => {
         TRENDING SEARCHES
       </Typography>
       <List disablePadding>
-        <ListItem
-          disablePadding
-          secondaryAction={
-            <IconButton edge="end" sx={{ color: "#000" }}>
-              <TrendingUp />
-            </IconButton>
-          }
-        >
-          <ListItemButton>
-            <ListItemAvatar>
-              <Avatar src="https://source.unsplash.com/40x40" />
-            </ListItemAvatar>
-            <ListItemText
-              primary={
-                <Typography
-                  sx={{
-                    fontWeight: 500,
-                    fontSize: (theme) => theme.typography.pxToRem(15),
-                  }}
-                >
-                  5W Blue color LED
-                </Typography>
-              }
-              secondary="23k searches this week"
-            />
+        {Array.from(Array(3)).map((_, index) => (
+          <ListItem
+            key={index}
+            disablePadding
+            secondaryAction={
+              <IconButton edge="end" sx={{ color: "#000" }}>
+                <TrendingUp />
+              </IconButton>
+            }
+          >
+            <ListItemButton>
+              <ListItemAvatar>
+                <Avatar
+                  src={`https://source.unsplash.com/40x40?color,led&sig=${index}`}
+                />
+              </ListItemAvatar>
+              <ListItemText
+                primary={
+                  <Typography
+                    sx={{
+                      fontWeight: 500,
+                      fontSize: (theme) => theme.typography.pxToRem(15),
+                    }}
+                  >
+                    5W Blue color LED
+                  </Typography>
+                }
+                secondary="23k searches this week"
+              />
+            </ListItemButton>
+          </ListItem>
+        ))}
+        <ListItem key="ViewMore" disablePadding>
+          <ListItemButton sx={{ p: 0 }}>
+            <ListItemText>
+              <Typography
+                sx={{
+                  textAlign: "center",
+                  color: "primary.sparkBlue",
+                  fontSize: (theme) => theme.typography.pxToRem(13.875),
+                }}
+              >
+                View More
+              </Typography>
+            </ListItemText>
           </ListItemButton>
         </ListItem>
       </List>
