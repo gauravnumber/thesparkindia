@@ -5,7 +5,7 @@ const Header = () => {
     <Stack direction="row" alignItems="center">
       <Typography
         sx={{
-          px: "6px",
+          // px: "6px",
           // width: 65,
           // height: 25,
           color: (theme) => theme.palette.primary.blue2,
