@@ -1,3 +1,4 @@
+import Categories from "@/components/Home/Categories";
 import HotDeals from "@/components/Home/HotDeals";
 import LiveStudio from "@/components/Home/LiveStudio";
 import Slide from "@/components/Home/Slide";
@@ -40,6 +41,7 @@ const Home = () => {
       <Spark />
       <HotDeals />
       <LiveStudio />
+      <Categories />
     </Box>
   );
 };
