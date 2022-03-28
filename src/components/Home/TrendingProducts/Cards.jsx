@@ -33,7 +33,9 @@ const Cards = () => {
               sx={{
                 // backgroundColor: "black",
                 backgroundImage:
-                  "url(https://source.unsplash.com/178x151), #c4c4c4",
+                  "url('https://source.unsplash.com/178x151?LCD,screen')",
+                // width: "100%",
+                // borderColor: "unset",
                 height: 151,
               }}
             />
