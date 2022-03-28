@@ -1,3 +1,4 @@
+import Sponsored from "@/components/Home/Sponsored";
 import TrendingSearches from "@/components/Home/TrendingSearches";
 import TrendingProducts from "@/components/Home/TrendingProducts";
 import Categories from "@/components/Home/Categories";
@@ -46,6 +47,7 @@ const Home = () => {
       <Categories />
       <TrendingSearches />
       <TrendingProducts />
+      <Sponsored />
     </Box>
   );
 };

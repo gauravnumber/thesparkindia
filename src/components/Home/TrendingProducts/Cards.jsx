@@ -2,7 +2,7 @@ import { Typography, Grid, Box, Paper, Stack } from "@mui/material";
 
 const Cards = () => {
   return (
-    <Grid container spacing={1}>
+    <Grid container spacing={1} mt={1}>
       {Array.from(Array(8)).map((_, index) => (
         <Grid key={index} item xs={6}>
           <Stack
@@ -32,8 +32,7 @@ const Cards = () => {
             <Box
               sx={{
                 // backgroundColor: "black",
-                backgroundImage:
-                  "url('https://source.unsplash.com/178x151?LCD,screen')",
+                backgroundImage: `url('https://source.unsplash.com/178x151?LCD,screen&sig=${index}')`,
                 // width: "100%",
                 // borderColor: "unset",
                 height: 151,
