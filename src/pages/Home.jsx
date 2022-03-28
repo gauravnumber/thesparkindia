@@ -1,4 +1,5 @@
 import TrendingSearches from "@/components/Home/TrendingSearches";
+import TrendingProducts from "@/components/Home/TrendingProducts";
 import Categories from "@/components/Home/Categories";
 import HotDeals from "@/components/Home/HotDeals";
 import LiveStudio from "@/components/Home/LiveStudio";
@@ -44,6 +45,7 @@ const Home = () => {
       <LiveStudio />
       <Categories />
       <TrendingSearches />
+      <TrendingProducts />
     </Box>
   );
 };
