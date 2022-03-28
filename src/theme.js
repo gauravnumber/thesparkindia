@@ -20,11 +20,7 @@ const theme = createTheme({
       // bgRed: "#c43838",
       // red: "#c33838"
     },
-    // redButton: {
-    //   main: "#c43838"
-    // },
     background: {
-      // paper: red[500],
       // default: red[500]
       default: grey[100],
     },
