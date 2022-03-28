@@ -34,7 +34,7 @@ const Sponsored = () => {
               // width: 308,
               // height: 206,
               minWidth: 308,
-              borderRadius: "2.7px",
+              // borderRadius: (theme) => theme.typography.pxToRem(2.78),
               bgcolor: (theme) => theme.palette.primary.sparkBlue,
             }}
           >
@@ -45,9 +45,10 @@ const Sponsored = () => {
                 justifyContent: "flex-end",
                 height: 206,
                 backgroundColor: "black",
-                backgroundImage: `url(https://source.unsplash.com/308x206?sig=${index})`,
+                background: `radial-gradient(82.38% 345.99% at 82.38% 45.99%, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.75) 100%),url(https://source.unsplash.com/308x206?sig=${index})`,
                 color: "white",
-                p: "18px",
+                px: "18px",
+                py: "14px",
                 borderRadius: "2.7px 2.7px 0 0",
               }}
             >
@@ -73,8 +74,11 @@ const Sponsored = () => {
               justifyContent="space-between"
               alignItems="center"
               sx={{
-                p: "19px",
+                px: "19px",
+                py: "10px",
                 color: "white",
+                borderRadius: "0 0 2.7px 2.7px",
+                // borderRadius: (theme) => theme.typography.pxToRem(2.78),
                 bgcolor: (theme) => theme.palette.primary.sparkBlue,
               }}
             >
