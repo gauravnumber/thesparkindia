@@ -2,7 +2,7 @@ import { Typography, Grid, Box, Paper, Stack } from "@mui/material";
 
 const Cards = () => {
   return (
-    <Grid container spacing={1}>
+    <Grid container spacing={1} mt={1}>
       {Array.from(Array(8)).map((_, index) => (
         <Grid key={index} item xs={6}>
           <Stack
