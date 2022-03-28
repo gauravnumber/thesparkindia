@@ -16,7 +16,7 @@ const TrendingSearches = () => {
   return (
     <Paper
       sx={{
-        mx: 1,
+        // mx: 1,
         mt: 1,
         p: 1,
         borderRadius: "3px",
