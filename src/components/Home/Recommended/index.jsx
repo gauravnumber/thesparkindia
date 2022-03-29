@@ -53,7 +53,6 @@ const Recommended = () => {
             <Avatar
               src="https://source.unsplash.com/48x46"
               sx={{
-                //  width: 48,
                 height: 46,
                 borderRadius: "unset",
               }}
@@ -75,7 +74,6 @@ const Recommended = () => {
             secondary={
               <Typography
                 sx={{
-                  // fontWeight: 500,
                   fontSize: (theme) => theme.typography.pxToRem(11),
                   lineHeight: (theme) => theme.typography.pxToRem(13),
                   color: "#656565",
@@ -91,12 +89,26 @@ const Recommended = () => {
       <Grid
         container
         sx={{
-          // height: 357,
           mt: 2,
-          //  borderColor: "divider", borderTop: 1
+          ml: "-9px",
+          mb: "-7px",
+          width: "105%",
         }}
       >
-        <Grid container direction="column" alignItems="center" item xs={7}>
+        <Grid
+          container
+          direction="column"
+          alignItems="center"
+          item
+          xs={7}
+          sx={{
+            width: 255,
+            overflow: "hidden",
+            borderColor: "divider",
+            borderTop: "1px solid",
+            borderRight: "1px solid",
+          }}
+        >
           <Avatar
             src="https://source.unsplash.com/196x149?monitor"
             sx={{ width: 196, height: 149, borderRadius: "unset" }}
@@ -161,47 +173,45 @@ const Recommended = () => {
             </Typography>
           </Stack>
         </Grid>
-        <Grid item container flexDirection="column" xs={5}>
-          {/* <Box
-            sx={{
-              backgroundColor: "red",
-              height: 100,
-            }}
-          />
-          <Box
-            sx={{
-              backgroundColor: "blue",
-              height: 100,
-            }}
-          /> */}
+        <Grid
+          item
+          container
+          xs={5}
+          sx={{
+            overflow: "hidden",
+          }}
+        >
           {Array.from(Array(2)).map((_, index) => (
             <Stack
               key={index}
               direction="column"
-              alignItems="center"
-              sx={{ width: 154 }}
+              sx={{
+                ml: "2px",
+                borderColor: "divider",
+                borderTop: "1px solid",
+              }}
             >
               <Avatar
-                src="https://source.unsplash.com/50x50?monitor"
+                src="https://source.unsplash.com/72x56?monitor"
                 sx={{
-                  // width: 50,
-                  height: 50,
+                  width: 72,
+                  height: 56,
                   borderRadius: "unset",
-                  // textAlign: "center",
+                  alignSelf: "center",
                 }}
               />
-              <Stack direction="column" spacing={1} sx={{ p: 1 }}>
+              <Stack direction="column">
                 <Typography
                   noWrap
                   sx={{
                     fontSize: (theme) => theme.typography.pxToRem(13),
                     lineHeight: (theme) => theme.typography.pxToRem(15),
                     textOverflow: "ellipsis",
-                    // width: 206,
-                    // height: 15,
+                    width: "auto",
+                    width: 134,
                   }}
                 >
-                  Dell 16inch monitor 500W input monitor
+                  Dell 16inch monitor 500W input
                 </Typography>
                 <Stack
                   direction="row"
