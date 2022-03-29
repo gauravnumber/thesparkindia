@@ -18,7 +18,7 @@ const SparkFeatures = () => {
           key={index}
           sx={{
             minWidth: 115,
-            height: 119,
+            // height: 119,
             backgroundColor: (theme) => theme.palette.background.paper,
             borderRadius: (theme) => theme.typography.pxToRem(3),
             boxShadow: "0px 4px 10px -5px rgba(0, 0, 0, 0.13)",
