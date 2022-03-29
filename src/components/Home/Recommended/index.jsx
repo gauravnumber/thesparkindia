@@ -104,9 +104,9 @@ const Recommended = () => {
           sx={{
             width: 255,
             overflow: "hidden",
-            borderColor: "divider",
-            borderTop: "1px solid",
+            borderTop: "1px solid ",
             borderRight: "1px solid",
+            borderColor: "#cce2ff",
           }}
         >
           <Avatar
@@ -187,8 +187,8 @@ const Recommended = () => {
               direction="column"
               sx={{
                 ml: "2px",
-                borderColor: "divider",
                 borderTop: "1px solid",
+                borderColor: "#cce2ff",
               }}
             >
               <Avatar
@@ -207,7 +207,7 @@ const Recommended = () => {
                     fontSize: (theme) => theme.typography.pxToRem(13),
                     lineHeight: (theme) => theme.typography.pxToRem(15),
                     textOverflow: "ellipsis",
-                    width: "auto",
+                    // width: "auto",
                     width: 134,
                   }}
                 >
