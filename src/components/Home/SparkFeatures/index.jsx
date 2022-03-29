@@ -51,8 +51,30 @@ const SparkFeatures = () => {
               Scan and Shop
             </Typography>
           </Stack>
-          <Typography>*Get Benefits worth 1Lac along with money</Typography>
-          <Button>Know More</Button>
+          <Typography
+            sx={{
+              fontSize: (theme) => theme.typography.pxToRem(7),
+              lineHeight: (theme) => theme.typography.pxToRem(8),
+              color: "#8b8b8b",
+              mt: 1,
+            }}
+          >
+            *Get Benefits worth 1Lac along with money
+          </Typography>
+          <Button
+            sx={{
+              backgroundColor: "primary.sparkBlue",
+              color: "white",
+              borderRadius: "3px",
+              // fontSize: (theme) => theme.typography.pxToRem(7),
+              // px: "7px",
+              // py: "5px",
+              p: "1px",
+              mt: 1,
+            }}
+          >
+            Know More &gt;
+          </Button>
         </Stack>
       ))}
     </Stack>
