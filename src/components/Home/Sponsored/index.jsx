@@ -34,8 +34,10 @@ const Sponsored = () => {
               // width: 308,
               // height: 206,
               minWidth: 308,
-              // borderRadius: (theme) => theme.typography.pxToRem(2.78),
               bgcolor: (theme) => theme.palette.primary.sparkBlue,
+              // borderRadius: (theme) => theme.typography.pxToRem(27.8),
+              borderRadius: (theme) => theme.typography.pxToRem(2.78),
+              overflow: "hidden",
             }}
           >
             <Box
@@ -49,7 +51,7 @@ const Sponsored = () => {
                 color: "white",
                 px: "18px",
                 py: "14px",
-                borderRadius: "2.7px 2.7px 0 0",
+                // borderRadius: "2.7px 2.7px 0 0",
               }}
             >
               <Typography
@@ -77,7 +79,7 @@ const Sponsored = () => {
                 px: "19px",
                 py: "10px",
                 color: "white",
-                borderRadius: "0 0 2.7px 2.7px",
+                // borderRadius: "0 0 2.7px 2.7px",
                 // borderRadius: (theme) => theme.typography.pxToRem(2.78),
                 bgcolor: (theme) => theme.palette.primary.sparkBlue,
               }}
