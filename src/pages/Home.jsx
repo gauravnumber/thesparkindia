@@ -1,3 +1,4 @@
+import SparkFeatures from "@/components/Home/SparkFeatures";
 import Sponsored from "@/components/Home/Sponsored";
 import TrendingSearches from "@/components/Home/TrendingSearches";
 import TrendingProducts from "@/components/Home/TrendingProducts";
@@ -48,6 +49,7 @@ const Home = () => {
       <TrendingSearches />
       <TrendingProducts />
       <Sponsored />
+      <SparkFeatures />
     </Box>
   );
 };
