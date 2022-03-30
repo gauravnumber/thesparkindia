@@ -1,5 +1,4 @@
 import {
-  // red, green,
   blue,
   grey,
 } from "@mui/material/colors";
@@ -18,7 +17,6 @@ const theme = createTheme({
       grey: "#747474",
       grey2: "#d6d6d6",
       borderBlue: "#cce2ff"
-      // bgRed: "#c43838",
       // red: "#c33838"
     },
     background: {

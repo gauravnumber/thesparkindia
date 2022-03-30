@@ -1,3 +1,4 @@
+import FloatButton from "@/components/Home/FloatButton";
 import BackToTop from "@/components/Home/BackToTop";
 import RecentlyViewedProducts from "@/components/Home/RecentlyViewedProducts";
 import TopSellingBrands from "@/components/Home/TopSellingBrands";
@@ -13,16 +14,12 @@ import Slide from "@/components/Home/Slide";
 import Spark from "@/components/Home/Spark";
 import Img from "@/components/Img";
 import { SearchOutlined } from "@mui/icons-material";
-import { Box, IconButton, InputAdornment, TextField } from "@mui/material";
+import { Box, IconButton, InputAdornment, TextField, Fab } from "@mui/material";
 
 const Home = () => {
   return (
-    <Box
-      //  mt={-5}
-      mx={-1}
-    >
+    <Box mx={-1}>
       <TextField
-        // id="top"
         size="small"
         sx={{
           mt: 1,
@@ -59,6 +56,7 @@ const Home = () => {
       <TopSellingBrands />
       <RecentlyViewedProducts />
       <BackToTop />
+      <FloatButton />
     </Box>
   );
 };

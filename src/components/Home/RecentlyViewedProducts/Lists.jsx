@@ -70,7 +70,7 @@ const Lists = () => {
                     fontSize: (theme) => theme.typography.pxToRem(13),
                     lineHeight: (theme) => theme.typography.pxToRem(15),
                     textOverflow: "ellipsis",
-                    width: 206,
+                    width: 170,
                     // height: 15,
                   }}
                 >
