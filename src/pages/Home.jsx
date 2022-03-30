@@ -1,3 +1,4 @@
+import RecentlyViewedProducts from "@/components/Home/RecentlyViewedProducts";
 import TopSellingBrands from "@/components/Home/TopSellingBrands";
 import Recommended from "@/components/Home/Recommended";
 import SparkFeatures from "@/components/Home/SparkFeatures";
@@ -54,6 +55,7 @@ const Home = () => {
       <SparkFeatures />
       <Recommended />
       <TopSellingBrands />
+      <RecentlyViewedProducts />
     </Box>
   );
 };
