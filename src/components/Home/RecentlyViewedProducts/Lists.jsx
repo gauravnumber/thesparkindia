@@ -21,9 +21,23 @@ const Lists = () => {
           key={index}
           disablePadding
           secondaryAction={
-            <Avatar sx={{ width: 35, height: 35 }}>
+            <Avatar
+              sx={{
+                width: 27,
+                height: 27,
+                backgroundColor: "primary.lightBlue",
+                "& .MuiSvgIcon-root": {
+                  width: 18,
+                  height: 18,
+                  fontWeight: 700,
+                  color: "primary.blue2",
+                },
+              }}
+            >
               {/* <IconButton > */}
-              <FavoriteBorderOutlined />
+              <FavoriteBorderOutlined
+              //  sx={{ width: 12, height: 12 }}
+              />
               {/* </IconButton> */}
             </Avatar>
           }
