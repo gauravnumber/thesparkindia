@@ -1,3 +1,4 @@
+import BackToTop from "@/components/Home/BackToTop";
 import RecentlyViewedProducts from "@/components/Home/RecentlyViewedProducts";
 import TopSellingBrands from "@/components/Home/TopSellingBrands";
 import Recommended from "@/components/Home/Recommended";
@@ -56,6 +57,7 @@ const Home = () => {
       <Recommended />
       <TopSellingBrands />
       <RecentlyViewedProducts />
+      <BackToTop />
     </Box>
   );
 };
