@@ -1,3 +1,10 @@
+import FloatButton from "@/components/Home/FloatButton";
+import BackToTop from "@/components/Home/BackToTop";
+import RecentlyViewedProducts from "@/components/Home/RecentlyViewedProducts";
+import TopSellingBrands from "@/components/Home/TopSellingBrands";
+import Recommended from "@/components/Home/Recommended";
+import SparkFeatures from "@/components/Home/SparkFeatures";
+import Sponsored from "@/components/Home/Sponsored";
 import TrendingSearches from "@/components/Home/TrendingSearches";
 import TrendingProducts from "@/components/Home/TrendingProducts";
 import Categories from "@/components/Home/Categories";
@@ -7,14 +14,11 @@ import Slide from "@/components/Home/Slide";
 import Spark from "@/components/Home/Spark";
 import Img from "@/components/Img";
 import { SearchOutlined } from "@mui/icons-material";
-import { Box, IconButton, InputAdornment, TextField } from "@mui/material";
+import { Box, IconButton, InputAdornment, TextField, Fab } from "@mui/material";
 
 const Home = () => {
   return (
-    <Box
-      //  mt={-5}
-      mx={-1}
-    >
+    <Box mx={-1}>
       <TextField
         size="small"
         sx={{
@@ -46,6 +50,13 @@ const Home = () => {
       <Categories />
       <TrendingSearches />
       <TrendingProducts />
+      <Sponsored />
+      <SparkFeatures />
+      <Recommended />
+      <TopSellingBrands />
+      <RecentlyViewedProducts />
+      <BackToTop />
+      <FloatButton />
     </Box>
   );
 };
