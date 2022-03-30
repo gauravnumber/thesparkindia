@@ -1,3 +1,4 @@
+import BackToTop from "@/components/Home/BackToTop";
 import RecentlyViewedProducts from "@/components/Home/RecentlyViewedProducts";
 import TopSellingBrands from "@/components/Home/TopSellingBrands";
 import Recommended from "@/components/Home/Recommended";
@@ -21,6 +22,7 @@ const Home = () => {
       mx={-1}
     >
       <TextField
+        // id="top"
         size="small"
         sx={{
           mt: 1,
@@ -56,6 +58,7 @@ const Home = () => {
       <Recommended />
       <TopSellingBrands />
       <RecentlyViewedProducts />
+      <BackToTop />
     </Box>
   );
 };

@@ -21,16 +21,32 @@ const Lists = () => {
           key={index}
           disablePadding
           secondaryAction={
-            <IconButton>
-              <FavoriteBorderOutlined />
-            </IconButton>
+            <Avatar
+              sx={{
+                width: 27,
+                height: 27,
+                backgroundColor: "primary.lightBlue",
+                "& .MuiSvgIcon-root": {
+                  width: 18,
+                  height: 18,
+                  fontWeight: 700,
+                  color: "primary.blue2",
+                },
+              }}
+            >
+              {/* <IconButton > */}
+              <FavoriteBorderOutlined
+              //  sx={{ width: 12, height: 12 }}
+              />
+              {/* </IconButton> */}
+            </Avatar>
           }
           sx={{
             borderBottom: "1px solid",
             borderColor: "divider",
             "& .MuiListItemSecondaryAction-root": {
               top: "30%",
-              right: 0,
+              right: "5px",
             },
           }}
         >
