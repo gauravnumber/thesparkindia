@@ -26,6 +26,7 @@ import AccountSettings from "./pages/AccountSettings";
 import PrivasySettings from "./pages/PrivasySettings";
 import AccountInformation from "./pages/AccountInformation";
 import Language from "./pages/Language";
+import SlidingMenu from "./pages/SlidingMenu";
 
 function App() {
   return (
@@ -61,6 +62,7 @@ function App() {
         <Route path="/privasy-settings" element={<PrivasySettings />} />
         <Route path="/account-information" element={<AccountInformation />} />
         <Route path="/language" element={<Language />} />
+        <Route path="/slidingmenue" element={<SlidingMenu />} />
         <Route path="*" element={<h1>404: File Not Found</h1>} />
       </Routes>
       <Box mt={10} />
