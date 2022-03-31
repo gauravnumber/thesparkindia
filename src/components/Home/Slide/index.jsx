@@ -1,5 +1,6 @@
 import Carousel from "react-material-ui-carousel";
-import Slide from "@/components/Slide";
+import Slide from "./Slide";
+// import Slide from "@/components/Slide";
 
 const Slides = () => {
   var items = [
