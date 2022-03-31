@@ -24,8 +24,9 @@ const Home = () => {
         sx={{
           mt: 1,
           px: 1,
-          borderRadius: "15px",
-          bgcolor: "background.paper",
+          // borderRadius: "15px",
+          bgcolor: "background.blue2",
+          // bgcolor: "background.paper",
         }}
         InputProps={{
           startAdornment: (

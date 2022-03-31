@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 
-import { QrCode } from "@mui/icons-material";
+import { QrCode, Notifications } from "@mui/icons-material";
 
 import Toolbar from "@mui/material/Toolbar";
 
@@ -37,8 +37,8 @@ const Header = () => {
 
         ...(location.pathname === "/" && {
           boxShadow: "unset",
-          // backgroundColor: "primary.blue",
-          // color: "#fff",
+          backgroundColor: "primary.blue2",
+          color: "#fff",
         }),
       }}
     >
@@ -46,11 +46,7 @@ const Header = () => {
       // disableGutters
       >
         {location.pathname === "/" ? (
-          <IconButton
-            color="inherit"
-            //  onClick={() => navigate(-1)}
-            edge="start"
-          >
+          <IconButton color="inherit" edge="start">
             <MenuIcon />
           </IconButton>
         ) : (
@@ -62,12 +58,19 @@ const Header = () => {
           {heading}
         </Typography>
         <Box sx={{ flexGrow: 1 }} />
+        {location.pathname === "/" && (
+          <>
+            <IconButton color="inherit" size="large">
+              <QrCode />
+            </IconButton>
+            <IconButton color="inherit" size="large">
+              <Notifications />
+            </IconButton>
+          </>
+        )}
         {/* <IconButton color="inherit" size="large">
-          <QrCode />
-        </IconButton> */}
-        <IconButton color="inherit" size="large">
           <PersonOutlineOutlinedIcon />
-        </IconButton>
+        </IconButton> */}
         <IconButton color="inherit" size="large">
           <ShoppingCartOutlinedIcon />
         </IconButton>
