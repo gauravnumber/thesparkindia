@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { useNavigate, useLocation } from "react-router-dom";
+import { useNavigate, useLocation, Link } from "react-router-dom";
 
 import { QrCode, Notifications } from "@mui/icons-material";
 
@@ -63,7 +63,12 @@ const Header = () => {
             <IconButton color="inherit" size="large">
               <QrCode />
             </IconButton>
-            <IconButton color="inherit" size="large">
+            <IconButton
+              color="inherit"
+              size="large"
+              component={Link}
+              to="/notification"
+            >
               <Notifications />
             </IconButton>
           </>
