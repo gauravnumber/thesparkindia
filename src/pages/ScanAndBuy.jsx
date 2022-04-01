@@ -34,9 +34,13 @@ const ScanAndBuy = () => {
             {/* <Box sx={{ bgcolor: "red", width: 100, height: 100 }} /> */}
             <Avatar
               src={`https://source.unsplash.com/100x100?mouse&sig=${index}`}
-              sx={{ width: 100, height: 100, borderRadius: "unset" }}
+              sx={{ width: 100, height: 100, borderRadius: "9px" }}
             />
-            <Stack direction="row" justifyContent="space-between">
+            <Stack
+              direction="row"
+              justifyContent="space-between"
+              alignItems="flex-end"
+            >
               <Typography
                 sx={{ fontSize: (theme) => theme.typography.pxToRem(8.7) }}
               >
