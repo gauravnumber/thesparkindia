@@ -56,7 +56,12 @@ const Header = () => {
         <Box sx={{ flexGrow: 1 }} />
         {location.pathname === "/" && (
           <>
-            <IconButton color="inherit" size="large">
+            <IconButton
+              color="inherit"
+              size="large"
+              component={Link}
+              to="/scan-and-buy"
+            >
               <QrCode />
             </IconButton>
             <IconButton
