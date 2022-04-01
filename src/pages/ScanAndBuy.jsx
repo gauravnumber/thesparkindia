@@ -99,7 +99,7 @@ const ScanAndBuy = () => {
                 }}
               >
                 <Avatar
-                  src="/broken"
+                  src={`https://source.unsplash.com/10x9`}
                   sx={{ borderRadius: "unset", width: 10, height: 9 }}
                 />
                 Comprton.pvt
