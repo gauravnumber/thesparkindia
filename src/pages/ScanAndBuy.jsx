@@ -6,48 +6,52 @@ const ScanAndBuy = () => {
       sx={{
         mx: -1,
         px: 2,
-        // pt: 2,
+        pt: 2,
         mt: 6,
       }}
     >
-      <Box>
-        <Stack direction="row" justifyContent="space-between">
-          <Typography
-            sx={{
-              fontSize: (theme) => theme.typography.pxToRem(16),
-            }}
-          >
-            Recent Scans
-          </Typography>
-          <Typography
-            sx={{
-              fontSize: (theme) => theme.typography.pxToRem(12),
-              color: "primary.sparkBlue",
-            }}
-          >
-            See all
-          </Typography>
-        </Stack>
-        <Stack direction="row" justifyContent="space-between">
-          {Array.from(Array(3)).map((_, index) => (
-            <Box key={index}>
-              <Box sx={{ bgcolor: "red", width: 100, height: 100 }} />
-              <Stack direction="row" justifyContent="space-between">
-                <Typography
-                  sx={{ fontSize: (theme) => theme.typography.pxToRem(8.7) }}
-                >
-                  Today
-                </Typography>
-                <Typography
-                  sx={{ fontSize: (theme) => theme.typography.pxToRem(7.2) }}
-                >
-                  07:20PM
-                </Typography>
-              </Stack>
-            </Box>
-          ))}
-        </Stack>
-      </Box>
+      {/* <Box> */}
+      <Stack direction="row" justifyContent="space-between">
+        <Typography
+          sx={{
+            fontSize: (theme) => theme.typography.pxToRem(16),
+          }}
+        >
+          Recent Scans
+        </Typography>
+        <Typography
+          sx={{
+            fontSize: (theme) => theme.typography.pxToRem(12),
+            color: "primary.sparkBlue",
+          }}
+        >
+          See all
+        </Typography>
+      </Stack>
+      <Stack direction="row" justifyContent="space-between" sx={{ mt: 1 }}>
+        {Array.from(Array(3)).map((_, index) => (
+          <Box key={index}>
+            {/* <Box sx={{ bgcolor: "red", width: 100, height: 100 }} /> */}
+            <Avatar
+              src={`https://source.unsplash.com/100x100?mouse&sig=${index}`}
+              sx={{ width: 100, height: 100, borderRadius: "unset" }}
+            />
+            <Stack direction="row" justifyContent="space-between">
+              <Typography
+                sx={{ fontSize: (theme) => theme.typography.pxToRem(8.7) }}
+              >
+                Today
+              </Typography>
+              <Typography
+                sx={{ fontSize: (theme) => theme.typography.pxToRem(7.2) }}
+              >
+                07:20PM
+              </Typography>
+            </Stack>
+          </Box>
+        ))}
+      </Stack>
+      {/* </Box> */}
 
       <Box sx={{ mt: 3 }}>
         <Stack direction="row" justifyContent="space-between">
@@ -68,47 +72,58 @@ const ScanAndBuy = () => {
           </Typography>
         </Stack>
 
-        <Stack direction="row" sx={{ mt: 1, pb: 1 }}>
-          <Box
-            sx={{ width: 67, height: 66, bgcolor: "blue", borderRadius: "9px" }}
-          />
-          <Stack direction="column" sx={{ ml: "23px" }}>
-            <Typography
+        {Array.from(Array(3)).map((_, index) => (
+          <Stack key={index} direction="row" sx={{ mt: 1, pb: 1 }}>
+            {/* <Box
               sx={{
-                color: "#595959",
-                fontSize: (theme) => theme.typography.pxToRem(9.62),
-                lineHeight: (theme) => theme.typography.pxToRem(11.27),
-                display: "flex",
-                flexDirection: "row",
-                alignItems: "center",
-                gap: "4px",
+                width: 67,
+                height: 66,
+                bgcolor: "blue",
+                borderRadius: "9px",
               }}
-            >
-              <Avatar
-                src="/broken"
-                sx={{ borderRadius: "unset", width: 10, height: 9 }}
-              />
-              Comprton.pvt
-            </Typography>
-            <Typography
-              sx={{
-                fontSize: (theme) => theme.typography.pxToRem(16),
-              }}
-            >
-              Black mouse with 1m wire
-            </Typography>
-            <Typography
-              sx={{
-                mt: "2px",
-                color: "primary.sparkBlue",
-                fontSize: (theme) => theme.typography.pxToRem(12.2),
-                // lineHeight: (theme) => theme.typography.pxToRem(14),
-              }}
-            >
-              View 4 offers &gt;
-            </Typography>
+            /> */}
+            <Avatar
+              src={`https://source.unsplash.com/67x66?black,mouse&sig=${index}`}
+              sx={{ width: 67, height: 66, borderRadius: "9px" }}
+            />
+            <Stack direction="column" sx={{ ml: "23px", mt: "4px" }}>
+              <Typography
+                sx={{
+                  color: "#595959",
+                  fontSize: (theme) => theme.typography.pxToRem(9.62),
+                  lineHeight: (theme) => theme.typography.pxToRem(11.27),
+                  display: "flex",
+                  flexDirection: "row",
+                  alignItems: "center",
+                  gap: "4px",
+                }}
+              >
+                <Avatar
+                  src="/broken"
+                  sx={{ borderRadius: "unset", width: 10, height: 9 }}
+                />
+                Comprton.pvt
+              </Typography>
+              <Typography
+                sx={{
+                  fontSize: (theme) => theme.typography.pxToRem(16),
+                }}
+              >
+                Black mouse with 1m wire
+              </Typography>
+              <Typography
+                sx={{
+                  mt: "2px",
+                  color: "primary.sparkBlue",
+                  fontSize: (theme) => theme.typography.pxToRem(12.2),
+                  // lineHeight: (theme) => theme.typography.pxToRem(14),
+                }}
+              >
+                View 4 offers &gt;
+              </Typography>
+            </Stack>
           </Stack>
-        </Stack>
+        ))}
       </Box>
     </Paper>
   );
