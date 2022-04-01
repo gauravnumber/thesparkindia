@@ -1,35 +1,45 @@
-import { Paper, Box, Stack, Typography } from "@mui/material";
+import { Avatar, Paper, Box, Stack, Typography } from "@mui/material";
 
 const ScanAndBuy = () => {
   return (
     <Paper
       sx={{
-        p: 1,
+        mx: -1,
+        px: 2,
         // pt: 2,
         mt: 6,
       }}
     >
       <Box>
         <Stack direction="row" justifyContent="space-between">
-          <Typography>Recent Scans</Typography>
-          <Typography>See all</Typography>
+          <Typography
+            sx={{
+              fontSize: (theme) => theme.typography.pxToRem(16),
+            }}
+          >
+            Recent Scans
+          </Typography>
+          <Typography
+            sx={{
+              fontSize: (theme) => theme.typography.pxToRem(12),
+              color: "primary.sparkBlue",
+            }}
+          >
+            See all
+          </Typography>
         </Stack>
-        <Stack
-          direction="row"
-          //  spacing={2}
-          justifyContent="space-between"
-        >
+        <Stack direction="row" justifyContent="space-between">
           {Array.from(Array(3)).map((_, index) => (
             <Box key={index}>
               <Box sx={{ bgcolor: "red", width: 100, height: 100 }} />
               <Stack direction="row" justifyContent="space-between">
                 <Typography
-                  sx={{ fontSize: (theme) => theme.typography.pxToRem(13) }}
+                  sx={{ fontSize: (theme) => theme.typography.pxToRem(8.7) }}
                 >
                   Today
                 </Typography>
                 <Typography
-                  sx={{ fontSize: (theme) => theme.typography.pxToRem(13) }}
+                  sx={{ fontSize: (theme) => theme.typography.pxToRem(7.2) }}
                 >
                   07:20PM
                 </Typography>
@@ -41,16 +51,62 @@ const ScanAndBuy = () => {
 
       <Box sx={{ mt: 3 }}>
         <Stack direction="row" justifyContent="space-between">
-          <Typography>Recent Products</Typography>
-          <Typography>See all</Typography>
+          <Typography
+            sx={{
+              fontSize: (theme) => theme.typography.pxToRem(16),
+            }}
+          >
+            Recent Products
+          </Typography>
+          <Typography
+            sx={{
+              fontSize: (theme) => theme.typography.pxToRem(12),
+              color: "primary.sparkBlue",
+            }}
+          >
+            See all
+          </Typography>
         </Stack>
 
-        <Stack direction="row">
-          <Box sx={{ width: 50, height: 50, bgcolor: "blue" }} />
-          <Stack direction="column">
-            <Typography>Comprton.pvt</Typography>
-            <Typography>Black mouse with 1m wire</Typography>
-            <Typography>View 4 offers &gt;</Typography>
+        <Stack direction="row" sx={{ mt: 1, pb: 1 }}>
+          <Box
+            sx={{ width: 67, height: 66, bgcolor: "blue", borderRadius: "9px" }}
+          />
+          <Stack direction="column" sx={{ ml: "23px" }}>
+            <Typography
+              sx={{
+                color: "#595959",
+                fontSize: (theme) => theme.typography.pxToRem(9.62),
+                lineHeight: (theme) => theme.typography.pxToRem(11.27),
+                display: "flex",
+                flexDirection: "row",
+                alignItems: "center",
+                gap: "4px",
+              }}
+            >
+              <Avatar
+                src="/broken"
+                sx={{ borderRadius: "unset", width: 10, height: 9 }}
+              />
+              Comprton.pvt
+            </Typography>
+            <Typography
+              sx={{
+                fontSize: (theme) => theme.typography.pxToRem(16),
+              }}
+            >
+              Black mouse with 1m wire
+            </Typography>
+            <Typography
+              sx={{
+                mt: "2px",
+                color: "primary.sparkBlue",
+                fontSize: (theme) => theme.typography.pxToRem(12.2),
+                // lineHeight: (theme) => theme.typography.pxToRem(14),
+              }}
+            >
+              View 4 offers &gt;
+            </Typography>
           </Stack>
         </Stack>
       </Box>
