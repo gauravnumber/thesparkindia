@@ -20,8 +20,6 @@ const Header = () => {
   const location = useLocation();
   const { heading } = useHeader();
 
-  // if (location.pathname === "/") return null;
-
   return (
     <AppBar
       position="fixed"
@@ -42,9 +40,7 @@ const Header = () => {
         }),
       }}
     >
-      <Toolbar
-      // disableGutters
-      >
+      <Toolbar>
         {location.pathname === "/" ? (
           <IconButton color="inherit" edge="start">
             <MenuIcon />
@@ -73,10 +69,7 @@ const Header = () => {
             </IconButton>
           </>
         )}
-        {/* <IconButton color="inherit" size="large">
-          <PersonOutlineOutlinedIcon />
-        </IconButton> */}
-        <IconButton color="inherit" size="large">
+        <IconButton color="inherit" size="large" component={Link} to="/my-cart">
           <ShoppingCartOutlinedIcon />
         </IconButton>
       </Toolbar>
