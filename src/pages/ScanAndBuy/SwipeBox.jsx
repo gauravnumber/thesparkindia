@@ -1,16 +1,31 @@
-import { Avatar, Paper, Box, Stack, Typography } from "@mui/material";
+import {
+  Avatar,
+  Paper,
+  Box,
+  Stack,
+  Typography,
+  SwipeableDrawer,
+} from "@mui/material";
 
-const ScanAndBuy = () => {
+const SwipeBox = () => {
   return (
     <Paper
       sx={{
-        mx: -1,
-        px: 2,
+        // mx: -1,
+        px: 1,
         pt: 2,
+        // mb: 50,
         mt: 6,
+        // mt: -1,
+        // position: "absolute",
+        // // top: 56,
+        // borderTopLeftRadius: 18,
+        // borderTopRightRadius: 18,
+        // visibility: "visible",
+        // right: 0,
+        // left: 0,
       }}
     >
-      {/* <Box> */}
       <Stack direction="row" justifyContent="space-between">
         <Typography
           sx={{
@@ -31,7 +46,6 @@ const ScanAndBuy = () => {
       <Stack direction="row" justifyContent="space-between" sx={{ mt: 1 }}>
         {Array.from(Array(3)).map((_, index) => (
           <Box key={index}>
-            {/* <Box sx={{ bgcolor: "red", width: 100, height: 100 }} /> */}
             <Avatar
               src={`https://source.unsplash.com/100x100?mouse&sig=${index}`}
               sx={{ width: 100, height: 100, borderRadius: "9px" }}
@@ -55,8 +69,6 @@ const ScanAndBuy = () => {
           </Box>
         ))}
       </Stack>
-      {/* </Box> */}
-
       <Box sx={{ mt: 3 }}>
         <Stack direction="row" justifyContent="space-between">
           <Typography
@@ -75,17 +87,16 @@ const ScanAndBuy = () => {
             See all
           </Typography>
         </Stack>
-
         {Array.from(Array(3)).map((_, index) => (
           <Stack key={index} direction="row" sx={{ mt: 1, pb: 1 }}>
             {/* <Box
-              sx={{
-                width: 67,
-                height: 66,
-                bgcolor: "blue",
-                borderRadius: "9px",
-              }}
-            /> */}
+        sx={{
+          width: 67,
+          height: 66,
+          bgcolor: "blue",
+          borderRadius: "9px",
+        }}
+      /> */}
             <Avatar
               src={`https://source.unsplash.com/67x66?black,mouse&sig=${index}`}
               sx={{ width: 67, height: 66, borderRadius: "9px" }}
@@ -132,4 +143,5 @@ const ScanAndBuy = () => {
     </Paper>
   );
 };
-export default ScanAndBuy;
+
+export default SwipeBox;
