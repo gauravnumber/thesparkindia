@@ -53,7 +53,7 @@ const Lists = () => {
           <ListItemButton>
             <ListItemAvatar>
               <Avatar
-                src="https://source.unsplash.com/98x74"
+                src={`https://source.unsplash.com/98x74?monitor&sig=${index}`}
                 sx={{
                   width: 98,
                   height: 74,
@@ -81,7 +81,7 @@ const Lists = () => {
                 <>
                   <Stack
                     direction="row"
-                    alignItems="center"
+                    alignItems="flex-end"
                     spacing="6px"
                     sx={{
                       mt: 1,
@@ -115,6 +115,16 @@ const Lists = () => {
                       }}
                     >
                       Per item
+                    </Typography>
+                    <Typography
+                      sx={{
+                        color: "primary.blue2",
+                        fontWeight: 500,
+                        fontSize: (theme) => theme.typography.pxToRem(10),
+                        lineHeight: (theme) => theme.typography.pxToRem(15),
+                      }}
+                    >
+                      65% off
                     </Typography>
                   </Stack>
                   <Typography

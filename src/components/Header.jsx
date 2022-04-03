@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
-import { useNavigate, useLocation } from "react-router-dom";
+import { useNavigate, useLocation, Link } from "react-router-dom";
 
-import { QrCode } from "@mui/icons-material";
+import { QrCode, Notifications } from "@mui/icons-material";
 
 import Toolbar from "@mui/material/Toolbar";
 
@@ -20,8 +20,6 @@ const Header = () => {
   const location = useLocation();
   const { heading } = useHeader();
 
-  // if (location.pathname === "/") return null;
-
   return (
     <AppBar
       position="fixed"
@@ -37,20 +35,14 @@ const Header = () => {
 
         ...(location.pathname === "/" && {
           boxShadow: "unset",
-          // backgroundColor: "primary.blue",
-          // color: "#fff",
+          backgroundColor: "primary.blue2",
+          color: "#fff",
         }),
       }}
     >
-      <Toolbar
-      // disableGutters
-      >
+      <Toolbar>
         {location.pathname === "/" ? (
-          <IconButton
-            color="inherit"
-            //  onClick={() => navigate(-1)}
-            edge="start"
-          >
+          <IconButton color="inherit" edge="start">
             <MenuIcon />
           </IconButton>
         ) : (
@@ -62,13 +54,27 @@ const Header = () => {
           {heading}
         </Typography>
         <Box sx={{ flexGrow: 1 }} />
-        {/* <IconButton color="inherit" size="large">
-          <QrCode />
-        </IconButton> */}
-        <IconButton color="inherit" size="large">
-          <PersonOutlineOutlinedIcon />
-        </IconButton>
-        <IconButton color="inherit" size="large">
+        {location.pathname === "/" && (
+          <>
+            <IconButton
+              color="inherit"
+              size="large"
+              component={Link}
+              to="/scan-and-buy"
+            >
+              <QrCode />
+            </IconButton>
+            <IconButton
+              color="inherit"
+              size="large"
+              component={Link}
+              to="/notification"
+            >
+              <Notifications />
+            </IconButton>
+          </>
+        )}
+        <IconButton color="inherit" size="large" component={Link} to="/my-cart">
           <ShoppingCartOutlinedIcon />
         </IconButton>
       </Toolbar>

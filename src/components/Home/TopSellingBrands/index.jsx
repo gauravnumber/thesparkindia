@@ -24,7 +24,7 @@ const TopSellingBrands = () => {
             justifyContent="center"
           >
             <Avatar
-              src="https://source.unsplash.com/78x78"
+              src={`https://source.unsplash.com/78x78?sig=${index}`}
               alt="Brand"
               sx={{ width: 78, height: 78 }}
             />

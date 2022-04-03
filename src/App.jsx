@@ -1,5 +1,3 @@
-// import { useState } from "react";
-// import { Icon, Menu, Container } from "semantic-ui-react";
 import { CssBaseline, Container, Box } from "@mui/material";
 import { Routes, Route } from "react-router-dom";
 
@@ -28,11 +26,12 @@ import AccountInformation from "./pages/AccountInformation";
 import Language from "./pages/Language";
 import SlidingMenu from "./pages/SlidingMenu";
 
+import ScanAndBuy from "./pages/ScanAndBuy";
+
 function App() {
   return (
     <Container
       sx={{
-        // paddingX: 0,
         paddingX: 1,
       }}
     >
@@ -50,6 +49,8 @@ function App() {
           <Route index element={<Favourites />} />
           <Route path="led" element={<FavouritePage />} />
         </Route>
+        <Route path="/account-information" element={<AccountInformation />} />
+        <Route path="/account-settings" element={<AccountSettings />} />
         <Route path="/notification" element={<Notification />} />
         <Route path="/recently-viewed" element={<RecentlyViewed />} />
         <Route path="/my-orders" element={<MyOrders />} />
@@ -58,11 +59,11 @@ function App() {
         <Route path="/edit-profile" element={<EditProfile />} />
         <Route path="/my-cart" element={<MyCart />} />
         <Route path="/help-center" element={<HelpCenter />} />
-        <Route path="/account-settings" element={<AccountSettings />} />
+        <Route path="/scan-and-buy" element={<ScanAndBuy />} />
         <Route path="/privasy-settings" element={<PrivasySettings />} />
-        <Route path="/account-information" element={<AccountInformation />} />
         <Route path="/language" element={<Language />} />
-        <Route path="/slidingmenue" element={<SlidingMenu />} />
+
+        <Route path="/sliding-menu" element={<SlidingMenu />} />
         <Route path="*" element={<h1>404: File Not Found</h1>} />
       </Routes>
       <Box mt={10} />

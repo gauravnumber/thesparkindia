@@ -20,7 +20,6 @@ const theme = createTheme({
       // red: "#c33838"
     },
     background: {
-      // default: red[500]
       default: grey[100],
     },
   },
