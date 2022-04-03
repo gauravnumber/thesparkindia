@@ -25,6 +25,7 @@ import PrivasySettings from "./pages/PrivasySettings";
 import AccountInformation from "./pages/AccountInformation";
 import Language from "./pages/Language";
 import SlidingMenu from "./pages/SlidingMenu";
+import Refer from "./pages/Refer";
 
 import ScanAndBuy from "./pages/ScanAndBuy";
 
@@ -62,6 +63,7 @@ function App() {
         <Route path="/scan-and-buy" element={<ScanAndBuy />} />
         <Route path="/privasy-settings" element={<PrivasySettings />} />
         <Route path="/language" element={<Language />} />
+        <Route path="/refer" element={<Refer />} />
 
         <Route path="/sliding-menu" element={<SlidingMenu />} />
         <Route path="*" element={<h1>404: File Not Found</h1>} />
