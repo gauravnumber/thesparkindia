@@ -1,8 +1,11 @@
-import { useState } from "react";
+import { Camera } from "react-camera-pro";
+import { useState, useRef } from "react";
 import { SwipeableDrawer, GlobalStyles } from "@mui/material";
 import SwipeBox from "./SwipeBox";
 
 const ScanAndBuy = () => {
+  const camera = useRef(null);
+  const [image, setImage] = useState(null);
   const [open, setOpen] = useState(true);
 
   const toggleDrawer = (newOpen) => () => {
@@ -20,6 +23,11 @@ const ScanAndBuy = () => {
           },
         }}
       />
+      <Camera ref={camera} />
+      {/* <button onClick={() => setImage(camera.current.takePhoto())}>
+        Take Photo{" "}
+      </button>
+      <img src={image} /> */}
       {/* <button onClick={() => toggleDrawer(setOpen((value) => !value))}>
         toggle
       </button> */}
