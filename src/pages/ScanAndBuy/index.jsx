@@ -8,6 +8,7 @@ import {
 } from "@mui/icons-material";
 
 import { Camera } from "react-camera-pro";
+import Webcam from "react-webcam";
 import { useState, useRef } from "react";
 import {
   Typography,
@@ -24,6 +25,13 @@ const ScanAndBuy = () => {
   const [image, setImage] = useState(null);
   const [open, setOpen] = useState(true);
 
+  // const videoConstraints = {
+  //   facingMode: {
+  //     exact: "environment",
+  //   },
+  // };
+  const videoConstraints = { facingMode: "user" };
+
   const toggleDrawer = (newOpen) => () => {
     setOpen(newOpen);
   };
@@ -39,14 +47,19 @@ const ScanAndBuy = () => {
           },
         }}
       /> */}
-      {/* <Stack direction="row" justifyContent="space-between">
-        <p>one</p>
-        <p>two</p>
-        <p>three</p>
-      </Stack> */}
-      {/* <Box sx={{ backgroundColor: "rgba(0, 0, 0, 0.1)" }}> */}
-      <Camera ref={camera} />
-      {/* </Box> */}
+      {/* <Camera ref={camera} /> */}
+      <Box
+        sx={{
+          position: "fixed",
+          top: 0,
+          left: 0,
+          width: "100%",
+          height: "100%",
+        }}
+      >
+        <Webcam videoConstraints={videoConstraints} />
+        {/* <Webcam ref={camera} /> */}
+      </Box>
       <Box
         sx={{
           position: "fixed",
@@ -134,7 +147,8 @@ const ScanAndBuy = () => {
           // alignItems: "center",
         }}
       >
-        <Camera ref={camera} />
+        <Webcam videoConstraints={videoConstraints} />
+        {/* <Camera ref={camera} /> */}
       </Box>
       {/* <button onClick={() => setImage(camera.current.takePhoto())}>
         Take Photo{" "}
