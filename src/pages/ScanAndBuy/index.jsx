@@ -4,6 +4,7 @@ import {
   HelpCenter,
   HelpCenterRounded,
   HelpCenterOutlined,
+  HelpOutline,
 } from "@mui/icons-material";
 
 import { Camera } from "react-camera-pro";
@@ -60,7 +61,8 @@ const ScanAndBuy = () => {
       <Stack
         direction="row"
         justifyContent="space-between"
-        alignItems="center"
+        alignItems="flex-end"
+        // alignItems="center"
         sx={{
           position: "fixed",
           left: 0,
@@ -88,8 +90,8 @@ const ScanAndBuy = () => {
         <Typography
           variant="h6"
           sx={{
-            width: 106,
-            height: 25,
+            // width: 106,
+            // height: 25,
             fontSize: (theme) => theme.typography.pxToRem(21.5),
             // lineHeight: (theme) => theme.typography.pxToRem(15),
           }}
@@ -106,7 +108,8 @@ const ScanAndBuy = () => {
             },
           }}
         >
-          <HelpCenterOutlined />
+          <HelpOutline />
+          {/* <HelpCenterOutlined /> */}
           {/* <HelpCenterRounded /> */}
           {/* <HelpCenter /> */}
         </IconButton>
