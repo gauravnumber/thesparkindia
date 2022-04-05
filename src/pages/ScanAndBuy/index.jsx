@@ -25,12 +25,12 @@ const ScanAndBuy = () => {
   const [image, setImage] = useState(null);
   const [open, setOpen] = useState(true);
 
-  // const videoConstraints = {
-  //   facingMode: {
-  //     exact: "environment",
-  //   },
-  // };
-  const videoConstraints = { facingMode: "user" };
+  const videoConstraints = {
+    facingMode: {
+      exact: "environment",
+    },
+  };
+  // const videoConstraints = { facingMode: "user" };
 
   const toggleDrawer = (newOpen) => () => {
     setOpen(newOpen);
