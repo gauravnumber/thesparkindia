@@ -20,6 +20,8 @@ const Header = () => {
   const location = useLocation();
   const { heading } = useHeader();
 
+  if (location.pathname === "/scan-and-buy") return null;
+
   return (
     <AppBar
       position="fixed"
