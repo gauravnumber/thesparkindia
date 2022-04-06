@@ -400,7 +400,6 @@ function Refer() {
                 p: "2px 4px",
                 display: "flex",
                 alignItems: "center",
-                width: 400,
                 borderRadius: 9,
                 width: 334,
                 borderColor: "#999898",
