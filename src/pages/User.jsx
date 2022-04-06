@@ -22,6 +22,7 @@ import {
   Typography,
 } from "@mui/material";
 import { Link } from "react-router-dom";
+import { Edit } from "@mui/icons-material";
 
 function User() {
   const menu = [
@@ -46,40 +47,13 @@ function User() {
     },
   ];
 
-  // const inputGlobalStyles = (
-  //   <GlobalStyles
-  //     style={{
-  //       body: {
-  //         color: "green",
-  //         backgroundColor: "red",
-  //       },
-  //     }}
-  //   />
-  // );
-  //       paper: "#fff",
-  //     },
-  //     // background: "white",
-  //   },
-  // });
-  // {inputGlobalStyles}{" "}
-  // <GlobalStyles
-  //   style={{
-  //     body: {
-  //       color: "pink",
-  //       backgroundColor: "red",
-  //     },
-  //   }}
-  // />
-
   return (
     <
       // ThemeProvider theme={theme}
     >
-      {/*! GlobalStyles not working */}
       <GlobalStyles
         styles={{
           body: {
-            // color: "pink",
             backgroundColor: "#fff",
           },
         }}
@@ -102,17 +76,7 @@ function User() {
         // backgroundColor="red"
         // backgroundColor="background.paper"
       >
-        {/* {inputGlobalStyles} */}
-        {/* <GlobalStyles
-          style={{
-            h4: {
-              color: "green",
-              backgroundColor: "red",
-            },
-          }}
-        /> */}
-        {/* <h1>lij</h1> */}
-        <Grid item container direction="column" spacing={5} mb={2}>
+        <Grid item container direction="column" spacing={1} mb={2}>
           <Grid item container xs justifyContent="center" alignItems="center">
             <Grid item xs>
               <IconButton size="large">
@@ -151,6 +115,15 @@ function User() {
                 Sign up
               </Button>
             </Grid>
+          </Grid>
+          <Grid item container justifyContent="flex-end" sx={{ m: 0, p: 0 }}>
+            <IconButton
+              component={Link}
+              to="/edit-profile"
+              //  LinkComponent="/edit-profile"
+            >
+              <Edit />
+            </IconButton>
           </Grid>
         </Grid>
         <Divider />
