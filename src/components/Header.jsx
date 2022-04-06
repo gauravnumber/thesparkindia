@@ -1,7 +1,12 @@
 import { useState, useEffect } from "react";
 import { useNavigate, useLocation, Link } from "react-router-dom";
 
-import { QrCode, Notifications, Settings } from "@mui/icons-material";
+import {
+  QrCode,
+  Notifications,
+  Settings,
+  ArrowBack,
+} from "@mui/icons-material";
 
 import Toolbar from "@mui/material/Toolbar";
 
@@ -11,7 +16,7 @@ import PersonOutlineOutlinedIcon from "@mui/icons-material/PersonOutlineOutlined
 // import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 
 import { Typography, IconButton, Box, AppBar } from "@mui/material";
-import { ArrowBack } from "@mui/icons-material";
+// import { ArrowBack } from "@mui/icons-material";
 
 import useHeader from "@/hooks/useHeader";
 
@@ -78,6 +83,14 @@ const Header = () => {
         )}
         <IconButton color="inherit" size="large" component={Link} to="/my-cart">
           <ShoppingCartOutlinedIcon />
+        </IconButton>
+        <IconButton
+          color="inherit"
+          size="large"
+          component={Link}
+          to="/account-settings"
+        >
+          <Settings />
         </IconButton>
       </Toolbar>
     </AppBar>
