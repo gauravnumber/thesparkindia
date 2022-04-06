@@ -22,7 +22,7 @@ const Home = () => {
       <SearchBar />
       <Img
         src="https://source.unsplash.com/393x67?advertisement,discount"
-        sx={{ mt: 1, mb: -1 }}
+        sx={{ mt: 0, mb: -1 }}
         alt="Offers Banner"
       />
       <Slide />
