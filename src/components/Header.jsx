@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { useNavigate, useLocation, Link } from "react-router-dom";
 
-import { QrCode, Notifications } from "@mui/icons-material";
+import { QrCode, Notifications, Settings } from "@mui/icons-material";
 
 import Toolbar from "@mui/material/Toolbar";
 
