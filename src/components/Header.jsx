@@ -84,14 +84,16 @@ const Header = () => {
         <IconButton color="inherit" size="large" component={Link} to="/my-cart">
           <ShoppingCartOutlinedIcon />
         </IconButton>
-        <IconButton
-          color="inherit"
-          size="large"
-          component={Link}
-          to="/account-settings"
-        >
-          <Settings />
-        </IconButton>
+        {location.pathname === "/user" && (
+          <IconButton
+            color="inherit"
+            size="large"
+            component={Link}
+            to="/account-settings"
+          >
+            <Settings />
+          </IconButton>
+        )}
       </Toolbar>
     </AppBar>
   );
