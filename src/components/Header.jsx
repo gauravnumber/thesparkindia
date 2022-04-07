@@ -12,7 +12,8 @@ import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import Toolbar from "@mui/material/Toolbar";
 import {
   styled,
-  AppBar as MuiAppBar,
+  AppBar,
+  // AppBar as MuiAppBar,
   Box,
   IconButton,
   Typography,
@@ -28,6 +29,7 @@ const Header = () => {
   const { heading } = useHeader();
 
   if (location.pathname === "/scan-and-buy") return null;
+  if (["/scan-and-buy", "/"].includes(location.pathname)) return null;
 
   // const handleDrawerOpen = () => {
   //   setOpen(true);
@@ -58,7 +60,7 @@ const Header = () => {
     <div>
       <AppBar
         position="fixed"
-        open={open}
+        // open={open}
         sx={{
           color: "primary.blue",
           backgroundColor: (theme) => theme.palette.background.paper,
