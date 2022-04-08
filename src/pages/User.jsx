@@ -207,13 +207,19 @@ function User() {
               <ArrowForwardIosOutlinedIcon />
             </ListItemIcon>
           </ListItemButton>
-          <ListItemButton component="a">
+          <ListItemButton
+            // component="a"
+            component={Link}
+            to="/language"
+          >
             <ListItemIcon>
               <LibraryAddCheckOutlinedIcon />
             </ListItemIcon>
             <ListItemText
               primary="Language"
               primaryTypographyProps={{ fontWeight: "bold" }}
+              // component={Link}
+              // to="/language"
             />
             <ListItemIcon>
               <ArrowForwardIosOutlinedIcon />
