@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 // import { useState } from "react";
 
 import { Box, Typography, IconButton, Drawer, Divider } from "@mui/material";
@@ -78,7 +79,11 @@ const DrawerWrapper = ({ open, setOpen }) => {
             >
               Hello!
             </Typography>
-            <IconButton sx={{ left: 196, top: 3 }}>
+            <IconButton
+              sx={{ left: 196, top: 3 }}
+              component={Link}
+              to="/account-settings"
+            >
               <Settings />
             </IconButton>
             <AccountCircleRoundedIcon
@@ -163,6 +168,8 @@ const DrawerWrapper = ({ open, setOpen }) => {
                 top: 0,
                 m: 2,
               }}
+              component={Link}
+              to="/categories"
             >
               Category
             </Typography>
@@ -241,6 +248,8 @@ const DrawerWrapper = ({ open, setOpen }) => {
                 top: 0,
                 m: 2,
               }}
+              component={Link}
+              to="/my-orders"
             >
               My orders
             </Typography>
@@ -292,6 +301,8 @@ const DrawerWrapper = ({ open, setOpen }) => {
                 top: 0,
                 m: 2,
               }}
+              component={Link}
+              to="/scan-and-buy"
             >
               Scan and pay
             </Typography>
@@ -317,6 +328,8 @@ const DrawerWrapper = ({ open, setOpen }) => {
                 top: 0,
                 m: 2,
               }}
+              component={Link}
+              to="/refer"
             >
               Refer and pay
             </Typography>
