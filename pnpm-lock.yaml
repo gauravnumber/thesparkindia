@@ -23,6 +23,7 @@ specifiers:
   react-dom: ^17.0.2
   react-material-ui-carousel: ^3.2.0
   react-router-dom: ^6.2.1
+  react-webcam: ^7.0.1
   styled-components: ^5.3.5
   vite: ^2.7.2
 
@@ -37,6 +38,7 @@ dependencies:
   react-dom: 17.0.2_react@17.0.2
   react-material-ui-carousel: 3.2.0
   react-router-dom: 6.2.2_react-dom@17.0.2+react@17.0.2
+  react-webcam: 7.0.1_react-dom@17.0.2+react@17.0.2
   styled-components: 5.3.5_react-dom@17.0.2+react@17.0.2
 
 devDependencies:
@@ -2611,6 +2613,16 @@ packages:
       dom-helpers: 5.2.1
       loose-envify: 1.4.0
       prop-types: 15.8.1
+      react: 17.0.2
+      react-dom: 17.0.2_react@17.0.2
+    dev: false
+
+  /react-webcam/7.0.1_react-dom@17.0.2+react@17.0.2:
+    resolution: {integrity: sha512-8E/Eb/7ksKwn5QdLn67tOR7+TdP9BZdu6E5/DSt20v8yfW/s0VGBigE6VA7R4278mBuBUowovAB3DkCfVmSPvA==}
+    peerDependencies:
+      react: '>=16.2.0'
+      react-dom: '>=16.2.0'
+    dependencies:
       react: 17.0.2
       react-dom: 17.0.2_react@17.0.2
     dev: false
