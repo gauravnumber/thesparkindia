@@ -28,7 +28,7 @@ const Header = () => {
   const location = useLocation();
   const { heading } = useHeader();
 
-  if (location.pathname === "/scan-and-buy") return null;
+  // if (location.pathname === "/scan-and-buy") return null;
   if (["/scan-and-buy", "/"].includes(location.pathname)) return null;
 
   // const handleDrawerOpen = () => {
