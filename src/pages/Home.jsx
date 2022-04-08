@@ -27,6 +27,7 @@ import {
   QrCode,
   ShoppingCartOutlined,
   Close,
+  Settings,
 } from "@mui/icons-material";
 import {
   AppBar as MuiAppBar,
@@ -43,6 +44,7 @@ import { Link } from "react-router-dom";
 
 // const drawerWidth = 0;
 const drawerWidth = 240;
+// const drawerWidth = 400;
 
 const Home = () => {
   const [open, setOpen] = useState(false);
@@ -161,11 +163,12 @@ const Home = () => {
           width: drawerWidth,
           flexShrink: 0,
           "& .MuiDrawer-paper": {
-            width: drawerWidth,
+            // width: drawerWidth,
             boxSizing: "border-box",
           },
         }}
-        variant="persistent"
+        variant="temporary"
+        // variant="persistent"
         anchor="left"
         open={open}
       >
@@ -181,7 +184,7 @@ const Home = () => {
         <Box
           sx={{
             width: drawerWidth,
-            height: 802,
+            // height: 802,
             left: 0,
             top: 42,
           }}
@@ -208,6 +211,9 @@ const Home = () => {
             >
               Hello!
             </Typography>
+            <IconButton sx={{ left: 196, top: 3 }}>
+              <Settings />
+            </IconButton>
             <AccountCircleRoundedIcon
               fontSize="large"
               color="action"
