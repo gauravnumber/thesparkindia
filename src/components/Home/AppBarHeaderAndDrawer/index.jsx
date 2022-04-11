@@ -108,7 +108,14 @@ const AppBarHeaderAndDrawer = () => {
           </IconButton>
         </Toolbar>
       </AppBar>
-      <Drawer open={open} setOpen={setOpen} />
+      <Drawer
+        open={open}
+        setOpen={setOpen}
+        // disableSwipeToOpen={true}
+        // ModalProps={{
+        //   keepMounted: false,
+        // }}
+      />
     </>
   );
 };

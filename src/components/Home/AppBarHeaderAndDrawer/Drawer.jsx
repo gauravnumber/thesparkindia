@@ -20,6 +20,18 @@ const DrawerWrapper = ({ open, setOpen }) => {
   //   setOpen(true);
   // };
 
+  const toggleDrawer = (open) => (event) => {
+    if (
+      event.type === "keydown" &&
+      (event.key === "Tab" || event.key === "Shift")
+    ) {
+      return;
+    }
+
+    setOpen(open);
+    // setState({ ...state, [anchor]: open });
+  };
+
   const handleDrawerClose = () => {
     setOpen(false);
   };
@@ -35,12 +47,18 @@ const DrawerWrapper = ({ open, setOpen }) => {
             boxSizing: "border-box",
           },
         }}
-        variant="temporary"
-        // variant="persistent"
+        // variant="temporary"
         anchor="left"
         open={open}
+        onClick={handleDrawerClose}
+        // onClick={toggleDrawer(false)}
+        // onKeyDown={toggleDrawer(false)}
+        // disableSwipeToOpen={true}
+        // ModalProps={{
+        //   keepMounted: true,
+        // }}
       >
-        <IconButton
+        {/* <IconButton
           color="inherit"
           aria-label="close drawer"
           onClick={handleDrawerClose}
@@ -48,7 +66,7 @@ const DrawerWrapper = ({ open, setOpen }) => {
           // sx={{ mr: 2, ...(open && { display: "none" }) }}
         >
           <Close />
-        </IconButton>
+        </IconButton> */}
         <Box
           sx={{
             width: drawerWidth,
