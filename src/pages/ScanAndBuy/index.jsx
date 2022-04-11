@@ -18,8 +18,8 @@ import SwipeBox from "./SwipeBox";
 const ScanAndBuy = () => {
   // const camera = useRef(null);
   // const [image, setImage] = useState(null);
-  // const [open, setOpen] = useState(true);
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState(true);
+  // const [open, setOpen] = useState(false);
 
   const videoConstraints = {
     facingMode: {
