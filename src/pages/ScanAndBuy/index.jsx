@@ -1,10 +1,12 @@
 import {
   Close,
   HelpOutline,
-  FlashlightOffSharp as FlashlightOff,
   BrowseGallery,
+  FlashlightOnOutlined,
+  CollectionsOutlined,
 } from "@mui/icons-material";
 import {
+  Avatar,
   Box,
   IconButton,
   Stack,
@@ -141,33 +143,33 @@ const ScanAndBuy = () => {
         sx={{
           position: "absolute",
           top: "75%",
-          left: "calc(50% - 75px)",
+          left: "calc(50% - 48px)",
         }}
       >
-        <IconButton
+        <Avatar
           sx={{
             "& .MuiSvgIcon-root": {
               // color: "white",
-              width: "51px",
-              height: "51px",
+              // width: "51px",
+              // height: "51px",
               // borderRadius: "50%",
             },
           }}
         >
-          <FlashlightOff />
-        </IconButton>
-        <IconButton
-          sx={{
-            "& .MuiSvgIcon-root": {
-              // color: "white",
-              width: "51px",
-              height: "51px",
-              // borderRadius: "50%",
-            },
-          }}
+          <FlashlightOnOutlined />
+        </Avatar>
+        <Avatar
+        // sx={{
+        //   "& .MuiSvgIcon-root": {
+        //     // color: "white",
+        //     width: "51px",
+        //     height: "51px",
+        //     // borderRadius: "50%",
+        //   },
+        // }}
         >
-          <BrowseGallery />
-        </IconButton>
+          <CollectionsOutlined />
+        </Avatar>
       </Stack>
 
       <SwipeableDrawer
