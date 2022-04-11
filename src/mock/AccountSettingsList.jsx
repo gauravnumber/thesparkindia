@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { Box, Typography } from "@mui/material";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 import IconButton from "@mui/material/IconButton";
@@ -21,13 +22,16 @@ function AccountSettingsList() {
 
         <Typography
           variant="h6"
-          component="h3"
+          component={Link}
+          to="/edit-profile"
+          // component="h3"
           sx={{
+            display: "block",
             m: 2,
             color: "#000000",
           }}
         >
-          Help center
+          Edit profile
           <IconButton sx={{ position: "absolute", right: 0 }}>
             <ChevronRightIcon />
           </IconButton>
@@ -35,13 +39,16 @@ function AccountSettingsList() {
 
         <Typography
           variant="h6"
-          component="h3"
+          component={Link}
+          to="/my-address"
+          // component="h3"
           sx={{
+            display: "block",
             m: 2,
             color: "#000000",
           }}
         >
-          My Adfdresses
+          My Address
           <IconButton sx={{ position: "absolute", right: 0 }}>
             <ChevronRightIcon />
           </IconButton>
@@ -49,8 +56,11 @@ function AccountSettingsList() {
 
         <Typography
           variant="h6"
-          component="h3"
+          // component="h3"
+          component={Link}
+          to="/payment-method"
           sx={{
+            display: "block",
             m: 2,
             color: "#000000",
           }}
@@ -90,8 +100,11 @@ function AccountSettingsList() {
 
         <Typography
           variant="h6"
-          component="h3"
+          // component="h3"
+          component={Link}
+          to="/notification"
           sx={{
+            display: "block",
             m: 2,
             color: "#000000",
           }}
@@ -104,13 +117,16 @@ function AccountSettingsList() {
 
         <Typography
           variant="h6"
-          component="h3"
+          // component="h3"
+          component={Link}
+          to="/privasy-settings"
           sx={{
+            display: "block",
             m: 2,
             color: "#000000",
           }}
         >
-          Privecy settings
+          Privacy settings
           <IconButton sx={{ position: "absolute", right: 0 }}>
             <ChevronRightIcon />
           </IconButton>
@@ -132,8 +148,11 @@ function AccountSettingsList() {
 
         <Typography
           variant="h6"
-          component="h3"
+          // component="h3"
+          component={Link}
+          to="/language"
           sx={{
+            display: "block",
             m: 2,
             color: "#000000",
           }}
@@ -159,8 +178,11 @@ function AccountSettingsList() {
 
         <Typography
           variant="h6"
-          component="h3"
+          // component="h3"
+          component={Link}
+          to="/help-center"
           sx={{
+            display: "block",
             m: 2,
             color: "#000000",
           }}
