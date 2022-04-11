@@ -1,5 +1,4 @@
 // import AccountSettingsList from "./AccountSettingsList";
-
 import { Box, Button, GlobalStyles } from "@mui/material";
 import Typography from "@mui/material/Typography";
 // import IconButton from "@mui/material/IconButton";
