@@ -27,6 +27,7 @@ import Language from "./pages/Language";
 import SlidingMenu from "./pages/SlidingMenu";
 import ScanAndBuy from "./pages/ScanAndBuy";
 import Refer from "./pages/Refer";
+import ScanAndShop from "./pages/ScanAndShop";
 
 function App() {
   return (
@@ -64,7 +65,9 @@ function App() {
         <Route path="/language" element={<Language />} />
         <Route path="/refer" element={<Refer />} />
         <Route path="/sliding-menu" element={<SlidingMenu />} />
+        <Route path="/scan-and-shop" element={<ScanAndShop />} />
         <Route path="*" element={<h1>404: File Not Found</h1>} />
+
       </Routes>
       <Box mt={10} />
       <LowBar />
