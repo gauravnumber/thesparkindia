@@ -17,6 +17,8 @@ specifiers:
   eslint-plugin-react-hooks: ^4.3.0
   husky: ^7.0.0
   lint-staged: ^12.3.5
+  material-auto-rotating-carousel: ^3.0.2
+  mui-image: ^1.0.4
   prettier: ^2.5.1
   react: ^17.0.2
   react-camera-pro: ^1.1.1
@@ -33,6 +35,8 @@ dependencies:
   '@fontsource/roboto': 4.5.5
   '@mui/icons-material': 5.5.1_@mui+material@5.5.2+react@17.0.2
   '@mui/material': 5.5.2_eb8585ddc00e6d8e3b40a6701d59ed38
+  material-auto-rotating-carousel: 3.0.2_react-dom@17.0.2+react@17.0.2
+  mui-image: 1.0.4_e4ce113af6310e834cb2e476a59fc676
   react: 17.0.2
   react-camera-pro: 1.1.1_cdce0472005fc9929e7dd0afca7bfa15
   react-dom: 17.0.2_react@17.0.2
@@ -978,6 +982,10 @@ packages:
       ansi-styles: 4.3.0
       supports-color: 7.2.0
     dev: true
+
+  /classnames/2.3.1:
+    resolution: {integrity: sha512-OlQdbZ7gLfGarSqxesMesDa5uz7KFbID8Kpq/SxIoNGDqY8lSYs0D+hhtBXhcdB3rcbXArFr7vlHheLk1voeNA==}
+    dev: false
 
   /clean-stack/2.2.0:
     resolution: {integrity: sha512-4diC9HaTE+KRAMWhDhrGOECgWZxoevMc5TlkObMqNSsVU62PYzXZ/SMTjzyGAFF1YusgxGcSWTEXBhp0CPwQ1A==}
@@ -2252,6 +2260,34 @@ packages:
     dependencies:
       js-tokens: 4.0.0
 
+  /material-auto-rotating-carousel/3.0.2_react-dom@17.0.2+react@17.0.2:
+    resolution: {integrity: sha512-ql/jiV0R9xsOUVn7JNOomvgXHkVFYjmClei+jsfgpOlHXsXztqfOFl6rb0mLbBIpg4mRzTV5oNYOGAM3MvXETA==}
+    peerDependencies:
+      '@material-ui/core': ^3.6.0 || ^4.0.0
+      '@material-ui/icons': ^3.0.0 || ^4.0.0
+      react: ^16.3.0
+      react-dom: ^16.3.0
+      react-swipeable-views: ^0.13.3
+    dependencies:
+      classnames: 2.3.1
+      material-ui-dots: 2.0.2_react-dom@17.0.2+react@17.0.2
+      prop-types: 15.8.1
+      react: 17.0.2
+      react-dom: 17.0.2_react@17.0.2
+    dev: false
+
+  /material-ui-dots/2.0.2_react-dom@17.0.2+react@17.0.2:
+    resolution: {integrity: sha512-1pKjHednWNaVmzo/3fr6dJ+yDCZWfR/GEasqhJKRvb1hIs54064smlNJ/zVdAmt4NMsbxZQPf2D3LnEWvH8y8g==}
+    peerDependencies:
+      '@material-ui/core': ^1.0.0 || ^3.0.0 || ^4.0.0
+      react: ^16.3.0
+      react-dom: ^16.3.0
+    dependencies:
+      prop-types: 15.8.1
+      react: 17.0.2
+      react-dom: 17.0.2_react@17.0.2
+    dev: false
+
   /merge-stream/2.0.0:
     resolution: {integrity: sha512-abv/qOcuPfk3URPfDzmZU1LKmuw8kT+0nIHvKrKgFrwifol/doWcdA4ZqsWQ8ENrFKkd67Mfpo/LovbIUsbt3w==}
     dev: true
@@ -2289,6 +2325,21 @@ packages:
   /ms/2.1.3:
     resolution: {integrity: sha512-6FlzubTLZG3J2a/NVCAleEhjzq5oxgHyaCU9yYXvcLsvoVaHJq/s5xXI6/XXP6tz7R9xAOtHnSO/tXtF3WRTlA==}
     dev: true
+
+  /mui-image/1.0.4_e4ce113af6310e834cb2e476a59fc676:
+    resolution: {integrity: sha512-X2MdelRdzEE8KWCmCpUHEm37VgsfcaEN1+AdOgJ4N1AwGu7RAb7Kf1W7Zgy0XuogVOoC1ULHtuSgjGghEh9NrQ==}
+    peerDependencies:
+      '@emotion/react': ^11.4.1
+      '@emotion/styled': ^11.3.0
+      '@mui/material': ^5.0.1
+      prop-types: ^15.7.2
+      react: ^17.0.2
+    dependencies:
+      '@emotion/react': 11.8.2_react@17.0.2
+      '@emotion/styled': 11.8.1_fa30c4a31333a43d23a4fe708e0dc178
+      '@mui/material': 5.5.2_eb8585ddc00e6d8e3b40a6701d59ed38
+      react: 17.0.2
+    dev: false
 
   /nanoid/3.3.1:
     resolution: {integrity: sha512-n6Vs/3KGyxPQd6uO0eH4Bv0ojGSUvuLlIHtC3Y0kEO23YRge8H9x1GCzLn28YX0H66pMkxuaeESFq4tKISKwdw==}
