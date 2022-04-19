@@ -34,15 +34,12 @@ const Intro = () => {
       // autoPlay={false}
       //  indicators={false}
       >
-        {Array.from(Array(3)).map((item, i) => (
-          <Stack
-            key={i}
-            // sx={{ height: "500px" }}
-            direction="column"
-          >
+        {Array.from(Array(3)).map((_, i) => (
+          <Stack key={i} sx={{ height: "500px" }} direction="column">
             <Image
               src={`https://source.unsplash.com/200x250?sig=${i}`}
-              // height="90"
+              alt="demo"
+              height="250"
               width="200"
               // variant="square"
               // sx={{
