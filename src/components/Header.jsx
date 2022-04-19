@@ -29,7 +29,7 @@ const Header = () => {
   const { heading } = useHeader();
 
   // if (location.pathname === "/scan-and-buy") return null;
-  if (["/scan-and-buy", "/"].includes(location.pathname)) return null;
+  if (["/scan-and-buy", "/", "/intro"].includes(location.pathname)) return null;
 
   // const handleDrawerOpen = () => {
   //   setOpen(true);
