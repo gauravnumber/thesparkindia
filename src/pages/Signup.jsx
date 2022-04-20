@@ -1,6 +1,9 @@
+import { useState } from "react";
 import { TextField, Box, Typography, Button } from "@mui/material";
 
 const Signup = () => {
+  const [mobileNumber, setMobileNumber] = useState();
+
   const blueColor = "#2847a1";
   const greyColor = "#686868";
 
@@ -30,6 +33,7 @@ const Signup = () => {
 
       <TextField
         label="Mobile Number*"
+        // placeholder="Mobile Number*" 52px
         InputProps={{
           startAdornment: <Typography>+91</Typography>,
         }}
