@@ -1,27 +1,34 @@
 import {
   Close,
-  CropSquareSharp,
-  HelpCenter,
-  HelpCenterRounded,
-  HelpCenterOutlined,
+  HelpOutline,
+  BrowseGallery,
+  FlashlightOnOutlined,
+  CollectionsOutlined,
 } from "@mui/icons-material";
-
-import { Camera } from "react-camera-pro";
-import { useState, useRef } from "react";
 import {
-  Typography,
-  Stack,
-  IconButton,
+  Avatar,
   Box,
+  IconButton,
+  Stack,
   SwipeableDrawer,
-  GlobalStyles,
+  Typography,
 } from "@mui/material";
+import { useRef, useState } from "react";
+import Webcam from "react-webcam";
 import SwipeBox from "./SwipeBox";
 
 const ScanAndBuy = () => {
-  const camera = useRef(null);
-  const [image, setImage] = useState(null);
+  // const camera = useRef(null);
+  // const [image, setImage] = useState(null);
   const [open, setOpen] = useState(true);
+  // const [open, setOpen] = useState(false);
+
+  const videoConstraints = {
+    facingMode: {
+      exact: "environment",
+    },
+  };
+  // const videoConstraints = { facingMode: "user" };
 
   const toggleDrawer = (newOpen) => () => {
     setOpen(newOpen);
@@ -29,23 +36,18 @@ const ScanAndBuy = () => {
 
   return (
     <>
-      {/* <GlobalStyles
-        styles={{
-          ".MuiDrawer-root > .MuiPaper-root": {
-            // height: `calc(50% - 56px)`,
-            // height: open ? `unset` : `calc(50% - 56px)`,
-            // overflow: "visible",
-          },
+      <Box
+        sx={{
+          position: "fixed",
+          top: 0,
+          left: 0,
+          width: "100%",
+          height: "100%",
         }}
-      /> */}
-      {/* <Stack direction="row" justifyContent="space-between">
-        <p>one</p>
-        <p>two</p>
-        <p>three</p>
-      </Stack> */}
-      {/* <Box sx={{ backgroundColor: "rgba(0, 0, 0, 0.1)" }}> */}
-      <Camera ref={camera} />
-      {/* </Box> */}
+      >
+        <Webcam videoConstraints={videoConstraints} />
+        {/* <Webcam ref={camera} /> */}
+      </Box>
       <Box
         sx={{
           position: "fixed",
@@ -60,7 +62,8 @@ const ScanAndBuy = () => {
       <Stack
         direction="row"
         justifyContent="space-between"
-        alignItems="center"
+        alignItems="flex-end"
+        // alignItems="center"
         sx={{
           position: "fixed",
           left: 0,
@@ -88,8 +91,8 @@ const ScanAndBuy = () => {
         <Typography
           variant="h6"
           sx={{
-            width: 106,
-            height: 25,
+            // width: 106,
+            // height: 25,
             fontSize: (theme) => theme.typography.pxToRem(21.5),
             // lineHeight: (theme) => theme.typography.pxToRem(15),
           }}
@@ -106,9 +109,7 @@ const ScanAndBuy = () => {
             },
           }}
         >
-          <HelpCenterOutlined />
-          {/* <HelpCenterRounded /> */}
-          {/* <HelpCenter /> */}
+          <HelpOutline />
         </IconButton>
       </Stack>
 
@@ -116,9 +117,11 @@ const ScanAndBuy = () => {
         sx={{
           width: 274,
           // height: 276,
-          height: 376,
+          // height: 376,
+          height: 320,
+          // height: 307,
           position: "fixed",
-          top: "calc(50% - 192px)",
+          top: "calc(50% - 200px)",
           left: "calc(50% - 133px)",
           border: "5px solid black",
           borderRadius: "37px",
@@ -131,15 +134,44 @@ const ScanAndBuy = () => {
           // alignItems: "center",
         }}
       >
-        <Camera ref={camera} />
+        <Webcam videoConstraints={videoConstraints} />
       </Box>
-      {/* <button onClick={() => setImage(camera.current.takePhoto())}>
-        Take Photo{" "}
-      </button>
-      <img src={image} /> */}
-      {/* <button onClick={() => toggleDrawer(setOpen((value) => !value))}>
-        toggle
-      </button> */}
+
+      <Stack
+        direction="row"
+        spacing={2}
+        sx={{
+          position: "absolute",
+          top: "75%",
+          left: "calc(50% - 48px)",
+        }}
+      >
+        <Avatar
+          sx={{
+            "& .MuiSvgIcon-root": {
+              // color: "white",
+              // width: "51px",
+              // height: "51px",
+              // borderRadius: "50%",
+            },
+          }}
+        >
+          <FlashlightOnOutlined />
+        </Avatar>
+        <Avatar
+        // sx={{
+        //   "& .MuiSvgIcon-root": {
+        //     // color: "white",
+        //     width: "51px",
+        //     height: "51px",
+        //     // borderRadius: "50%",
+        //   },
+        // }}
+        >
+          <CollectionsOutlined />
+        </Avatar>
+      </Stack>
+
       <SwipeableDrawer
         anchor="bottom"
         // container={
@@ -150,9 +182,9 @@ const ScanAndBuy = () => {
         onOpen={toggleDrawer(true)}
         disableSwipeToOpen={false}
         swipeAreaWidth={10}
-        ModalProps={{
-          keepMounted: true,
-        }}
+        // ModalProps={{
+        //   keepMounted: true,
+        // }}
       >
         <SwipeBox />
       </SwipeableDrawer>

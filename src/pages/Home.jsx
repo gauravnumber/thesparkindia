@@ -1,3 +1,5 @@
+import Main from "@/components/Home/Main";
+import AppBarHeaderAndDrawer from "@/components/Home/AppBarHeaderAndDrawer";
 import BackToTop from "@/components/Home/BackToTop";
 import Categories from "@/components/Home/Categories";
 import FloatButton from "@/components/Home/FloatButton";
@@ -14,31 +16,39 @@ import TopSellingBrands from "@/components/Home/TopSellingBrands";
 import TrendingProducts from "@/components/Home/TrendingProducts";
 import TrendingSearches from "@/components/Home/TrendingSearches";
 import Img from "@/components/Img";
-import { Box } from "@mui/material";
+import { Box, styled } from "@mui/material";
 
 const Home = () => {
   return (
-    <Box mx={-1}>
-      <SearchBar />
-      <Img
-        src="https://source.unsplash.com/393x67?advertisement,discount"
-        sx={{ mt: 1, mb: -1 }}
-        alt="Offers Banner"
-      />
-      <Slide />
-      <Spark />
-      <HotDeals />
-      <LiveStudio />
-      <Categories />
-      <TrendingSearches />
-      <TrendingProducts />
-      <Sponsored />
-      <SparkFeatures />
-      <Recommended />
-      <TopSellingBrands />
-      <RecentlyViewedProducts />
-      <BackToTop />
-      <FloatButton />
+    <Box
+      //  mt={-5}
+      mx={-1}
+      // display="flex"
+      // in <Main> uncomment -drawerWidth
+    >
+      <AppBarHeaderAndDrawer />
+      <Main open={open}>
+        <SearchBar />
+        <Img
+          src="https://source.unsplash.com/393x67?advertisement,discount"
+          sx={{ mt: 0, mb: -1 }}
+          alt="Offers Banner"
+        />
+        <Slide />
+        <Spark />
+        <HotDeals />
+        <LiveStudio />
+        <Categories />
+        <TrendingSearches />
+        <TrendingProducts />
+        <Sponsored />
+        <SparkFeatures />
+        <Recommended />
+        <TopSellingBrands />
+        <RecentlyViewedProducts />
+        <BackToTop />
+        <FloatButton />
+      </Main>
     </Box>
   );
 };

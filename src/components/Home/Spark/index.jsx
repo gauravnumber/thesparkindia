@@ -1,7 +1,61 @@
+import { Link } from "react-router-dom";
 import { IconButton, Paper, Typography, Grid } from "@mui/material";
-import { VoiceChat } from "@mui/icons-material";
+import {
+  VoiceChat,
+  QrCode,
+  Money,
+  BrandingWatermark,
+  LocalShipping,
+  MoneyOff,
+  VolunteerActivism,
+  MoneyOffCsredRounded,
+  Share,
+} from "@mui/icons-material";
 
 const Spark = () => {
+  const sparkFeatures = [
+    {
+      name: "Scan and Buy",
+      icon: <QrCode />,
+      slug: "/scan-and-buy",
+    },
+    {
+      name: "Business loan",
+      icon: <Money />,
+      slug: "/scan-and-buy",
+    },
+    {
+      name: "Build your Brand",
+      icon: <BrandingWatermark />,
+      slug: "/scan-and-buy",
+    },
+    {
+      name: "Ship with Spark",
+      icon: <LocalShipping />,
+      slug: "/scan-and-buy",
+    },
+    {
+      name: "Spark Wallet",
+      icon: <MoneyOff />,
+      slug: "/scan-and-buy",
+    },
+    {
+      name: "Coupons",
+      icon: <VolunteerActivism />,
+      slug: "/scan-and-buy",
+    },
+    {
+      name: "My Orders",
+      icon: <MoneyOffCsredRounded />,
+      slug: "/scan-and-buy",
+    },
+    {
+      name: "Refer and Loan",
+      icon: <Share />,
+      slug: "/refer",
+    },
+  ];
+
   return (
     <Paper
       sx={{
@@ -18,17 +72,20 @@ const Spark = () => {
         container
         // alignItems="center"
       >
-        {Array.from(Array(8)).map((_, index) => (
+        {sparkFeatures.map((feature, index) => (
           <Grid
+            key={index}
             item
             container
-            alignItems="center"
             justifyContent="center"
-            key={index}
+            alignItems="flex-start"
+            // alignItems="center"
             // spacing={1}
             // rowSpacing={2}
             xs={3}
-            // component="button"
+            component={Link}
+            to={feature.slug}
+            // to="/scan-and-buy"
           >
             <IconButton
               sx={{
@@ -37,7 +94,8 @@ const Spark = () => {
                 },
               }}
             >
-              <VoiceChat />
+              {feature.icon}
+              {/* <QrCode /> */}
             </IconButton>
             <Typography
               sx={{
@@ -45,9 +103,10 @@ const Spark = () => {
                 // height: 26,
                 fontSize: (theme) => theme.typography.pxToRem(12),
                 textAlign: "center",
+                // textDecorationLine: "none",
               }}
             >
-              Scan and Buy
+              {feature.name}
             </Typography>
           </Grid>
         ))}
