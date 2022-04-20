@@ -30,6 +30,7 @@ import Refer from "./pages/Refer";
 import ScanAndShop from "./pages/ScanAndShop";
 import Intro from "./pages/Intro";
 import Signup from "./pages/Signup";
+import Notifications from "./pages/Notifications";
 
 function App() {
   return (
@@ -70,6 +71,7 @@ function App() {
         <Route path="/scan-and-shop" element={<ScanAndShop />} />
         <Route path="/intro" element={<Intro />} />
         <Route path="/signup" element={<Signup />} />
+        <Route path="/notifications" element={<Notifications />} />
         <Route path="*" element={<h1>404: File Not Found</h1>} />
       </Routes>
       <Box mt={10} />
