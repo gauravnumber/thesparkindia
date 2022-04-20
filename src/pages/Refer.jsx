@@ -543,7 +543,7 @@ function Refer() {
                 alignItems: "center",
                 borderRadius: 9,
                 width: 334,
-                borderColor: "#999898",
+                // borderColor: "#999898",
                 borderStyle: "solid",
                 borderWidth: 1,
                 borderColor: "#2847A1",
