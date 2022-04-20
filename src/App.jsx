@@ -28,6 +28,8 @@ import SlidingMenu from "./pages/SlidingMenu";
 import ScanAndBuy from "./pages/ScanAndBuy";
 import Refer from "./pages/Refer";
 import Notifications from "./pages/Notifications";
+import Sparklogo from "./pages/Sparklogo";
+import LanguageChoose from "./pages/LanguageChoose";
 
 function App() {
   return (
@@ -66,6 +68,8 @@ function App() {
         <Route path="/refer" element={<Refer />} />
         <Route path="/sliding-menu" element={<SlidingMenu />} />
         <Route path="/notifications" element={<Notifications />} />
+        <Route path="/sparklogo" element={<Sparklogo />} />
+        <Route path="/language-choose" element={<LanguageChoose />} />
         <Route path="*" element={<h1>404: File Not Found</h1>} />
       </Routes>
       <Box mt={10} />
