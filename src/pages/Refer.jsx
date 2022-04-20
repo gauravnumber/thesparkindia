@@ -538,11 +538,12 @@ function Refer() {
             </Typography>
             <Typography
               sx={{
-                position: "absolute",
-                left: 304,
-                borderRadius: 18,
-                width: 64,
-                height: 25,
+                p: "2px 4px",
+                display: "flex",
+                alignItems: "center",
+                borderRadius: 9,
+                width: 334,
+                // borderColor: "#999898",
                 borderStyle: "solid",
                 borderWidth: 1,
                 borderColor: "#2847A1",
