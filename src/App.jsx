@@ -29,6 +29,7 @@ import ScanAndBuy from "./pages/ScanAndBuy";
 import Refer from "./pages/Refer";
 import ScanAndShop from "./pages/ScanAndShop";
 import Intro from "./pages/Intro";
+import Signup from "./pages/Signup";
 
 function App() {
   return (
@@ -68,6 +69,7 @@ function App() {
         <Route path="/sliding-menu" element={<SlidingMenu />} />
         <Route path="/scan-and-shop" element={<ScanAndShop />} />
         <Route path="/intro" element={<Intro />} />
+        <Route path="/signup" element={<Signup />} />
         <Route path="*" element={<h1>404: File Not Found</h1>} />
       </Routes>
       <Box mt={10} />
