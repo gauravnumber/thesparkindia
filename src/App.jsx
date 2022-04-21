@@ -30,6 +30,7 @@ import Refer from "./pages/Refer";
 import ScanAndShop from "./pages/ScanAndShop";
 import Intro from "./pages/Intro";
 import Signup from "./pages/Signup";
+import VerifyWithOtp from "./pages/VerifyWithOtp";
 import Notifications from "./pages/Notifications";
 
 function App() {
@@ -70,7 +71,10 @@ function App() {
         <Route path="/sliding-menu" element={<SlidingMenu />} />
         <Route path="/scan-and-shop" element={<ScanAndShop />} />
         <Route path="/intro" element={<Intro />} />
-        <Route path="/signup" element={<Signup />} />
+        <Route path="/signup">
+          <Route index element={<Signup />} />
+          <Route path="verify-with-otp" element={<VerifyWithOtp />} />
+        </Route>
         <Route path="/notifications" element={<Notifications />} />
         <Route path="*" element={<h1>404: File Not Found</h1>} />
       </Routes>

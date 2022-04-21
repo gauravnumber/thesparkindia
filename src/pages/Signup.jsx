@@ -1,9 +1,6 @@
-import { useState } from "react";
 import { TextField, Box, Typography, Button } from "@mui/material";
 
 const Signup = () => {
-  const [mobileNumber, setMobileNumber] = useState();
-
   const blueColor = "#2847a1";
   const greyColor = "#686868";
 
@@ -14,7 +11,7 @@ const Signup = () => {
         sx={{
           mt: "35px",
           // mt: "43px",
-          fontSize: (theme) => (theme) => theme.typography.pxToRem(24),
+          fontSize: (theme) => theme.typography.pxToRem(24),
           fontWeight: 500,
           color: "#2847a1",
         }}
@@ -24,8 +21,10 @@ const Signup = () => {
       <Typography
         sx={{
           mt: "27px",
-          fontSize: (theme) => (theme) => theme.typography.pxToRem(24),
+          fontSize: (theme) => theme.typography.pxToRem(24),
           color: "#999898",
+          // width: 106,
+          // height: 33,
         }}
       >
         Welcome!
@@ -33,6 +32,13 @@ const Signup = () => {
 
       <TextField
         label="Mobile Number*"
+        // type="number"
+        inputMode="numeric"
+        pattern="[0-9]*"
+        // inputProps={{
+        //   inputmode: "numeric",
+        //   pattern: "[0-9]*",
+        // }}
         // placeholder="Mobile Number*" 52px
         InputProps={{
           startAdornment: <Typography>+91</Typography>,
