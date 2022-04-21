@@ -14,7 +14,7 @@ const Signup = () => {
         sx={{
           mt: "35px",
           // mt: "43px",
-          fontSize: (theme) => (theme) => theme.typography.pxToRem(24),
+          fontSize: (theme) => theme.typography.pxToRem(24),
           fontWeight: 500,
           color: "#2847a1",
         }}
@@ -24,8 +24,10 @@ const Signup = () => {
       <Typography
         sx={{
           mt: "27px",
-          fontSize: (theme) => (theme) => theme.typography.pxToRem(24),
+          fontSize: (theme) => theme.typography.pxToRem(24),
           color: "#999898",
+          // width: 106,
+          // height: 33,
         }}
       >
         Welcome!
