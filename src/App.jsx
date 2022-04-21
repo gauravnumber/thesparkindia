@@ -30,6 +30,7 @@ import Refer from "./pages/Refer";
 import ScanAndShop from "./pages/ScanAndShop";
 import Intro from "./pages/Intro";
 import Signup from "./pages/Signup";
+import Login from "./pages/Login";
 import VerifyWithOtp from "./pages/VerifyWithOtp";
 import Notifications from "./pages/Notifications";
 
@@ -71,6 +72,7 @@ function App() {
         <Route path="/sliding-menu" element={<SlidingMenu />} />
         <Route path="/scan-and-shop" element={<ScanAndShop />} />
         <Route path="/intro" element={<Intro />} />
+        <Route path="/login" element={<Login />} />
         <Route path="/signup">
           <Route index element={<Signup />} />
           <Route path="verify-with-otp" element={<VerifyWithOtp />} />
