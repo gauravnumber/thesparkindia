@@ -1,4 +1,9 @@
-import { Refresh } from "@mui/icons-material";
+import {
+  Refresh,
+  Edit,
+  EditOutlined,
+  ArrowRightAlt,
+} from "@mui/icons-material";
 import {
   IconButton,
   Stack,
@@ -28,12 +33,40 @@ const VerifyWithOtp = () => {
       </Typography>
       <Typography
         sx={{
+          display: "flex",
+          alignItems: "center",
+
           mt: "27px",
           fontSize: (theme) => theme.typography.pxToRem(14),
           color: "#999898",
         }}
       >
-        Verify via SMS to 8956234555
+        Verify via SMS to
+        <Typography
+          component="span"
+          sx={{
+            ml: 1,
+            fontSize: (theme) => theme.typography.pxToRem(14),
+            color: "#2847a1",
+          }}
+        >
+          8956234555
+        </Typography>
+        <Box sx={{ flexGrow: 1 }} />
+        <Typography component="span">
+          {/* <Typography component="span" sx={{ float: "right" }}> */}
+          Edit{" "}
+          <IconButton
+            sx={{
+              color: blueColor,
+              "& .MuiSvgIcon-root": {
+                width: 15,
+              },
+            }}
+          >
+            <EditOutlined />
+          </IconButton>
+        </Typography>
       </Typography>
 
       <Stack
@@ -167,6 +200,9 @@ const VerifyWithOtp = () => {
           }}
         >
           1:00
+          <IconButton sx={{ color: blueColor }}>
+            <Refresh />
+          </IconButton>
         </Typography>
       </Typography>
       <Typography
@@ -185,6 +221,9 @@ const VerifyWithOtp = () => {
           }}
         >
           Password
+          <IconButton sx={{ color: blueColor }}>
+            <ArrowRightAlt />
+          </IconButton>
         </Typography>
       </Typography>
       <Typography
@@ -205,24 +244,6 @@ const VerifyWithOtp = () => {
           Get help
         </Typography>
       </Typography>
-
-      {/* <Button
-        variant="contained"
-        fullWidth
-        sx={{
-          mt: 5,
-          backgroundColor: blueColor,
-        }}
-      >
-        CONTINUE
-      </Button>
-
-      <Typography sx={{ mt: "34px", color: greyColor }}>
-        Having trouble logging in?{" "}
-        <Typography component="span" sx={{ color: blueColor }}>
-          Get Help
-        </Typography>
-      </Typography> */}
     </Box>
   );
 };
