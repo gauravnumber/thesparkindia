@@ -1,13 +1,31 @@
-// import { red } from "@mui/material/colors";
-import { TextField, Box, Typography, Button } from "@mui/material";
+import { Google, Facebook, Apple, Twitter } from "@mui/icons-material";
+import {
+  Paper,
+  GlobalStyles,
+  IconButton,
+  Stack,
+  TextField,
+  Box,
+  Typography,
+  Button,
+} from "@mui/material";
 
 const Login = () => {
   const blueColor = "#2847a1";
   const greyColor = "#686868";
   const redColor = "#d90000";
 
+  const icons = [<Google />, <Facebook />, <Apple />, <Twitter />];
+
   return (
     <Box sx={{ p: 2 }}>
+      <GlobalStyles
+        styles={{
+          body: {
+            backgroundColor: "white",
+          },
+        }}
+      />
       {/* <Typography>Spark India</Typography> */}
       <Typography
         sx={{
@@ -89,12 +107,26 @@ const Login = () => {
       >
         Or Continue with Social Accounts
       </Typography>
-      {/* <Typography sx={{ mt: "34px", color: greyColor }}>
-        Having trouble logging in?{" "}
-        <Typography component="span" sx={{ color: blueColor }}>
-          Get Help
-        </Typography>
-      </Typography> */}
+      <Stack
+        direction="row"
+        spacing="12px"
+        justifyContent="center"
+        alignItems="center"
+        sx={{ mt: 4 }}
+      >
+        {icons.map((icon, index) => (
+          <Paper key={index}>
+            <Stack
+              direction="column"
+              justifyContent="center"
+              alignItems="center"
+              sx={{ width: 68.75, height: 64 }}
+            >
+              <IconButton>{icon}</IconButton>
+            </Stack>
+          </Paper>
+        ))}
+      </Stack>
     </Box>
   );
 };
