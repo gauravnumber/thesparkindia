@@ -30,6 +30,7 @@ import Refer from "./pages/Refer";
 import ScanAndShop from "./pages/ScanAndShop";
 import Intro from "./pages/Intro";
 import Signup from "./pages/Signup";
+import CreateAccount from "./pages/CreateAccount";
 import Login from "./pages/Login";
 import VerifyWithOtp from "./pages/VerifyWithOtp";
 import Notifications from "./pages/Notifications";
@@ -79,6 +80,7 @@ function App() {
           <Route index element={<Signup />} />
           <Route path="verify-with-otp" element={<VerifyWithOtp />} />
         </Route>
+        <Route path="/create-account" element={<CreateAccount />} />
         <Route path="/notifications" element={<Notifications />} />
         <Route path="/sparklogo" element={<Sparklogo />} />
         <Route path="/language-choose" element={<LanguageChoose />} />
