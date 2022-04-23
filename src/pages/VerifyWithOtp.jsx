@@ -87,7 +87,7 @@ const VerifyWithOtp = () => {
             pattern: "[0-9]*",
             maxLength: 1,
             size: 1,
-            tabIndex: 0,
+            // tabIndex: 0,
             // min: 0,
             // max: 9,
           }}
@@ -116,7 +116,7 @@ const VerifyWithOtp = () => {
             pattern: "[0-9]*",
             maxLength: 1,
             size: 1,
-            tabIndex: 1,
+            // tabIndex: 1,
           }}
           sx={{
             mt: "27px",
@@ -136,7 +136,7 @@ const VerifyWithOtp = () => {
             pattern: "[0-9]*",
             maxLength: 1,
             size: 1,
-            tabIndex: 2,
+            // tabIndex: 2,
           }}
           sx={{
             mt: "27px",
