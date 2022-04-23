@@ -75,16 +75,22 @@ const VerifyWithOtp = () => {
         sx={{
           mt: "27px",
         }}
+        component="form"
       >
         <TextField
           // label="Mobile Number*"
           // type="number"
-          inputMode="numeric"
-          pattern="[0-9]*"
-          // inputProps={{
-          //   inputmode: "numeric",
-          //   pattern: "[0-9]*",
-          // }}
+          // inputMode="numeric"
+          // pattern="[0-9]*"
+          inputProps={{
+            inputMode: "numeric",
+            pattern: "[0-9]*",
+            maxLength: 1,
+            size: 1,
+            tabIndex: 0,
+            // min: 0,
+            // max: 9,
+          }}
           // placeholder="Mobile Number*" 52px
           // InputProps={{
           //   startAdornment: <Typography>+91</Typography>,
@@ -103,8 +109,15 @@ const VerifyWithOtp = () => {
           }}
         />
         <TextField
-          inputMode="numeric"
-          pattern="[0-9]*"
+          // inputMode="numeric"
+          // pattern="[0-9]*"
+          inputProps={{
+            inputMode: "numeric",
+            pattern: "[0-9]*",
+            maxLength: 1,
+            size: 1,
+            tabIndex: 1,
+          }}
           sx={{
             mt: "27px",
             fontWeight: 300,
@@ -118,8 +131,13 @@ const VerifyWithOtp = () => {
           }}
         />
         <TextField
-          inputMode="numeric"
-          pattern="[0-9]*"
+          inputProps={{
+            inputMode: "numeric",
+            pattern: "[0-9]*",
+            maxLength: 1,
+            size: 1,
+            tabIndex: 2,
+          }}
           sx={{
             mt: "27px",
             fontWeight: 300,
@@ -133,8 +151,12 @@ const VerifyWithOtp = () => {
           }}
         />
         <TextField
-          inputMode="numeric"
-          pattern="[0-9]*"
+          inputProps={{
+            inputMode: "numeric",
+            pattern: "[0-9]*",
+            maxLength: 1,
+            size: 1,
+          }}
           sx={{
             mt: "27px",
             fontWeight: 300,
@@ -148,8 +170,12 @@ const VerifyWithOtp = () => {
           }}
         />
         <TextField
-          inputMode="numeric"
-          pattern="[0-9]*"
+          inputProps={{
+            inputMode: "numeric",
+            pattern: "[0-9]*",
+            maxLength: 1,
+            size: 1,
+          }}
           sx={{
             mt: "27px",
             fontWeight: 300,
@@ -163,8 +189,12 @@ const VerifyWithOtp = () => {
           }}
         />
         <TextField
-          inputMode="numeric"
-          pattern="[0-9]*"
+          inputProps={{
+            inputMode: "numeric",
+            pattern: "[0-9]*",
+            maxLength: 1,
+            size: 1,
+          }}
           sx={{
             mt: "27px",
             fontWeight: 300,
