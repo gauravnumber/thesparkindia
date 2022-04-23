@@ -33,6 +33,8 @@ import Signup from "./pages/Signup";
 import Login from "./pages/Login";
 import VerifyWithOtp from "./pages/VerifyWithOtp";
 import Notifications from "./pages/Notifications";
+import Sparklogo from "./pages/Sparklogo";
+import LanguageChoose from "./pages/LanguageChoose";
 
 function App() {
   return (
@@ -78,6 +80,8 @@ function App() {
           <Route path="verify-with-otp" element={<VerifyWithOtp />} />
         </Route>
         <Route path="/notifications" element={<Notifications />} />
+        <Route path="/sparklogo" element={<Sparklogo />} />
+        <Route path="/language-choose" element={<LanguageChoose />} />
         <Route path="*" element={<h1>404: File Not Found</h1>} />
       </Routes>
       <Box mt={10} />
