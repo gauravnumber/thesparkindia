@@ -75,6 +75,7 @@ const VerifyWithOtp = () => {
         sx={{
           mt: "27px",
         }}
+        component="form"
       >
         <TextField
           // label="Mobile Number*"
@@ -84,7 +85,7 @@ const VerifyWithOtp = () => {
           inputProps={{
             inputMode: "numeric",
             pattern: "[0-9]*",
-            maxlength: 1,
+            maxLength: 1,
             size: 1,
             tabIndex: 0,
             // min: 0,
@@ -113,9 +114,9 @@ const VerifyWithOtp = () => {
           inputProps={{
             inputMode: "numeric",
             pattern: "[0-9]*",
-            maxlength: 1,
+            maxLength: 1,
             size: 1,
-            tabIndex: 0,
+            tabIndex: 1,
           }}
           sx={{
             mt: "27px",
@@ -133,9 +134,9 @@ const VerifyWithOtp = () => {
           inputProps={{
             inputMode: "numeric",
             pattern: "[0-9]*",
-            maxlength: 1,
+            maxLength: 1,
             size: 1,
-            tabIndex: 0,
+            tabIndex: 2,
           }}
           sx={{
             mt: "27px",
@@ -153,26 +154,7 @@ const VerifyWithOtp = () => {
           inputProps={{
             inputMode: "numeric",
             pattern: "[0-9]*",
-            maxlength: 1,
-            size: 1,
-          }}
-          sx={{
-            mt: "27px",
-            fontWeight: 300,
-            fontSize: (theme) => theme.typography.pxToRem(19),
-            width: 35,
-            "& .MuiOutlinedInput-input": {
-              p: 0,
-              height: 43,
-              textAlign: "center",
-            },
-          }}
-        />
-        <TextField
-          inputProps={{
-            inputMode: "numeric",
-            pattern: "[0-9]*",
-            maxlength: 1,
+            maxLength: 1,
             size: 1,
           }}
           sx={{
@@ -191,7 +173,26 @@ const VerifyWithOtp = () => {
           inputProps={{
             inputMode: "numeric",
             pattern: "[0-9]*",
-            maxlength: 1,
+            maxLength: 1,
+            size: 1,
+          }}
+          sx={{
+            mt: "27px",
+            fontWeight: 300,
+            fontSize: (theme) => theme.typography.pxToRem(19),
+            width: 35,
+            "& .MuiOutlinedInput-input": {
+              p: 0,
+              height: 43,
+              textAlign: "center",
+            },
+          }}
+        />
+        <TextField
+          inputProps={{
+            inputMode: "numeric",
+            pattern: "[0-9]*",
+            maxLength: 1,
             size: 1,
           }}
           sx={{
