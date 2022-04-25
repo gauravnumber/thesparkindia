@@ -32,6 +32,7 @@ import Intro from "./pages/Intro";
 import Signup from "./pages/Signup";
 import CreateAccount from "./pages/CreateAccount";
 import TermsOfUse from "./pages/TermsOfUse";
+import Help from "./pages/Help";
 import Login from "./pages/Login";
 import VerifyWithOtp from "./pages/VerifyWithOtp";
 import Notifications from "./pages/Notifications";
@@ -83,6 +84,7 @@ function App() {
         </Route>
         <Route path="/create-account" element={<CreateAccount />} />
         <Route path="/terms-of-use" element={<TermsOfUse />} />
+        <Route path="/help" element={<Help />} />
         <Route path="/notifications" element={<Notifications />} />
         <Route path="/sparklogo" element={<Sparklogo />} />
         <Route path="/language-choose" element={<LanguageChoose />} />
