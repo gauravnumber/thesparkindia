@@ -38,6 +38,8 @@ import VerifyWithOtp from "./pages/VerifyWithOtp";
 import Notifications from "./pages/Notifications";
 import Sparklogo from "./pages/Sparklogo";
 import LanguageChoose from "./pages/LanguageChoose";
+import ProductScan from "./pages/ProductScan";
+import ProductScanWithVideo from "./pages/ProductScanWithVideo";
 
 function App() {
   return (
@@ -88,6 +90,8 @@ function App() {
         <Route path="/notifications" element={<Notifications />} />
         <Route path="/sparklogo" element={<Sparklogo />} />
         <Route path="/language-choose" element={<LanguageChoose />} />
+        <Route path="/product-scan" element={<ProductScan />} />
+        <Route path="/product-scan-video" element={<ProductScanWithVideo />} />
         <Route path="*" element={<h1>404: File Not Found</h1>} />
       </Routes>
       <Box mt={10} />
