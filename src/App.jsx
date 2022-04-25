@@ -90,7 +90,7 @@ function App() {
         <Route path="/notifications" element={<Notifications />} />
         <Route path="/sparklogo" element={<Sparklogo />} />
         <Route path="/language-choose" element={<LanguageChoose />} />
-        <Route path="/prudct-scan" element={<ProductScan />} />
+        <Route path="/product-scan" element={<ProductScan />} />
         <Route path="/product-scan-video" element={<ProductScanWithVideo />} />
         <Route path="*" element={<h1>404: File Not Found</h1>} />
       </Routes>
