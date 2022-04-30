@@ -1,12 +1,9 @@
-import { useState } from "react";
 import {
   Divider,
   ImageList,
   ImageListItem,
   Typography,
   Stack,
-  TextField,
-  InputLabel,
   Paper,
   InputBase,
 } from "@mui/material";
@@ -15,24 +12,11 @@ import IconButton from "@mui/material/IconButton";
 import { SearchOutlined } from "@mui/icons-material";
 
 function Refer() {
-  const [inputText, setInputText] = useState("");
-  const inputHandler = (e) => {
-    // convert input text to lower case
-    const lowerCase = e.target.value.toLowerCase();
-    setInputText(lowerCase);
-  };
   return (
-    <Box
-      sx={{
-        mx: -1,
-        // width: 390,
-        // height: 802,
-      }}
-    >
+    <div>
       <Box
         sx={{
           bgcolor: "blue",
-          // width: 390,
           height: 327,
         }}
       >
@@ -43,14 +27,7 @@ function Refer() {
           height="327px"
         />
       </Box>
-      <Box
-        sx={
-          {
-            // width: 390,
-            // height: 753,
-          }
-        }
-      >
+      <Box>
         <Divider
           sx={{
             position: "relative",
@@ -75,6 +52,7 @@ function Refer() {
             alignItems: "flex-end",
             textAlign: "center",
             letterSpacing: 0.01,
+            width: 100
           }}
         >
           Invite
@@ -229,6 +207,7 @@ function Refer() {
               textAlign: "center",
               letterSpacing: 0.01,
               color: "#2847A1",
+              width: 50
             }}
           >
             View All
@@ -538,12 +517,11 @@ function Refer() {
             </Typography>
             <Typography
               sx={{
-                p: "2px 4px",
-                display: "flex",
-                alignItems: "center",
-                borderRadius: 9,
-                width: 334,
-                // borderColor: "#999898",
+                position: "absolute",
+                left: 304,
+                borderRadius: 18,
+                width: 64,
+                height: 25,
                 borderStyle: "solid",
                 borderWidth: 1,
                 borderColor: "#2847A1",
@@ -752,7 +730,7 @@ function Refer() {
           </Stack>
         </Box>
       </Box>
-    </Box>
+    </div>
   );
 }
 
