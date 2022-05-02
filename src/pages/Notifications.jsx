@@ -1,4 +1,4 @@
-import { Box, Stack, Typography, Button } from "@mui/material";
+import { Box, Stack, Typography, Button, Divider } from "@mui/material";
 import NotificationsNoneOutlinedIcon from '@mui/icons-material/NotificationsNoneOutlined';
 import DiscountOutlinedIcon from '@mui/icons-material/DiscountOutlined';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
@@ -24,7 +24,7 @@ function Notifications() {
                 <Stack direction="row" spacing={15}
                     sx={{
                         mt: 10,
-                        ml: 5
+                        ml: 2
                     }}
             >
                 <NotificationsNoneOutlinedIcon fontSize="large" color="primary"  />
@@ -39,8 +39,8 @@ function Notifications() {
                   fontWeight: 400,
                   fontSize: 14,
                   letterSpacing: 0.15,
-                  right: 15,
-                  ml: 5
+                  right: 11,
+                  ml: 1
                 }}
             >
                 <Button variant="text"
@@ -55,23 +55,33 @@ function Notifications() {
                     sx={{
                       color: "#000000",
                       mt: 2,
-                      ml: 11
+                      ml: 12
                     }}
                 >
                   Offers
                 </Button>
                 <Button variant="text"
                     sx={{
-                      color: "#000000",
                       mt: 2,
-                      ml: 11
+                      ml: 11,
+                      color: "#004AAD"
                     }}
                 >
                   Orders
                 </Button>
             </Box>
-       
           </Box>
+          <Divider 
+            sx={{
+              position: "absolute",
+              width: 94,
+              left: 305,
+              top: 165,
+              borderWidth: 2,
+              borderColor: "#004AAD",
+              borderRadius: 8
+            }}
+          />
         
         <Box
             sx={{
@@ -79,7 +89,7 @@ function Notifications() {
               fontStyle: "normal",
               bgcolor: "#FFFFFF",
               position: "absolute",
-              top: 170,
+              top: 174,
               width: 1
             }}
         >
