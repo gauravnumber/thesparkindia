@@ -1,16 +1,16 @@
-import { useState } from "react";
-import { Box, Tab, Tabs, GlobalStyles } from "@mui/material";
 import {
-  SearchOutlined,
   CameraAltOutlined,
+  SearchOutlined,
   TvOutlined,
 } from "@mui/icons-material";
-
+import { Box, GlobalStyles, Tabs } from "@mui/material";
+import { useState } from "react";
 import CategoriePanel from "./CategoriePanel";
 import CategoryTab from "./CategoryTab";
+import Explore from "@/components/SparkStudio/Explore";
 
 const Category = () => {
-  const [value, setValue] = useState(0);
+  const [value, setValue] = useState(1);
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
@@ -41,7 +41,7 @@ const Category = () => {
         one
       </CategoriePanel>
       <CategoriePanel value={value} index={1}>
-        two
+        <Explore />
       </CategoriePanel>
     </Box>
   );
