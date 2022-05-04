@@ -1,11 +1,12 @@
-import Header from "@/components/SparkStudio/Header";
 import { Box } from "@mui/material";
+import Header from "@/components/SparkStudio/Header";
+import Category from "@/components/SparkStudio/Category";
 
 const HomeStudio = () => {
   return (
-    <Box>
+    <Box m={-1}>
       <Header />
-      wow
+      <Category />
     </Box>
   );
 };
