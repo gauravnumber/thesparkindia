@@ -1,4 +1,4 @@
-import Header from "@/components/HomeStudio/Header";
+import Header from "@/components/SparkStudio/Header";
 import { Box } from "@mui/material";
 
 const HomeStudio = () => {
