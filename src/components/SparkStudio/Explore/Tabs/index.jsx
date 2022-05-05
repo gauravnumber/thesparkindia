@@ -1,5 +1,8 @@
 import { useState } from "react";
+import { Image } from "mui-image";
 import {
+  ImageList,
+  ImageListItem,
   Tabs,
   Tab,
   Avatar,
@@ -107,13 +110,53 @@ const ExploreTabs = () => {
         /> */}
       </Tabs>
       <CategoriePanel value={value} index={0}>
-        one
+        <ImageList
+          variant="quilted"
+          cols={3}
+          //  rowHeight={121}
+        >
+          {Array.from(Array(21)).map((_, index) => (
+            <ImageListItem key={index}>
+              <Image
+                src={`https://source.unsplash.com/100x100?${items[0]}&sig=${index}`}
+                showLoading
+              />
+            </ImageListItem>
+          ))}
+        </ImageList>
       </CategoriePanel>
       <CategoriePanel value={value} index={1}>
-        two
+        <ImageList
+          variant="quilted"
+          cols={3}
+          //  rowHeight={121}
+        >
+          {Array.from(Array(21)).map((_, index) => (
+            <ImageListItem key={index}>
+              <Image
+                src={`https://source.unsplash.com/100x100?${items[1]}&sig=${index}`}
+                showLoading
+              />
+            </ImageListItem>
+          ))}
+        </ImageList>
       </CategoriePanel>
       <CategoriePanel value={value} index={2}>
-        three
+        <ImageList
+          variant="quilted"
+          cols={3}
+          //  rowHeight={121}
+        >
+          {Array.from(Array(21)).map((_, index) => (
+            <ImageListItem key={index}>
+              <Image
+                src={`https://source.unsplash.com/100x100?${items[2]}&sig=${index}`}
+                showLoading
+                // duration={1000}
+              />
+            </ImageListItem>
+          ))}
+        </ImageList>
       </CategoriePanel>
     </>
     // <Stack direction="row" spacing="15px" sx={{ p: 1, overflowY: "scroll" }}>
