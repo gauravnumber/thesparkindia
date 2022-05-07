@@ -8,6 +8,7 @@ import { useState } from "react";
 import CategoriePanel from "./CategoriePanel";
 import CategoryTab from "./CategoryTab";
 import Explore from "@/components/SparkStudio/Explore";
+import Live from "@/components/SparkStudio/Live";
 
 const Category = () => {
   const [value, setValue] = useState(1);
@@ -42,6 +43,9 @@ const Category = () => {
       </CategoriePanel>
       <CategoriePanel value={value} index={1}>
         <Explore />
+      </CategoriePanel>
+      <CategoriePanel value={value} index={2}>
+        <Live />
       </CategoriePanel>
     </Box>
   );
