@@ -19,16 +19,17 @@ const Category = () => {
 
   return (
     <Box>
-      <GlobalStyles
+      {/* <GlobalStyles
         styles={{
           body: { backgroundColor: "#fff" },
         }}
-      />
+      /> */}
       <Tabs
         variant="fullWidth"
         value={value}
         onChange={handleChange}
         sx={{
+          backgroundColor: "#fff",
           ".MuiTabs-indicator": {
             backgroundColor: "primary.darkRed",
           },

@@ -13,13 +13,12 @@ const Live = () => {
   const redColor = "#d90000";
 
   return (
-    <Box
-    // sx={{ backgroundColor: "lightblue" }}
-    >
+    <Box sx={{ backgroundColor: "#fff" }}>
       <ListItem
         component="div"
         secondaryAction={<Typography>See all</Typography>}
         sx={{
+          mt: 1,
           "& .MuiListItemIcon-root": {
             minWidth: "33px",
           },
