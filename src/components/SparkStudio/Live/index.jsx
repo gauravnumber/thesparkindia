@@ -11,12 +11,18 @@ import {
 
 const Live = () => {
   const redColor = "#d90000";
+  const blackColor = "#1e1e1e";
+  const sparkBlue = "#2847a1";
 
   return (
     <Box sx={{ backgroundColor: "#fff" }}>
       <ListItem
         component="div"
-        secondaryAction={<Typography>See all</Typography>}
+        secondaryAction={
+          <Typography sx={{ color: sparkBlue, fontSize: 12, fontWeight: 500 }}>
+            See all
+          </Typography>
+        }
         sx={{
           mt: 1,
           "& .MuiListItemIcon-root": {
@@ -27,7 +33,16 @@ const Live = () => {
         <ListItemIcon>
           <TvOutlined />
         </ListItemIcon>
-        <ListItemText primary="Current Lives" />
+        {/* <ListItemText primary="Current Lives" /> */}
+        <ListItemText
+          primary={
+            <Typography
+              sx={{ fontWeight: 500, fontSize: 16, color: blackColor }}
+            >
+              Current Lives
+            </Typography>
+          }
+        />
       </ListItem>
       <Stack direction="row" spacing={1} sx={{ overflowX: "scroll", p: 1 }}>
         {Array.from(Array(10)).map((_, index) => (
