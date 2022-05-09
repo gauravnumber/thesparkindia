@@ -1,15 +1,15 @@
-import { Visibility, TvOutlined, Favorite } from "@mui/icons-material";
+import { TvOutlined, WifiTethering } from "@mui/icons-material";
 import {
-  Button,
-  IconButton,
-  useTheme,
   Avatar,
   Box,
+  Button,
+  IconButton,
   ListItem,
   ListItemIcon,
   ListItemText,
-  Typography,
   Stack,
+  Typography,
+  useTheme,
 } from "@mui/material";
 
 const UpcomingLives = () => {
@@ -81,6 +81,9 @@ const UpcomingLives = () => {
                   sx={{
                     width: 29,
                     height: 29,
+                    border: `2px solid ${sparkBlue}`,
+                    // border: "2px solid blue",
+                    // border: "2px solid primary.sparkBlue2",
                   }}
                 />
                 <Stack direction="column">
@@ -124,7 +127,7 @@ const UpcomingLives = () => {
                     color: blueColor,
                   }}
                 >
-                  <Favorite />
+                  <WifiTethering />
                 </IconButton>
                 <Typography
                   sx={{
