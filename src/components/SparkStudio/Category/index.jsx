@@ -8,6 +8,7 @@ import { useState } from "react";
 import CategoriePanel from "./CategoriePanel";
 import CategoryTab from "./CategoryTab";
 import Explore from "@/components/SparkStudio/Explore";
+import Live from "@/components/SparkStudio/Live";
 
 const Category = () => {
   const [value, setValue] = useState(1);
@@ -18,16 +19,17 @@ const Category = () => {
 
   return (
     <Box>
-      <GlobalStyles
+      {/* <GlobalStyles
         styles={{
           body: { backgroundColor: "#fff" },
         }}
-      />
+      /> */}
       <Tabs
         variant="fullWidth"
         value={value}
         onChange={handleChange}
         sx={{
+          backgroundColor: "#fff",
           ".MuiTabs-indicator": {
             backgroundColor: "primary.darkRed",
           },
@@ -42,6 +44,9 @@ const Category = () => {
       </CategoriePanel>
       <CategoriePanel value={value} index={1}>
         <Explore />
+      </CategoriePanel>
+      <CategoriePanel value={value} index={2}>
+        <Live />
       </CategoriePanel>
     </Box>
   );
