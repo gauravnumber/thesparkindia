@@ -1,4 +1,4 @@
-import { TvOutlined, Favorite } from "@mui/icons-material";
+import { Visibility, TvOutlined, Favorite } from "@mui/icons-material";
 import {
   IconButton,
   useTheme,
@@ -137,12 +137,39 @@ const RecentLiveVideos = () => {
                   sx={{
                     fontSize: 9,
                     fontWeight: 500,
+                    color: "#fff",
                   }}
                 >
                   1.5k
                 </Typography>
                 <Box flexGrow={1} />
-                <span>one</span>
+                <IconButton
+                  sx={{
+                    m: 0,
+                    p: 0,
+                    color: "#fff",
+                    // alignSelf: "center",
+                  }}
+                >
+                  <Visibility
+                    sx={{
+                      width: 18,
+                      height: 12,
+                      m: 0,
+                      p: 0,
+                      // boxShadow: "0px 3px 4px rgba(0, 0, 0, 0.25)",
+                    }}
+                  />
+                </IconButton>
+                <Typography
+                  sx={{
+                    fontSize: 9,
+                    fontWeight: 500,
+                    color: "#fff",
+                  }}
+                >
+                  15,000
+                </Typography>
               </Stack>
             </Stack>
           </Stack>
