@@ -1,18 +1,14 @@
-import Carousel from "react-material-ui-carousel";
 import { TvOutlined } from "@mui/icons-material";
 import {
-  useTheme,
-  Avatar,
   Box,
   ListItem,
   ListItemIcon,
   ListItemText,
   Typography,
-  Stack,
+  useTheme,
 } from "@mui/material";
-
+import Carousel from "react-material-ui-carousel";
 import Slide from "./Slide";
-import TrendingShops from "./TrendingShops";
 
 const CurrentLives = () => {
   const theme = useTheme();
@@ -61,17 +57,8 @@ const CurrentLives = () => {
         {Array.from(Array(6)).map((item, index) => (
           <Slide key={index} />
         ))}
-        {/* <p>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-          Reprehenderit nihil at atque dignissimos amet totam beatae nisi
-          fugiat?
-        </p>
-        <p>
-          Fugiat necessitatibus dolores, exercitationem tempora porro esse
-          molestiae cum temporibus quas sed.
-        </p> */}
       </Carousel>
-      <TrendingShops />
+      {/* <TrendingShops /> */}
     </Box>
   );
 };
