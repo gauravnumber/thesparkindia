@@ -4,6 +4,8 @@ import { Avatar, Box, Stack, Typography } from "@mui/material";
 
 const TrendingShops = () => {
   const lightBlue = "#b3c4ff";
+  const lightBlue2 = "#f0f6ff";
+
   const items = [
     {
       name: "Pavithra",
@@ -23,7 +25,7 @@ const TrendingShops = () => {
   ];
 
   return (
-    <Box sx={{ backgroundColor: "#fff", p: "7px 18px" }}>
+    <Box sx={{ backgroundColor: lightBlue2, p: "7px 18px" }}>
       <Stack
         direction="row"
         //  sx={{ p: "7px 18px" }}
