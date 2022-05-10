@@ -12,7 +12,7 @@ const CategoryTab = styled((props) => <Tab {...props} iconPosition="start" />)(
       textTransform: "none",
       padding: 10,
       // mb: 10,
-      color: "#000",
+      // color: "#000",
 
       "&.Mui-selected": {
         color: "#000",
