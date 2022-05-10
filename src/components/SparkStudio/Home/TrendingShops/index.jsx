@@ -4,6 +4,8 @@ import { Avatar, Box, Stack, Typography } from "@mui/material";
 
 const TrendingShops = () => {
   const lightBlue = "#b3c4ff";
+  const lightBlue2 = "#f0f6ff";
+
   const items = [
     {
       name: "Pavithra",
@@ -23,7 +25,7 @@ const TrendingShops = () => {
   ];
 
   return (
-    <Box sx={{ backgroundColor: "#fff", p: "7px 18px" }}>
+    <Box sx={{ backgroundColor: lightBlue2, p: "7px 18px" }}>
       <Stack
         direction="row"
         //  sx={{ p: "7px 18px" }}
@@ -70,7 +72,7 @@ const TrendingShops = () => {
               {index + 1}
             </Typography>
             <Avatar
-              src={`https://source.unsplash.com/43x43?sig=${index}`}
+              src={`https://source.unsplash.com/43x43?woman-face&sig=${index}`}
               sx={{
                 width: 43,
                 height: 43,
@@ -79,7 +81,7 @@ const TrendingShops = () => {
             />
             <Stack
               direction="column"
-              alignItems="center"
+              // alignItems="center"
               spacing="2px"
               sx={{ ml: "10px" }}
             >
