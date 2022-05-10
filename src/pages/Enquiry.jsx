@@ -1,9 +1,8 @@
 import { SearchOutlined } from "@mui/icons-material";
 import {
-  Badge,
-  Stack,
-  Box,
   Avatar,
+  Badge,
+  Box,
   Divider,
   IconButton,
   InputAdornment,
@@ -12,7 +11,6 @@ import {
   ListItemAvatar,
   ListItemText,
   TextField,
-  Typography,
 } from "@mui/material";
 
 const Enquiry = () => {
