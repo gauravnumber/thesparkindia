@@ -1,3 +1,4 @@
+import Image from "mui-image";
 import {
   ThreeDRotation,
   KeyboardOptionKey,
@@ -27,8 +28,8 @@ const Post = () => {
     >
       <Stack direction="row">
         <Avatar
-          variant="square"
-          src="https://source.unsplash.com/29x29?woman"
+          // variant="square"
+          src="https://source.unsplash.com/29x29?woman-face-head"
           sx={{
             width: 29,
             height: 29,
@@ -85,6 +86,11 @@ const Post = () => {
           <MoreVert />
         </IconButton>
       </Stack>
+      <Image
+        src="https://source.unsplash.com/324x327"
+        alt="post"
+        sx={{ width: 324, height: 327, mt: 1 }}
+      />
     </Box>
   );
 };

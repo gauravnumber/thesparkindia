@@ -72,7 +72,7 @@ const TrendingShops = () => {
               {index + 1}
             </Typography>
             <Avatar
-              src={`https://source.unsplash.com/43x43?sig=${index}`}
+              src={`https://source.unsplash.com/43x43?woman-face&sig=${index}`}
               sx={{
                 width: 43,
                 height: 43,
@@ -81,7 +81,7 @@ const TrendingShops = () => {
             />
             <Stack
               direction="column"
-              alignItems="center"
+              // alignItems="center"
               spacing="2px"
               sx={{ ml: "10px" }}
             >
