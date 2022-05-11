@@ -4,8 +4,12 @@ import {
   KeyboardOptionKey,
   ThreeGMobiledata,
   MoreVert,
+  FavoriteBorderOutlined,
+  FavoriteBorderTwoTone,
+  FavoriteBorder,
 } from "@mui/icons-material";
 import {
+  Checkbox,
   Typography,
   Box,
   Stack,
@@ -91,6 +95,28 @@ const Post = () => {
         alt="post"
         sx={{ width: 324, height: 327, mt: 1 }}
       />
+      <Stack direction="row" alignItems="center">
+        <Checkbox
+          icon={<FavoriteBorderOutlined />}
+          checkedIcon={<FavoriteBorder />}
+          // checkedIcon={<FavoriteBorderTwoTone />}
+          sx={{
+            // p: 0,
+            mr: "8.31px",
+            width: 21,
+            height: 21,
+            color: "primary.red",
+            // borderRadius: 5,
+            "&.Mui-checked": {
+              color: "primary.red",
+            },
+          }}
+        />
+
+        <Typography sx={{ fontSize: 12, fontWeight: 500 }}>
+          1.4K people liked this post
+        </Typography>
+      </Stack>
     </Box>
   );
 };
