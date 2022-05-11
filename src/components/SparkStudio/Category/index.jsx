@@ -9,9 +9,10 @@ import CategoriePanel from "./CategoriePanel";
 import CategoryTab from "./CategoryTab";
 import Explore from "@/components/SparkStudio/Explore";
 import Live from "@/components/SparkStudio/Live";
+import Home from "@/components/SparkStudio/Home";
 
 const Category = () => {
-  const [value, setValue] = useState(1);
+  const [value, setValue] = useState(0);
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
@@ -40,7 +41,7 @@ const Category = () => {
         <CategoryTab label="Live" icon={<TvOutlined />} />
       </Tabs>
       <CategoriePanel value={value} index={0}>
-        one
+        <Home />
       </CategoriePanel>
       <CategoriePanel value={value} index={1}>
         <Explore />

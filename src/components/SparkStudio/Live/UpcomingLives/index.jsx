@@ -71,7 +71,7 @@ const UpcomingLives = () => {
               sx={{
                 p: "12px 9px ",
                 height: 120,
-                backgroundImage: `linear-gradient(0deg, rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url(https://source.unsplash.com/130x165?sig=${index})`,
+                backgroundImage: `linear-gradient(0deg, rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url(https://source.unsplash.com/150x165?sig=${index})`,
               }}
             >
               <Stack direction="row" alignItems="center" spacing="7px">

@@ -25,6 +25,7 @@ specifiers:
   react-dom: ^17.0.2
   react-material-ui-carousel: ^3.2.0
   react-router-dom: ^6.2.1
+  react-swipeable-views: ^0.14.0
   react-webcam: ^7.0.1
   styled-components: ^5.3.5
   vite: ^2.7.2
@@ -35,13 +36,14 @@ dependencies:
   '@fontsource/roboto': 4.5.5
   '@mui/icons-material': 5.5.1_@mui+material@5.5.2+react@17.0.2
   '@mui/material': 5.5.2_eb8585ddc00e6d8e3b40a6701d59ed38
-  material-auto-rotating-carousel: 3.0.2_react-dom@17.0.2+react@17.0.2
+  material-auto-rotating-carousel: 3.0.2_e5229f51c5f5f38716c0d99da8c5eae5
   mui-image: 1.0.4_e4ce113af6310e834cb2e476a59fc676
   react: 17.0.2
   react-camera-pro: 1.1.1_cdce0472005fc9929e7dd0afca7bfa15
   react-dom: 17.0.2_react@17.0.2
   react-material-ui-carousel: 3.2.0
   react-router-dom: 6.2.2_react-dom@17.0.2+react@17.0.2
+  react-swipeable-views: 0.14.0_react@17.0.2
   react-webcam: 7.0.1_react-dom@17.0.2+react@17.0.2
   styled-components: 5.3.5_react-dom@17.0.2+react@17.0.2
 
@@ -298,6 +300,12 @@ packages:
       core-js-pure: 3.21.1
       regenerator-runtime: 0.13.9
     dev: true
+
+  /@babel/runtime/7.0.0:
+    resolution: {integrity: sha512-7hGhzlcmg01CvH1EHdSPVXYX1aJ8KCEyz6I9xYIi/asDtzBPMyMhVibhM/K6g/5qnKBwjZtp10bNZIEFTRW1MA==}
+    dependencies:
+      regenerator-runtime: 0.12.1
+    dev: false
 
   /@babel/runtime/7.17.8:
     resolution: {integrity: sha512-dQpEpK0O9o6lj6oPu0gRDbbnk+4LeHlNcBpspf6Olzt3GIX4P1lWF1gS+pHLDFlaJvbR6q7jCfQ08zA4QJBnmA==}
@@ -2159,6 +2167,10 @@ packages:
       object.assign: 4.1.2
     dev: true
 
+  /keycode/2.2.1:
+    resolution: {integrity: sha512-Rdgz9Hl9Iv4QKi8b0OlCRQEzp4AgVxyCtz5S/+VIHezDmrDhkp2N2TqBWOLz0/gbeREXOOiI9/4b8BY9uw2vFg==}
+    dev: false
+
   /language-subtag-registry/0.3.21:
     resolution: {integrity: sha512-L0IqwlIXjilBVVYKFT37X9Ih11Um5NEl9cbJIuU/SwP/zEEAbBPOnEeeuxVMf45ydWQRDQN3Nqc96OgbH1K+Pg==}
     dev: true
@@ -2260,7 +2272,7 @@ packages:
     dependencies:
       js-tokens: 4.0.0
 
-  /material-auto-rotating-carousel/3.0.2_react-dom@17.0.2+react@17.0.2:
+  /material-auto-rotating-carousel/3.0.2_e5229f51c5f5f38716c0d99da8c5eae5:
     resolution: {integrity: sha512-ql/jiV0R9xsOUVn7JNOomvgXHkVFYjmClei+jsfgpOlHXsXztqfOFl6rb0mLbBIpg4mRzTV5oNYOGAM3MvXETA==}
     peerDependencies:
       '@material-ui/core': ^3.6.0 || ^4.0.0
@@ -2274,6 +2286,7 @@ packages:
       prop-types: 15.8.1
       react: 17.0.2
       react-dom: 17.0.2_react@17.0.2
+      react-swipeable-views: 0.14.0_react@17.0.2
     dev: false
 
   /material-ui-dots/2.0.2_react-dom@17.0.2+react@17.0.2:
@@ -2605,6 +2618,17 @@ packages:
       scheduler: 0.20.2
     dev: false
 
+  /react-event-listener/0.6.6_react@17.0.2:
+    resolution: {integrity: sha512-+hCNqfy7o9wvO6UgjqFmBzARJS7qrNoda0VqzvOuioEpoEXKutiKuv92dSz6kP7rYLmyHPyYNLesi5t/aH1gfw==}
+    peerDependencies:
+      react: ^16.3.0
+    dependencies:
+      '@babel/runtime': 7.17.8
+      prop-types: 15.8.1
+      react: 17.0.2
+      warning: 4.0.3
+    dev: false
+
   /react-is/16.13.1:
     resolution: {integrity: sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==}
 
@@ -2654,6 +2678,42 @@ packages:
       react: 17.0.2
     dev: false
 
+  /react-swipeable-views-core/0.14.0:
+    resolution: {integrity: sha512-0W/e9uPweNEOSPjmYtuKSC/SvKKg1sfo+WtPdnxeLF3t2L82h7jjszuOHz9C23fzkvLfdgkaOmcbAxE9w2GEjA==}
+    engines: {node: '>=6.0.0'}
+    dependencies:
+      '@babel/runtime': 7.0.0
+      warning: 4.0.3
+    dev: false
+
+  /react-swipeable-views-utils/0.14.0_react@17.0.2:
+    resolution: {integrity: sha512-W+fXBOsDqgFK1/g7MzRMVcDurp3LqO3ksC8UgInh2P/tKgb5DusuuB1geKHFc6o1wKl+4oyER4Zh3Lxmr8xbXA==}
+    engines: {node: '>=6.0.0'}
+    dependencies:
+      '@babel/runtime': 7.0.0
+      keycode: 2.2.1
+      prop-types: 15.8.1
+      react-event-listener: 0.6.6_react@17.0.2
+      react-swipeable-views-core: 0.14.0
+      shallow-equal: 1.2.1
+    transitivePeerDependencies:
+      - react
+    dev: false
+
+  /react-swipeable-views/0.14.0_react@17.0.2:
+    resolution: {integrity: sha512-wrTT6bi2nC3JbmyNAsPXffUXLn0DVT9SbbcFr36gKpbaCgEp7rX/OFxsu5hPc/NBsUhHyoSRGvwqJNNrWTwCww==}
+    engines: {node: '>=6.0.0'}
+    peerDependencies:
+      react: ^15.3.0 || ^16.0.0 || ^17.0.0
+    dependencies:
+      '@babel/runtime': 7.0.0
+      prop-types: 15.8.1
+      react: 17.0.2
+      react-swipeable-views-core: 0.14.0
+      react-swipeable-views-utils: 0.14.0_react@17.0.2
+      warning: 4.0.3
+    dev: false
+
   /react-transition-group/4.4.2_react-dom@17.0.2+react@17.0.2:
     resolution: {integrity: sha512-/RNYfRAMlZwDSr6z4zNKV6xu53/e2BuaBbGhbyYIXTrmgu/bGHzmqOs7mJSJBHy9Ud+ApHx3QjrkKSp1pxvlFg==}
     peerDependencies:
@@ -2684,6 +2744,10 @@ packages:
     dependencies:
       loose-envify: 1.4.0
       object-assign: 4.1.1
+    dev: false
+
+  /regenerator-runtime/0.12.1:
+    resolution: {integrity: sha512-odxIc1/vDlo4iZcfXqRYFj0vpXFNoGdKMAUieAlFYO6m/nl5e9KR/beGf41z4a1FI+aQgtjhuaSlDxQ0hmkrHg==}
     dev: false
 
   /regenerator-runtime/0.13.9:
@@ -2768,6 +2832,10 @@ packages:
     resolution: {integrity: sha512-b39TBaTSfV6yBrapU89p5fKekE2m/NwnDocOVruQFS1/veMgdzuPcnOM34M6CwxW8jH/lxEa5rBoDeUwu5HHTw==}
     hasBin: true
     dev: true
+
+  /shallow-equal/1.2.1:
+    resolution: {integrity: sha512-S4vJDjHHMBaiZuT9NPb616CSmLf618jawtv3sufLl6ivK8WocjAo58cXwbRV1cgqxH0Qbv+iUt6m05eqEa2IRA==}
+    dev: false
 
   /shallowequal/1.1.0:
     resolution: {integrity: sha512-y0m1JoUZSlPAjXVtPPW70aZWfIL/dSP7AFkRnniLCrK/8MDKog3TySTBmckD+RObVxH0v4Tox67+F14PdED2oQ==}
@@ -3057,6 +3125,12 @@ packages:
     optionalDependencies:
       fsevents: 2.3.2
     dev: true
+
+  /warning/4.0.3:
+    resolution: {integrity: sha512-rpJyN222KWIvHJ/F53XSZv0Zl/accqHR8et1kpaMTD/fLCRxtV8iX8czMzY7sVZupTI3zcUTg8eycS2kNF9l6w==}
+    dependencies:
+      loose-envify: 1.4.0
+    dev: false
 
   /which-boxed-primitive/1.0.2:
     resolution: {integrity: sha512-bwZdv0AKLpplFY2KZRX6TvyuN7ojjr7lwkg6ml0roIy9YeuSr7JS372qlNW18UQYzgYK9ziGcerWqZOmEn9VNg==}
