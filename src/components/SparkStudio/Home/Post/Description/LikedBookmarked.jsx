@@ -17,11 +17,11 @@ const LikedBookmarked = () => {
           mr: "8.31px",
           width: 21,
           height: 21,
-          color: "primary.red",
+          // color: "primary.red",
           // borderRadius: 5,
-          "&.Mui-checked": {
-            color: "primary.red",
-          },
+          // "&.Mui-checked": {
+          //   color: "primary.red",
+          // },
         }}
       />
 
