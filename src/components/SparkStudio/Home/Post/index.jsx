@@ -3,7 +3,7 @@ import Image from "mui-image";
 import Description from "./Description";
 import Header from "./Header";
 
-const Post = () => {
+const Post = ({ index }) => {
   // const blackColor = "rgba(0, 0, 0, 0.4)";
   // const lightRed = "#feaaaa";
 
@@ -17,7 +17,7 @@ const Post = () => {
     >
       <Header />
       <Image
-        src="https://source.unsplash.com/324x327"
+        src={`https://source.unsplash.com/324x327?sig=${index}`}
         alt="post"
         sx={{ width: 324, height: 327, mt: 1 }}
       />
