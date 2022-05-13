@@ -1,20 +1,19 @@
-import { useState } from "react";
 import { TvOutlined, Visibility } from "@mui/icons-material";
 import {
-  Stack,
   Avatar,
-  IconButton,
   Box,
+  Grid,
+  IconButton,
   ListItem,
   ListItemIcon,
   ListItemText,
+  MobileStepper,
+  Stack,
   Typography,
   useTheme,
-  Grid,
 } from "@mui/material";
-import Carousel from "react-material-ui-carousel";
+import { useState } from "react";
 import SwipeableViews from "react-swipeable-views";
-import Slide from "./Slide";
 
 const CurrentLives = () => {
   const [activeStep, setActiveStep] = useState(0);
@@ -23,6 +22,7 @@ const CurrentLives = () => {
   // const redColor = theme.palette.primary.liveRed;
   const blackColor = theme.palette.primary.lightBlack;
   const sparkBlue = theme.palette.primary.sparkBlue2;
+  const blueColor = "#2a00fa";
 
   const handleStepChange = (step) => {
     setActiveStep(step);
@@ -78,6 +78,7 @@ const CurrentLives = () => {
               sx={{
                 height: "100%",
                 p: "12px",
+                pb: "2px",
               }}
               direction="column"
               justifyContent="space-between"
@@ -167,7 +168,7 @@ const CurrentLives = () => {
                 // alignContent="flex-end"
                 // justifySelf="flex-end"
                 justifyContent="space-between"
-                // alignItems="flex-end"
+                alignItems="flex-end"
                 // direction="column"
                 // xs={6}
               >
@@ -201,7 +202,7 @@ const CurrentLives = () => {
                           fontWeight: 300,
                           color: "#fff",
                           // color: "primary.grey3",
-                          width: 220,
+                          width: 200,
                           // maxWidth: 220,
                           // minWidth: 110,
                           textShadow: "0px 4px 4px rgba(0, 0, 0, 0.25)",
@@ -216,11 +217,51 @@ const CurrentLives = () => {
                 </Grid>
                 <Grid item>
                   <Avatar
-                    src="https://source.unsplash.com/42x42"
+                    src="https://source.unsplash.com/42x42?company,logo"
                     sx={{
                       width: 42,
                       height: 42,
                     }}
+                  />
+                </Grid>
+                <Grid item container justifyContent="center">
+                  <MobileStepper
+                    variant="dots"
+                    steps={6}
+                    position="static"
+                    activeStep={activeStep}
+                    sx={{
+                      backgroundColor: "transparent",
+                      "& .MuiMobileStepper-dot": {
+                        backgroundColor: "#fff",
+                        width: "7px",
+                        height: "7px",
+                        mx: "7px",
+                      },
+                      "& .MuiMobileStepper-dotActive": {
+                        backgroundColor: blueColor,
+                      },
+                    }}
+                    // nextButton={
+                    //   <Button size="small" onClick={handleNext} disabled={activeStep === 5}>
+                    //     Next
+                    //     {theme.direction === 'rtl' ? (
+                    //       <KeyboardArrowLeft />
+                    //     ) : (
+                    //       <KeyboardArrowRight />
+                    //     )}
+                    //   </Button>
+                    // }
+                    // backButton={
+                    //   <Button size="small" onClick={handleBack} disabled={activeStep === 0}>
+                    //     {theme.direction === 'rtl' ? (
+                    //       <KeyboardArrowRight />
+                    //     ) : (
+                    //       <KeyboardArrowLeft />
+                    //     )}
+                    //     Back
+                    //   </Button>
+                    // }
                   />
                 </Grid>
               </Grid>
