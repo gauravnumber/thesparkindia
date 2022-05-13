@@ -77,7 +77,7 @@ const CurrentLives = () => {
               container
               sx={{
                 height: "100%",
-                p: "10px 10px",
+                p: "12px",
               }}
               direction="column"
               justifyContent="space-between"
@@ -166,50 +166,63 @@ const CurrentLives = () => {
                 container
                 // alignContent="flex-end"
                 // justifySelf="flex-end"
-                // justifyContent="flex-end"
+                justifyContent="space-between"
                 // alignItems="flex-end"
                 // direction="column"
                 // xs={6}
               >
-                <Stack
-                  direction="row"
-                  alignItems="center"
-                  // sx={{
-                  //   mt: "10px",
-                  //   ml: "8px",
-                  // }}
-                  spacing="7px"
-                >
+                <Grid item>
+                  <Stack
+                    direction="row"
+                    alignItems="center"
+                    // sx={{
+                    //   mt: "10px",
+                    //   ml: "8px",
+                    // }}
+                    spacing="7px"
+                  >
+                    <Avatar
+                      src="https://source.unsplash.com/29x29?social-media-user"
+                      alt="user"
+                      sx={{
+                        width: 24,
+                        height: 24,
+                      }}
+                    />
+                    <Stack direction="column">
+                      <Typography
+                        sx={{ color: "#fff", fontSize: 11, fontWeight: 500 }}
+                      >
+                        Sindhu.pvt
+                      </Typography>
+                      <Typography
+                        sx={{
+                          fontSize: 10,
+                          fontWeight: 300,
+                          color: "#fff",
+                          // color: "primary.grey3",
+                          width: 220,
+                          // maxWidth: 220,
+                          // minWidth: 110,
+                          textShadow: "0px 4px 4px rgba(0, 0, 0, 0.25)",
+                        }}
+                        noWrap
+                      >
+                        Best Selling Electronic under 2000/- Best Selling
+                        Electronics
+                      </Typography>
+                    </Stack>
+                  </Stack>
+                </Grid>
+                <Grid item>
                   <Avatar
-                    src="https://source.unsplash.com/29x29?social-media-user"
-                    alt="user"
+                    src="https://source.unsplash.com/42x42"
                     sx={{
-                      width: 24,
-                      height: 24,
+                      width: 42,
+                      height: 42,
                     }}
                   />
-                  <Stack direction="column">
-                    <Typography
-                      sx={{ color: "#fff", fontSize: 11, fontWeight: 500 }}
-                    >
-                      Sindhu.pvt
-                    </Typography>
-                    <Typography
-                      sx={{
-                        fontSize: 10,
-                        fontWeight: 300,
-                        color: "#fff",
-                        // color: "primary.grey3",
-                        width: 220,
-                        textShadow: "0px 4px 4px rgba(0, 0, 0, 0.25)",
-                      }}
-                      noWrap
-                    >
-                      Best Selling Electronic under 2000/- Best Selling
-                      Electronics
-                    </Typography>
-                  </Stack>
-                </Stack>
+                </Grid>
               </Grid>
             </Grid>
           </Box>
