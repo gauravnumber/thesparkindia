@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { TvOutlined, Visibility } from "@mui/icons-material";
 import {
+  Stack,
+  Avatar,
   IconButton,
   Box,
   ListItem,
@@ -57,7 +59,7 @@ const CurrentLives = () => {
       <SwipeableViews
         index={activeStep}
         onChangeIndex={handleStepChange}
-        enableMouseEvents
+        // enableMouseEvents
       >
         {Array.from(Array(6)).map((_, index) => (
           <Box
@@ -68,20 +70,24 @@ const CurrentLives = () => {
               mx: "18px",
               mb: "10px",
               borderRadius: "10px",
-              background:
-                "linear-gradient(180deg, rgba(182, 182, 182, 0.79) 0%, rgba(11, 11, 11, 0.65) 100%) , url(https://source.unsplash.com/324x190)",
+              backgroundImage: `linear-gradient(180deg, rgba(182, 182, 182, 0.79) 0%, rgba(11, 11, 11, 0.65) 100%) , url(https://source.unsplash.com/324x190?sig=${index})`,
             }}
           >
             <Grid
               container
               sx={{
+                height: "100%",
                 p: "10px 10px",
               }}
+              direction="column"
+              justifyContent="space-between"
+              // alignItems="flex-end"
             >
               <Grid
                 item
                 container
                 direction="row"
+                // xs={6}
                 // alignItems="flex-start"
                 // alignItems="flex-end"
                 // alignItems="center"
@@ -153,6 +159,57 @@ const CurrentLives = () => {
                     </Typography>
                   </Grid>
                 </Grid>
+              </Grid>
+
+              <Grid
+                item
+                container
+                // alignContent="flex-end"
+                // justifySelf="flex-end"
+                // justifyContent="flex-end"
+                // alignItems="flex-end"
+                // direction="column"
+                // xs={6}
+              >
+                <Stack
+                  direction="row"
+                  alignItems="center"
+                  // sx={{
+                  //   mt: "10px",
+                  //   ml: "8px",
+                  // }}
+                  spacing="7px"
+                >
+                  <Avatar
+                    src="https://source.unsplash.com/29x29?social-media-user"
+                    alt="user"
+                    sx={{
+                      width: 24,
+                      height: 24,
+                    }}
+                  />
+                  <Stack direction="column">
+                    <Typography
+                      sx={{ color: "#fff", fontSize: 11, fontWeight: 500 }}
+                    >
+                      Sindhu.pvt
+                    </Typography>
+                    <Typography
+                      sx={{
+                        fontSize: 10,
+                        fontWeight: 300,
+                        color: "#fff",
+                        // color: "primary.grey3",
+                        width: 220,
+                        textShadow: "0px 4px 4px rgba(0, 0, 0, 0.25)",
+                      }}
+                      noWrap
+                    >
+                      Best Selling Electronic under 2000/- Best Selling
+                      Electronics
+                    </Typography>
+                  </Stack>
+                </Stack>
               </Grid>
             </Grid>
           </Box>
