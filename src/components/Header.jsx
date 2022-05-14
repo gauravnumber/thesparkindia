@@ -13,7 +13,6 @@ import Toolbar from "@mui/material/Toolbar";
 import {
   styled,
   AppBar,
-  // AppBar as MuiAppBar,
   Box,
   IconButton,
   Typography,
@@ -23,44 +22,16 @@ import {
 const drawerWidth = 240;
 
 const Header = () => {
-  // const [open, setOpen] = useState(false);
   const navigate = useNavigate();
   const location = useLocation();
   const { heading } = useHeader();
 
-  // if (location.pathname === "/scan-and-buy") return null;
   if (["/scan-and-buy", "/", "/intro"].includes(location.pathname)) return null;
-
-  // const handleDrawerOpen = () => {
-  //   setOpen(true);
-  // };
-
-  // const handleDrawerClose = () => {
-  //   setOpen(false);
-  // };
-
-  // const AppBar = styled(MuiAppBar, {
-  //   shouldForwardProp: (prop) => prop !== "open",
-  // })(({ theme, open }) => ({
-  //   transition: theme.transitions.create(["margin", "width"], {
-  //     easing: theme.transitions.easing.sharp,
-  //     duration: theme.transitions.duration.leavingScreen,
-  //   }),
-  //   ...(open && {
-  //     width: `calc(100% - ${drawerWidth}px)`,
-  //     marginLeft: `${drawerWidth}px`,
-  //     transition: theme.transitions.create(["margin", "width"], {
-  //       easing: theme.transitions.easing.easeOut,
-  //       duration: theme.transitions.duration.enteringScreen,
-  //     }),
-  //   }),
-  // }));
 
   return (
     <div>
       <AppBar
         position="fixed"
-        // open={open}
         sx={{
           color: "primary.blue",
           backgroundColor: (theme) => theme.palette.background.paper,
