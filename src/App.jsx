@@ -34,6 +34,7 @@ import CreateAccount from "./pages/CreateAccount";
 import TermsOfUse from "./pages/TermsOfUse";
 import ChooseYourLanguage from "./pages/ChooseYourLanguage";
 import SparkStudio from "./pages/SparkStudio";
+import TrendingShops from "./pages/SparkStudio/TrendingShops";
 import Help from "./pages/Help";
 import Login from "./pages/Login";
 import VerifyWithOtp from "./pages/VerifyWithOtp";
@@ -87,7 +88,11 @@ function App() {
           <Route path="verify-with-otp" element={<VerifyWithOtp />} />
         </Route>
         <Route path="/create-account" element={<CreateAccount />} />
-        <Route path="/spark-studio" element={<SparkStudio />} />
+        {/* <Route path="/spark-studio" element={<SparkStudio />} /> */}
+        <Route path="/spark-studio">
+          <Route index element={<SparkStudio />} />
+          <Route path="trending-shops" element={<TrendingShops />} />
+        </Route>
         <Route path="/terms-of-use" element={<TermsOfUse />} />
         <Route path="/choose-your-language" element={<ChooseYourLanguage />} />
         <Route path="/help" element={<Help />} />
