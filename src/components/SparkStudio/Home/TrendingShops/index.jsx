@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { Avatar, Box, Stack, Typography } from "@mui/material";
 
 // import Slide from "./Slide";
@@ -38,7 +39,15 @@ const TrendingShops = () => {
         {/* <Typography>Trending Shops</Typography> */}
         {/* <Link>See All</Link> */}
         <Typography
-          sx={{ color: "primary.sparkBlue2", fontSize: 12, fontWeight: 500 }}
+          component={Link}
+          to="trending-shops"
+          sx={{
+            color: "primary.sparkBlue2",
+            fontSize: 12,
+            fontWeight: 500,
+            // cursor: "pointer",
+            textDecoration: "none",
+          }}
         >
           See All
         </Typography>
