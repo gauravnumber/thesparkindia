@@ -32,7 +32,7 @@ const FavouritePage = () => {
         sx={{
           bgcolor: (theme) => theme.palette.background.paper,
           // px: 2,
-          mx: -2,
+          mx: -1,
           mt: -2,
           // pt: 10,
           // mt: -13,
