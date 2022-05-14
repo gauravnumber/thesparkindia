@@ -269,18 +269,6 @@ const CurrentLives = () => {
           </Box>
         ))}
       </SwipeableViews>
-      {/* <Carousel
-        autoPlay={false}
-        sx={{
-          //  backgroundColor: "red",
-          p: 0,
-          m: 0,
-        }}
-      >
-        {Array.from(Array(6)).map((item, index) => (
-          <Slide key={index} />
-        ))}
-      </Carousel> */}
     </Box>
   );
 };
