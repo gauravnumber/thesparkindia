@@ -17,10 +17,10 @@ const RecentlyViewed = () => {
     <List
       sx={{
         bgcolor: (theme) => theme.palette.background.paper,
-        px: 2,
-        mx: -2,
-        pt: 10,
-        mt: -10,
+        // px: 2,
+        // mx: -2,
+        // pt: 10,
+        // mt: -10,
       }}
       disablePadding
     >
