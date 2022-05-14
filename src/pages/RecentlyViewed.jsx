@@ -17,8 +17,8 @@ const RecentlyViewed = () => {
     <List
       sx={{
         bgcolor: (theme) => theme.palette.background.paper,
-        // px: 2,
-        // mx: -2,
+        px: 1,
+        mx: -1,
         // pt: 10,
         // mt: -10,
       }}
