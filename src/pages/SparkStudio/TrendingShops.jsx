@@ -1,6 +1,3 @@
-import { useEffect } from "react";
-import useHeader from "@/hooks/useHeader";
-
 const TrendingShops = () => {
   // const header = useHeader();
 
