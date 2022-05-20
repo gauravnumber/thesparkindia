@@ -1,5 +1,5 @@
 import { CssBaseline, Container, Box } from "@mui/material";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
 
 import LowBar from "./components/LowBar";
 import Header from "./components/Header";
@@ -52,6 +52,7 @@ function App() {
       }}
     >
       <CssBaseline />
+      {/* <Navigate to="/intro" /> */}
       <Header />
       <Box mt={5} />
       <Routes>
