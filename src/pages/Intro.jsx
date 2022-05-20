@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Carousel from "react-material-ui-carousel";
 
 import {
@@ -11,18 +12,22 @@ import {
 } from "@mui/material";
 import { ArrowBack, ArrowForward } from "@mui/icons-material";
 import { Image } from "mui-image";
+// import { useState } from "react";
 
 const Intro = () => {
+  // const [index, setIndex] = useState(0);
   const theme = useTheme();
 
   return (
     <Box mt={-5} p={1}>
       <Stack direction="row" justifyContent="flex-end">
-        <Button sx={{ color: "primary.darkBlue" }}>Skip</Button>
+        <Button sx={{ color: "primary.darkBlue" }} component={Link} to="/">
+          Skip
+        </Button>
       </Stack>
       <Carousel
-        // autoPlay={false}
-
+        autoPlay={false}
+        // index={index}
         activeIndicatorIconButtonProps={{
           style: {
             color: theme.palette.primary.darkBlue,
@@ -59,6 +64,8 @@ const Intro = () => {
           minHeight: "43px",
           backgroundColor: "primary.darkBlue",
         }}
+        // onClick={() => setIndex(index + 1)}
+        // onClick={() => setIndex((prev) => prev + 1)}
       >
         <ArrowForward />
       </Button>
