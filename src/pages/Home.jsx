@@ -17,15 +17,17 @@ import TrendingProducts from "@/components/Home/TrendingProducts";
 import TrendingSearches from "@/components/Home/TrendingSearches";
 import Img from "@/components/Img";
 import { Box } from "@mui/material";
-// import { Navigate, useNavigate } from "react-router-dom";
-// import { useEffect } from "react";
+import { Navigate, useNavigate } from "react-router-dom";
+import { useEffect } from "react";
 
 const Home = () => {
-  // const navigate = useNavigate();
+  const navigate = useNavigate();
 
-  // useEffect(() => {
-  //   navigate("/intro");
-  // }, []);
+  useEffect(() => {
+    const user = localStorage.getItem("loggedUser");
+
+    if (!user) navigate("/login");
+  }, []);
 
   return (
     <Box
