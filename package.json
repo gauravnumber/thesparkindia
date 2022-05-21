@@ -5,6 +5,7 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
+    "offline": "vite --mode offline",
     "lint": "eslint .",
     "lint:fix": "eslint --fix ./src",
     "format": "prettier --write --ignore-unknown ./src",

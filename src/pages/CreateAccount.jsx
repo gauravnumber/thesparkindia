@@ -17,8 +17,51 @@ import {
   Stack,
   Typography,
 } from "@mui/material";
+import userService from "@/services/userService";
+import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
 const CreateAccount = () => {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
+  const [referal, setReferal] = useState("");
+  const navigate = useNavigate();
+  // const [value, setValue] = useState({
+  //   name: "",
+  //   email: "",
+  //   password: "",
+  //   currentPassword: "",
+  //   referal: "",
+  // });
+
+  const handleCreateAccount = async (e) => {
+    e.preventDefault();
+
+    try {
+      const response = await userService.createAccount({
+        name,
+        email,
+        password,
+        confirmPassword,
+        referal,
+      });
+
+      // console.log(`response`, response);
+      localStorage.setItem("loggedUser", response.token);
+      navigate("/");
+    } catch (error) {
+      console.log(error?.response?.data?.message);
+    }
+    // console.log(`response.data`, response.data);
+  };
+
+  // const handleField = (e) => {
+  //   const name = e.target.name;
+  //   // console.log(`name`, name);
+  //   // setValue({ ...value, name: e.target.value });
+  // };
   const blueColor = "#2847a1";
   const ashColor = "#999898";
   const greyColor = "#a9a9a9";
@@ -54,12 +97,24 @@ const CreateAccount = () => {
       >
         89562348552
       </Typography>
-      <Box component="form" sx={{ mt: 2 }}>
-        <TextField placeholder="Name" fullWidth required />
+      <Box component="form" sx={{ mt: 2 }} onSubmit={handleCreateAccount}>
+        <TextField
+          placeholder="Name"
+          fullWidth
+          required
+          name="name"
+          value={name}
+          onChange={(e) => setName(e.target.value)}
+          // onChange={handleField}
+        />
         <TextField
           placeholder="Email (Optional)"
           fullWidth
           sx={{ mt: 2, mb: 2 }}
+          name="email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          // onChange={handleField}
         />
 
         <Typography
@@ -76,6 +131,9 @@ const CreateAccount = () => {
           required
           fullWidth
           sx={{ mb: 2 }}
+          name="password"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
         />
 
         <Typography
@@ -92,6 +150,9 @@ const CreateAccount = () => {
           required
           fullWidth
           sx={{ mb: 2 }}
+          name="confirmPassword"
+          value={confirmPassword}
+          onChange={(e) => setConfirmPassword(e.target.value)}
         />
         <Typography
           sx={{
@@ -105,6 +166,9 @@ const CreateAccount = () => {
           placeholder="Referral Code (Optional)"
           fullWidth
           sx={{ mb: 2 }}
+          name="referal"
+          value={referal}
+          onChange={(e) => setReferal(e.target.value)}
         />
         <Button
           type="submit"
