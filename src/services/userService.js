@@ -7,7 +7,7 @@ let token = null
 const setToken = newToken => { token = `bearer ${newToken}` }
 // console.log(`token`, token)
 
-const login = async (email, password) => {
+const login = (email, password) => {
   return axios.post(`${baseUrl}/login`, {
     email, password
   }).then(response => response.data)
@@ -18,4 +18,12 @@ const login = async (email, password) => {
   // return response.data
 }
 
-export default { login, setToken }
+const createAccount = async ({ name, email, password, confirmPassword, referal }) => {
+  const response = await axios.post(`${baseUrl}/registeration`, { name, email, password, confirmPassword, referal })
+  // const response = await axios.post(`${baseUrl}/registeration`, data)
+
+  // console.log(`response`, response)
+  return response.data
+}
+
+export default { login, setToken, createAccount }
