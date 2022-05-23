@@ -1,10 +1,15 @@
 import { IconButton, Paper, Typography, Box } from "@mui/material";
 // import { Box } from "@mui/system";
 import ArrowDownwardIcon from "@mui/icons-material/ArrowDownward";
+import { Link } from "react-router-dom";
 
 function LanguageChoose() {
   return (
-    <div className="App">
+    <Box
+      sx={{
+        mb: 100,
+      }}
+    >
       <Box
         sx={{
           position: "absolute",
@@ -341,6 +346,8 @@ function LanguageChoose() {
           fontWeight: 600,
           fontSize: 15,
         }}
+        component={Link}
+        to="/choose-your-language"
       >
         Show More
       </Typography>
@@ -354,7 +361,7 @@ function LanguageChoose() {
       >
         <ArrowDownwardIcon />
       </IconButton>
-    </div>
+    </Box>
   );
 }
 

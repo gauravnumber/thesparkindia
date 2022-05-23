@@ -19,11 +19,11 @@ const Login = () => {
   const [password, setPassword] = useState("");
   const [error, setError] = useState(false);
 
-  useEffect(() => {
-    const user = localStorage.getItem("loggedUser");
+  // useEffect(() => {
+  //   const user = localStorage.getItem("loggedUser");
 
-    if (user) navigate("/");
-  }, []);
+  //   if (user) navigate("/");
+  // }, []);
 
   // useEffect(() => {
   //   userService.login().then((response) => console.log(response.data));

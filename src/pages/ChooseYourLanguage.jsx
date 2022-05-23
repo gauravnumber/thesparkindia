@@ -19,6 +19,7 @@ import {
   TextField,
   Typography,
 } from "@mui/material";
+import { Link } from "react-router-dom";
 
 const ChooseYourLanguage = () => {
   const blueColor = "#2847a1";
@@ -120,6 +121,8 @@ const ChooseYourLanguage = () => {
           mt: 3,
           backgroundColor: blueColor,
         }}
+        component={Link}
+        to="/intro"
       >
         CONTINUE
       </Button>

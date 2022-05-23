@@ -26,7 +26,8 @@ const Home = () => {
   useEffect(() => {
     const user = localStorage.getItem("loggedUser");
 
-    if (!user) navigate("/intro");
+    if (!user) navigate("/language-choose");
+    // if (!user) navigate("/choose-your-language");
   }, []);
 
   return (
