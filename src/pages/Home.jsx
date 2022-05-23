@@ -26,7 +26,7 @@ const Home = () => {
   useEffect(() => {
     const user = localStorage.getItem("loggedUser");
 
-    if (!user) navigate("/login");
+    if (!user) navigate("/intro");
   }, []);
 
   return (
