@@ -66,6 +66,8 @@ const Intro = () => {
         }}
         // onClick={() => setIndex(index + 1)}
         // onClick={() => setIndex((prev) => prev + 1)}
+        component={Link}
+        to="/login"
       >
         <ArrowForward />
       </Button>
