@@ -11,12 +11,7 @@ export default function CategoriePanel(props) {
       aria-labelledby={`vertical-tab-${index}`}
       {...other}
     >
-      {value === index && (
-        <Box sx={{ px: 1 }}>
-          {children}
-          {/* <Typography>{children}</Typography> */}
-        </Box>
-      )}
+      {value === index && <Box sx={{ px: 1 }}>{children}</Box>}
     </div>
   );
 }
