@@ -43,6 +43,9 @@ import Sparklogo from "./pages/Sparklogo";
 import LanguageChoose from "./pages/LanguageChoose";
 import ProductScan from "./pages/ProductScan";
 import ProductScanWithVideo from "./pages/ProductScanWithVideo";
+import Erecent from "./pages/EnquiryRecent";
+import Eimp from "./pages/EnquiryImpotant";
+import Eorder from "./pages/EnquiryOrder";
 
 function App() {
   return (
@@ -102,6 +105,9 @@ function App() {
         <Route path="/language-choose" element={<LanguageChoose />} />
         <Route path="/product-scan" element={<ProductScan />} />
         <Route path="/product-scan-video" element={<ProductScanWithVideo />} />
+        <Route path="/enquery-recent" element={<Erecent />} />
+        <Route path="/enquery-important" element={<Eimp />} />
+        <Route path="/enquery-order" element={<Eorder />} />
         <Route path="*" element={<h1>404: File Not Found</h1>} />
       </Routes>
       <Box mt={10} />
