@@ -17,7 +17,10 @@ function Eimp() {
             sx={{
               height: 45,
               width: 390,
-              bgcolor: "#2847A1"
+              bgcolor: "#2847A1",
+              position: "absolute",
+              left: 0,
+              top: 50
             }}
           >
               <IconButton
@@ -30,8 +33,8 @@ function Eimp() {
               <Typography
                 sx={{
                   position: "absolute",
-                  left: 48,
-                  top: 15,
+                  left: 40,
+                  top: 8,
                   color: "#FFFFFF",
                   fontFamily: 'Roboto',
                   fontWeight: 600,
@@ -45,7 +48,7 @@ function Eimp() {
                   color: "#ffffff",
                   position: "absolute",
                   left: 320,
-                  top: 10
+                  top: 3
                 }}
               >
                 <SearchIcon />
@@ -55,7 +58,7 @@ function Eimp() {
                   color: "#ffffff",
                   position: "absolute",
                   left: 350,
-                  top: 10
+                  top: 3
                 }}
               >
                 <MoreVertIcon />
@@ -69,7 +72,7 @@ function Eimp() {
             width: 390,
             position: "absolute",
             left: 20,
-            top: 65
+            top: 95
           }}
          >
             <Typography
@@ -85,7 +88,7 @@ function Eimp() {
                 fontSize: 8,
                 color: "#D90000",
                 position: "absolute",
-                top: 1
+                top: 5
               }}
             />
             </Typography>
@@ -104,7 +107,7 @@ function Eimp() {
                 fontSize: 8,
                 color: "#D90000",
                 position: "absolute",
-                top: 1
+                top: 5
               }}
             />
             <Divider 
@@ -127,7 +130,7 @@ function Eimp() {
                 fontSize: 8,
                 color: "#D90000",
                 position: "absolute",
-                top: 1
+                top: 5
               }}
             />
             </Typography>
@@ -141,7 +144,7 @@ function Eimp() {
               height: 46,
               position: "absolute",
               left: 16,
-              top: 112,
+              top: 132,
             }}
           >
             <img src="https://www.cmswire.com/-/media/9cd5da57ceda4264a2b76b8c20e7a8e4.ashx?mw=640&mh=480" width="46" height="46" />
@@ -153,7 +156,7 @@ function Eimp() {
               fontWeight: 700,
               fontSize: 14,
               position: "absolute",
-              top: 110,
+              top: 128,
               left: 78
             }}
           >
@@ -165,7 +168,7 @@ function Eimp() {
               fontWeight: 600,
               fontSize: 16,
               position: "absolute",
-              top: 125,
+              top: 140,
               left: 78
             }}
           >
@@ -177,7 +180,7 @@ function Eimp() {
               fontWeight: 400,
               fontSize: 16,
               position: "absolute",
-              top: 140,
+              top: 158,
               left: 78,
               color: "#555555"
             }}
@@ -190,7 +193,7 @@ function Eimp() {
               fontWeight: 600,
               fontSize: 12,
               position: "absolute",
-              top: 105,
+              top: 125,
               left: 319,
               color: "#555555"
             }}
@@ -206,7 +209,7 @@ function Eimp() {
               height: 46,
               position: "absolute",
               left: 16,
-              top: 205,
+              top: 202,
             }}
           >
             <img src="https://d68b3152cf5d08c2f050-97c828cc9502c69ac5af7576c62d48d6.ssl.cf3.rackcdn.com/includes/img/cms/site-images/resized/b495a5e4f80-kingston-university-0c0ae6b8b2f-.jpg" width="46" height="46" />
@@ -218,7 +221,7 @@ function Eimp() {
               fontWeight: 700,
               fontSize: 14,
               position: "absolute",
-              top: 203,
+              top: 200,
               left: 78
             }}
           >
@@ -230,7 +233,7 @@ function Eimp() {
               fontWeight: 600,
               fontSize: 16,
               position: "absolute",
-              top: 218,
+              top: 212,
               left: 78
             }}
           >
@@ -242,7 +245,7 @@ function Eimp() {
               fontWeight: 400,
               fontSize: 16,
               position: "absolute",
-              top: 233,
+              top: 230,
               left: 78,
               color: "#555555"
             }}
@@ -255,7 +258,7 @@ function Eimp() {
               fontWeight: 600,
               fontSize: 12,
               position: "absolute",
-              top: 198,
+              top: 203,
               left: 319,
               color: "#555555"
             }}
@@ -264,123 +267,7 @@ function Eimp() {
           </Typography>
       
         </Box>
-        {/* box 3 */}
-        <Box
-          sx={{
-            position: "absolute",
-            bottom: 0,
-            color: "#000000"
-          }}
-        >
-          <Stack direction="row" spacing={5}>
-            <Stack>
-            <IconButton>
-                <HomeOutlinedIcon 
-                  sx={{
-                    color: "#000000"
-                  }}
-                />
-            </IconButton>
-            <Typography
-              sx={{
-              fontFamily: 'Roboto',
-              fontWeight: 600,
-              fontSize: 9.16,
-              position: "relative",
-              left: 8,
-              bottom: 8
-              }}
-            >
-                Home
-            </Typography>
-            </Stack>
-            <Stack>
-            <IconButton>
-                <CategoryOutlinedIcon
-                  sx={{
-                    color: "#000000"
-                  }}
-                />
-            </IconButton>
-            <Typography
-              sx={{
-              fontFamily: 'Roboto',
-              fontWeight: 600,
-              fontSize: 9.16,
-              position: "relative",
-              left: 3,
-              bottom: 8
-              }}
-            >
-                Category
-            </Typography>
-            </Stack>
-            <Stack>
-            <IconButton>
-                <SubscriptionsOutlinedIcon
-                  sx={{
-                    color: "#000000"
-                  }}
-                />
-            </IconButton>
-            <Typography
-              sx={{
-              fontFamily: 'Roboto',
-              fontWeight: 600,
-              fontSize: 9.16,
-              position: "relative",
-              left: 6,
-              bottom: 8
-              }}
-            >
-                Studio
-            </Typography>
-            </Stack>
-            <Stack>
-            <IconButton>
-                <BubbleChartOutlinedIcon
-                  sx={{
-                    color: "#2847A1"
-                  }}
-                />
-            </IconButton>
-            <Typography
-              sx={{
-              fontFamily: 'Roboto',
-              fontWeight: 600,
-              fontSize: 9.16,
-              position: "relative",
-              left: 6,
-              bottom: 8,
-              color: "#2847A1"
-              }}
-            >
-                Enquiry
-            </Typography>
-            </Stack>
-            <Stack>
-            <IconButton>
-                <AccountCircleOutlinedIcon
-                  sx={{
-                    color: "#000000"
-                  }}
-                />
-            </IconButton>
-            <Typography
-              sx={{
-              fontFamily: 'Roboto',
-              fontWeight: 600,
-              fontSize: 9.16,
-              position: "relative",
-              left: 12,
-              bottom: 8
-              }}
-            >
-                Me
-            </Typography>
-            </Stack>
-          </Stack>
-        </Box>
+        
     </div>
   );
 }
