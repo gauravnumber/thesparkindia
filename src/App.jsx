@@ -37,6 +37,7 @@ import SparkStudio from "./pages/SparkStudio";
 import TrendingShops from "./pages/SparkStudio/TrendingShops";
 import Help from "./pages/Help";
 import Login from "./pages/Login";
+import NewPassword from "./pages/NewPassword";
 import VerifyWithOtp from "./pages/VerifyWithOtp";
 import Notifications from "./pages/Notifications";
 import Sparklogo from "./pages/Sparklogo";
@@ -87,6 +88,7 @@ function App() {
         <Route path="/scan-and-shop" element={<ScanAndShop />} />
         <Route path="/intro" element={<Intro />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/new-password" element={<NewPassword />} />
         <Route path="/signup">
           <Route index element={<Signup />} />
           <Route path="verify-with-otp" element={<VerifyWithOtp />} />
