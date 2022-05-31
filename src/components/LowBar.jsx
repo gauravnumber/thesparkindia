@@ -7,11 +7,12 @@ import BottomNavigation from "@mui/material/BottomNavigation";
 import BottomNavigationAction from "@mui/material/BottomNavigationAction";
 import Paper from "@mui/material/Paper";
 import { useEffect, useState } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 
 const LowBar = () => {
   const [value, setValue] = useState(0);
   const location = useLocation();
+  // const navigate = useNavigate();
 
   const lowBarInfo = [
     {
@@ -55,6 +56,15 @@ const LowBar = () => {
         setValue(0);
     }
   }, [location.pathname]);
+
+  const user = localStorage.getItem("loggedUser");
+  if (user === null) return "";
+
+  // useEffect(() => {
+  //   const user = localStorage.getItem("loggedUser");
+  //   return;
+  //   // if (!user) navigate("/language-choose");
+  // }, []);
 
   return (
     <Paper
