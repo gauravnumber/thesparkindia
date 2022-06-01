@@ -23,12 +23,12 @@ import { useEffect } from "react";
 const Home = () => {
   const navigate = useNavigate();
 
-  // useEffect(() => {
-  //   const user = localStorage.getItem("loggedUser");
+  useEffect(() => {
+    const user = localStorage.getItem("loggedUser");
 
-  //   if (!user) navigate("/language-choose");
-  //   // if (!user) navigate("/choose-your-language");
-  // }, []);
+    if (!user) navigate("/language-choose");
+    // if (!user) navigate("/choose-your-language");
+  }, []);
 
   return (
     <Box
